@@ -6237,33 +6237,6 @@ if(/four.*force|fundamental.*force|নিউক্লিয়.*বল|मूल
   if(/\btabla\b|zakir.?hussain|তবলা|तबला/i.test(q)) return KB.tabla[L];
   if(/\bsitar\b|ravi.?shankar|সেতার|सितार/i.test(q)) return KB.sitar[L];
   if(/bansuri|bamboo.*flute|hariprasad|বাঁশরি|बांसुरी/i.test(q)) return KB.flute_music[L];
-  // Paste these matching rules inside your async function getLocalResponse(query) { ... }
-
-if (/solo\s*leveling|shadow\s*monarch/i.test(q)) return KB.solo_leveling[L];
-if (/kaiju\s*no\s*8|kafka\s*hibino/i.test(q)) return KB.kaiju_no8[L];
-if (/anime\s*dub|hindi\s*dub|crunchyroll/i.test(q)) return KB.anime_dub[L];
-
-if (/chess\s*strategy|grandmaster|positional\s*advantage/i.test(q)) return KB.chess_strategy[L];
-if (/magnus|carlsen/i.test(q)) return KB.magnus_carlsen[L];
-if (/mikhail\s*tal|magician\s*from\s*riga/i.test(q)) return KB.mikhail_tal[L];
-
-if (/transformer\s*architecture|self\s*attention/i.test(q)) return KB.transformer_arch[L];
-if (/train.*model|model\s*training|loss\s*function/i.test(q)) return KB.model_training[L];
-if (/mmlu\s*benchmark|mmlu/i.test(q)) return KB.mmlu_benchmark[L];
-
-if (/ronnie\s*coleman|light\s*weight\s*baby/i.test(q)) return KB.ronnie_coleman[L];
-if (/ramon\s*dino|classic\s*physique/i.test(q)) return KB.ramon_dino[L];
-if (/hiit|high\s*intensity\s*interval/i.test(q)) return KB.hiit_training[L];
-if (/kettlebell/i.test(q)) return KB.kettlebell[L];
-
-if (/wave\s*mechanics|schrodinger/i.test(q)) return KB.wave_mechanics[L];
-if (/simple\s*harmonic|harmonic\s*motion|shm/i.test(q)) return KB.harmonic_motion[L];
-if (/circle\s*equation|equation\s*of\s*circle/i.test(q)) return KB.circle_equations[L];
-if (/probability\s*theory|uncertainty\s*math/i.test(q)) return KB.probability_theory[L];
-
-if (/west\s*bengal/i.test(q)) return KB.west_bengal[L];
-if (/kolkata\s*heritage|cultural\s*capital/i.test(q)) return KB.kolkata_heritage[L];
-if (/satyajit\s*ray|apu\s*trilogy/i.test(q)) return KB.satyajit_ray[L];
   if(/bollywood|hindi.*film|shah.?rukh|amitabh|বলিউড|बॉलीवुड/i.test(q)) return KB.bollywood[L];
   if(/tollywood|bengali.*film|telugu.*film|টলিউড|टॉलीवुड/i.test(q)) return KB.tollywood[L];
   if(/\bagi\b|artificial general|জেনারেল ইন্টেলিজেন্স|सामान्य.*बुद्धि/i.test(q)) return KB.artificial_general_intelligence[L];
@@ -6985,7 +6958,33 @@ if(/electricity.*history|edison.*power.*station|tesla.*westinghouse.*ac/i.test(q
   if(/simple\s*harmonic|harmonic\s*motion|shm/i.test(q)) return KB.harmonic_motion[L];
   if(/circle\s*equation|equation\s*of\s*circle/i.test(q)) return KB.circle_equations[L];
   if(/redmi|galaxy\s*a07|battery\s*capacity|mobile\s*processor/i.test(q)) return KB.mobile_hardware[L];
+  // Paste these matching rules inside your async function getLocalResponse(query) { ... }
 
+if (/solo\s*leveling|shadow\s*monarch/i.test(q)) return KB.solo_leveling[L];
+if (/kaiju\s*no\s*8|kafka\s*hibino/i.test(q)) return KB.kaiju_no8[L];
+if (/anime\s*dub|hindi\s*dub|crunchyroll/i.test(q)) return KB.anime_dub[L];
+
+if (/chess\s*strategy|grandmaster|positional\s*advantage/i.test(q)) return KB.chess_strategy[L];
+if (/magnus|carlsen/i.test(q)) return KB.magnus_carlsen[L];
+if (/mikhail\s*tal|magician\s*from\s*riga/i.test(q)) return KB.mikhail_tal[L];
+
+if (/transformer\s*architecture|self\s*attention/i.test(q)) return KB.transformer_arch[L];
+if (/train.*model|model\s*training|loss\s*function/i.test(q)) return KB.model_training[L];
+if (/mmlu\s*benchmark|mmlu/i.test(q)) return KB.mmlu_benchmark[L];
+
+if (/ronnie\s*coleman|light\s*weight\s*baby/i.test(q)) return KB.ronnie_coleman[L];
+if (/ramon\s*dino|classic\s*physique/i.test(q)) return KB.ramon_dino[L];
+if (/hiit|high\s*intensity\s*interval/i.test(q)) return KB.hiit_training[L];
+if (/kettlebell/i.test(q)) return KB.kettlebell[L];
+
+if (/wave\s*mechanics|schrodinger/i.test(q)) return KB.wave_mechanics[L];
+if (/simple\s*harmonic|harmonic\s*motion|shm/i.test(q)) return KB.harmonic_motion[L];
+if (/circle\s*equation|equation\s*of\s*circle/i.test(q)) return KB.circle_equations[L];
+if (/probability\s*theory|uncertainty\s*math/i.test(q)) return KB.probability_theory[L];
+
+if (/west\s*bengal/i.test(q)) return KB.west_bengal[L];
+if (/kolkata\s*heritage|cultural\s*capital/i.test(q)) return KB.kolkata_heritage[L];
+if (/satyajit\s*ray|apu\s*trilogy/i.test(q)) return KB.satyajit_ray[L];
 
   // ── MATH ──
   const mathResult = tryMath(q);
@@ -7716,15 +7715,21 @@ function startUp(){
   else if(h<17) msg="Good afternoon, Boss. All systems operational. Voice is ready for English, Hindi, and Bengali commands. How may I assist you?";
   else msg="Good evening, Boss. METAMORPIX online. All systems nominal. I support English, Hindi, and Bengali voice commands. What do you need?";
 
-  typeResponse(msg);
-  // FIX #2 — autoListen enabled only after startup speech is fully done
+      typeResponse(msg);
+  
+  // Ensures autoListen is only enabled after startup speech finishes
   speakText(msg, function(){
     if(voiceSupported){
-      autoListen=true;
-      setTimeout(startListening,600);
+      autoListen = true;
     }
   });
 }
+
+// Triggers the initialization when the HTML is fully ready
+window.addEventListener('DOMContentLoaded', () => {
+  startUp();
+});
 </script>
+
 </body>
 </html>
