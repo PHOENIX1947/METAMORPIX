@@ -5263,6 +5263,446 @@ electricity_history: {
   hi: "बिजली का व्यावहारिक उपयोग 1882 में न्यूयॉर्क में थॉमस एडिसन के पहले वाणिज्यिक बिजली स्टेशन से शुरू हुआ, श्रीमान। निकोला टेस्ला और जॉर्ज वेस्टिंगहाउस ने AC करंट की वकालत की जिसने एडिसन के DC पर करंट का युद्ध जीता।",
   bn: "বিদ্যুতের ব্যবহারিক ব্যবহার ১৮৮২ সালে নিউ ইয়র্কে টমাস এডিসনের প্রথম বাণিজ্যিক পাওয়ার স্টেশন দিয়ে শুরু হয়েছিল, স্যার। নিকোলা টেসলা ও জর্জ ওয়েস্টিংহাউস AC কারেন্টের পক্ষে ছিলেন যা এডিসনের DC-এর উপর কারেন্টের যুদ্ধ জিতেছিল।"
 },
+// Add these items inside your const KB = { ... } object:
+
+  // ── ANIME & POP CULTURE ──
+  solo_leveling: {
+    en: "Solo Leveling follows Sung Jin-woo's journey from mankind's weakest hunter to the overpowered Shadow Monarch, Boss. Season 3 parameters are highly anticipated globally.",
+    hi: "सोलो लेवलिंग सुंग जिन-वू की कहानी है जो मानव जाति के सबसे कमजोर शिकारी से परम शैडो मोनार्क बनता है, श्रीमान।",
+    bn: "সোলো লেভেলিং সুং জিন-উ-এর যাত্রা অনুসরণ করে, যেখানে সে মানবজাতির সবচেয়ে দুর্বল শিকারী থেকে পরম শ্যাডো মোনার্কে পরিণত হয়, স্যার।"
+  },
+  kaiju_no8: {
+    en: "Kaiju No. 8 features Kafka Hibino, who gains the ability to transform into a monster while fighting for the Defense Force, Boss. Production metrics for upcoming seasons remain top-tier.",
+    hi: "काइजु नंबर 8 में काफ्का हिबिनो की कहानी है, जो डिफेंस फोर्स में लड़ते हुए एक राक्षस में बदलने की क्षमता हासिल करता है, श्रीमान।",
+    bn: "কাইজু নং ৮-এ কাফকা হিবিনোর গল্প দেখানো হয়েছে, যে ডিফেন্স ফোর্সে লড়াই করার সময় নিজেই একটি দানবে রূপান্তরিত হওয়ার ক্ষমতা পায়, স্যার।"
+  },
+  anime_dub: {
+    en: "Anime consumption in regional Indian languages like Hindi and Bengali is expanding rapidly across premium streaming networks, Boss.",
+    hi: "हिंदी और बंगाली जैसी क्षेत्रीय भारतीय भाषाओं में एनिमे का चलन प्रीमियम स्ट्रीमिंग नेटवर्क पर तेजी से बढ़ रहा है, श्रीमान।",
+    bn: "হিন্দি এবং বাংলার মতো আঞ্চলিক ভারতীয় ভাষায় অ্যানিমের জনপ্রিয়তা প্রিমিয়াম স্ট্রিমিং নেটওয়ার্ক জুড়ে দ্রুত বৃদ্ধি পাচ্ছে, স্যার।"
+  },
+
+  // ── CHESS & STRATEGY ──
+  chess_strategy: {
+    en: "In chess, pressing your opponent and accumulating small operational advantages is the classic grandmaster path to victory, Boss. Consistent pressure cracks the solid structures.",
+    hi: "शतरंज में, अपने प्रतिद्वंद्वी पर दबाव बनाना और छोटे-छोटे रणनीतिक लाभ जमा करना ग्रैंडमास्टर की जीत का क्लासिक तरीका है, श्रीमान।",
+    bn: "দাবায় আপনার প্রতিপক্ষের ওপর ক্রমাগত চাপ তৈরি করা এবং ছোট ছোট সুবিধা সঞ্চয় করা হলো গ্র্যান্ডমাস্টারদের জয়ের মূল কৌশল, স্যার।"
+  },
+  magnus_carlsen: {
+    en: "Magnus Carlsen is universally regarded for his endgame precision and unmatched ability to keep pressing until his opponents make a mistake, Boss.",
+    hi: "मैग्नस कार्लसन को उनकी एंडगेम सटीकता और तब तक दबाव बनाए रखने की बेजोड़ क्षमता के लिए जाना जाता है जब तक कि प्रतिद्वंद्वी गलती न कर दे, श्रीमान।",
+    bn: "ম্যাগনাস কার্লসেন তাঁর এন্ডগেমের নিখুঁততা এবং প্রতিপক্ষ ভুল না করা পর্যন্ত চাপ বজায় রাখার অতুলনীয় ক্ষমতার জন্য বিশ্বজুড়ে সমাদৃত, স্যার।"
+  },
+  mikhail_tal: {
+    en: "Mikhail Tal, the 'Magician from Riga', was famous for his intuitive, highly complex sacrifices that disrupted his opponent's psychological framework, Boss.",
+    hi: "मिखाइल ताल, जिन्हें 'रीगा का जादूगर' कहा जाता है, अपने जटिल बलिदानों और आक्रामक खेल के लिए प्रसिद्ध थे जो प्रतिद्वंद्वी को भ्रमित कर देता था, श्रीमान।",
+    bn: "মিখাইল তাল, যিনি 'রিগার জাদুকর' নামে পরিচিত, তাঁর অবিশ্বাস্য এবং জটিল গুটি উৎসর্গ করার জন্য বিখ্যাত ছিলেন যা প্রতিপক্ষের মনস্তত্ত্ব ভেঙে দিত, স্যার।"
+  },
+
+  // ── ADVANCED AI & ARCHITECTURES ──
+  transformer_arch: {
+    en: "The Transformer architecture relies entirely on self-attention mechanisms, bypassing recurrence to process sequences in parallel, Boss. It is the core framework behind modern LLMs.",
+    hi: "ट्रांसफॉर्मर आर्किटेक्चर पूरी तरह से सेल्फ-अटेंशन मैकेनिज्म पर निर्भर करता है, जिससे डेटा को समानांतर में प्रोसेस करना संभव होता है, श्रीमान।",
+    bn: "ট্রান্সফরমার আর্কিটেকচার সম্পূর্ণরূপে সেলফ-অ্যাটেনশন মেকানিজমের ওপর নির্ভর করে, যা সিকোয়েন্স প্যারালাল প্রসেস করতে সাহায্য করে, স্যার।"
+  },
+  model_training: {
+    en: "Training an AI model from scratch requires optimal hyperparameter tuning, clean datasets, robust loss functions, and high-performance GPU compute clusters, Boss.",
+    hi: "शुरुआत से एक एआई मॉडल को प्रशिक्षित करने के लिए इष्टतम हाइपरपैरामीटर ट्यूनिंग, साफ डेटासेट और उच्च प्रदर्शन वाले कंप्यूट क्लस्टर की आवश्यकता होती, श्रीमान।",
+    bn: "স্ক্র্যাচ থেকে একটি এআই মডেল ট্রেনিং করার জন্য নিখুঁত হাইপারপ্যারামিটার টিউনিং, পরিষ্কার ডেটাসেট এবং উচ্চ-ক্ষমতাসম্পন্ন কম্পিউট ক্লাস্টারের প্রয়োজন, স্যার।"
+  },
+  mmlu_benchmark: {
+    en: "The MMLU (Massive Multitask Language Understanding) benchmark measures an AI's factual knowledge across subjects ranging from elementary math to professional law, Boss.",
+    hi: "MMLU बेंचमार्क प्राथमिक गणित से लेकर व्यावसायिक कानून तक के विषयों में एक एआई के तथ्यात्मक ज्ञान को मापता है, श्रीमान।",
+    bn: "MMLU বেঞ্চমার্ক প্রাথমিক গণিত থেকে শুরু করে পেশাদার আইন পর্যন্ত বিভিন্ন বিষয়ে একটি এআই-এর তথ্যগত জ্ঞান পরিমাপ করে, স্যার।"
+  },
+
+  // ── PHYSICAL FITNESS & BODYBUILDING ──
+  ronnie_coleman: {
+    en: "Ronnie Coleman, an 8-time Mr. Olympia, is legendary for his extreme heavy lifting routines, using exercises like 800-pound squats to redefine muscle mass limits, Boss.",
+    hi: "रोनी कोलमैन, 8 बार के मिस्टर ओलंपिया, अपनी अत्यधिक भारी वजन उठाने की दिनचर्या और मांसपेशियों की सीमा को फिर से परिभाषित करने के लिए जाने जाते हैं, श्रीमान।",
+    bn: "রনি কোলম্যান, যিনি ৮ বারের মিস্টার অলিম্পিয়া, তাঁর চরম ভারী ওজন তোলার রুটিন এবং পেশীবহুলতার সীমাকে নতুনভাবে সংজ্ঞায়িত করার জন্য কিংবদন্তি, স্যার।"
+  },
+  ramon_dino: {
+    en: "Ramon Dino is a premier athlete in the Classic Physique division, celebrated for his exceptional muscle density, symmetry, and elite forearm conditioning, Boss.",
+    hi: "रेमन डिनो क्लासिक फिजिक डिवीजन में एक प्रमुख एथलीट हैं, जो अपनी उत्कृष्ट मांसपेशियों के घनत्व और समरूपता के लिए प्रसिद्ध हैं, श्रीमान।",
+    bn: "র‌্যামন ডিনো ক্লাসিক ফিজিক ডিভিশনের একজন শীর্ষস্থানীয় অ্যাথলেট, যিনি তাঁর অসাধারণ পেশীর ঘনত্ব এবং প্রতিসাম্যের জন্য সুপরিচিত, স্যার।"
+  },
+  hiit_training: {
+    en: "HIIT involves short bursts of intense anaerobic exercise mixed with brief recovery periods, maximizes cardiovascular capacity and metabolic rate efficiently, Boss.",
+    hi: "HIIT में कम समय के लिए तीव्र कसरत और फिर थोड़ा आराम शामिल होता है, जो कार्डियोवैस्कुलर क्षमता और मेटाबॉलिज्म को तेजी से बढ़ाता है, श्रीमान।",
+    bn: "HIIT-এর মধ্যে রয়েছে সংক্ষিপ্ত সময়ের জন্য তীব্র ব্যায়াম এবং তার মাঝে সামান্য বিশ্রাম, যা মেটাবলিজম এবং কার্ডিওভাসকুলার ক্ষমতা দ্রুত বাড়ায়, স্যার।"
+  },
+  kettlebell: {
+    en: "Kettlebell training combines ballistic exercises with cardiovascular, flexibility, and strength training, targets the posterior chain mechanics dynamically, Boss.",
+    hi: "केटलबेल प्रशिक्षण बैलिस्टिक अभ्यासों को कार्डियो और शक्ति प्रशिक्षण के साथ जोड़ता है, जो आपके कोर और मांसपेशियों को मजबूत करता है, श्रीमान।",
+    bn: "কেটলবেল ট্রেনিং শক্তি এবং কার্ডিও উভয়কেই একত্রিত করে, যা শরীরের কোর পেশী এবং পশ্চাৎভাগের মেকানিক্সকে চমৎকারভাবে উন্নত করে, স্যার।"
+  },
+
+  // ── MATHEMATICS & PHYSICS ──
+  wave_mechanics: {
+    en: "Wave mechanics describes physical phenomena in terms of wave equations, forming the foundational core of quantum theory via Schrödinger's equations, Boss.",
+    hi: "तरंग यांत्रिकी भौतिक घटनाओं को तरंग समीकरणों के रूप में वर्णित करती है, जो क्वांटम सिद्धांत का मुख्य आधार है, श्रीमान।",
+    bn: "ওয়েভ মেকানিক্স বা তরঙ্গ বলবিজ্ঞান তরঙ্গের সমীকরণের মাধ্যমে ভৌত ঘটনাবলী ব্যাখ্যা করে, যা কোয়ান্টাম তত্ত্বের মূল ভিত্তি তৈরি করে, স্যার।"
+  },
+  harmonic_motion: {
+    en: "Simple Harmonic Motion is a repetitive movement back and forth through an equilibrium position, where the restoring force is directly proportional to the displacement, Boss.",
+    hi: "सरल आवर्त गति (SHM) एक संतुलन स्थिति के आगे-पीछे होने वाली आवर्ती गति है, जहाँ विस्थापन बल दूरी के समानुपाती होता है, श्रीमान।",
+    bn: "সিম্পল হারমোনিক মোশন বা সরল দোলগতি হলো একটি সাম্যাবস্থাকে কেন্দ্র করে পর্যায়বৃত্ত গতি, যেখানে প্রত্যয়ানকারী বল সরণের সমানুপাতিক হয়, স্যার।"
+  },
+  circle_equations: {
+    en: "In coordinate geometry, the standard equation of a circle is (x - h)² + (y - k)² = r², where (h, k) represents the center coordinates and r is the radius, Boss.",
+    hi: "निर्देशांक ज्यामिति में, एक वृत्त का मानक समीकरण (x - h)² + (y - k)² = r² होता है, जहाँ (h, k) केंद्र और r त्रिज्या है, श्रीमान।",
+    bn: "স্থানাঙ্ক জ্যামিতিতে, একটি বৃত্তের আদর্শ সমীকরণ হলো (x - h)² + (y - k)² = r², যেখানে (h, k) কেন্দ্রের স্থানাঙ্ক এবং r হলো ব্যাসার্ধ, স্যার।"
+  },
+  probability_theory: {
+    en: "Probability theory quantifies the likelihood of events occurring, mapping uncertainties onto a strict numerical scale between 0 and 1, Boss.",
+    hi: "प्रायिकता सिद्धांत घटनाओं के घटने की संभावना को मापता है, जो अनिश्चितताओं को 0 और 1 के बीच एक संख्यात्मक पैमाने पर दर्शाता है, श्रीमान।",
+    bn: "প্রব্যাবিলিটি বা সম্ভাবনা তত্ত্ব কোনো ঘটনা ঘটার সম্ভাবনাকে গাণিতিকভাবে ০ থেকে ১-এর মধ্যকার স্কেলে পরিমাপ করে, স্যার।"
+  },
+
+  // ── WEST BENGAL & CULTURE ──
+  west_bengal: {
+    en: "West Bengal features a rich cultural heritage stretching from the Himalayas down to the Bay of Bengal, famous for its deep literary traditions, art, and intellectual legacy, Boss.",
+    hi: "पश्चिम बंगाल अपनी समृद्ध सांस्कृतिक विरासत, कला, गहन साहित्यिक परंपराओं और बौद्धिक इतिहास के लिए प्रसिद्ध है, श्रीमान।",
+    bn: "পশ্চিমবঙ্গ তার হিমালয় থেকে বঙ্গোপসাগর পর্যন্ত বিস্তৃত সমৃদ্ধ সাংস্কৃতিক ঐতিহ্য, গভীর সাহিত্যচর্চা, শিল্পকলা এবং বুদ্ধিবৃত্তিক উত্তরাধিকারের জন্য বিখ্যাত, স্যার।"
+  },
+  kolkata_heritage: {
+    en: "Kolkata, the capital of West Bengal, is historically renowned as India's cultural capital, featuring iconic trams, historical architecture, and a brilliant artistic community, Boss.",
+    hi: "पश्चिम बंगाल की राजधानी कोलकाता ऐतिहासिक रूप से भारत की सांस्कृतिक राजधानी के रूप में जानी जाती है, जो अपनी वास्तुकला और कला के लिए प्रसिद्ध है, श्रीमान।",
+    bn: "পশ্চিমবঙ্গের রাজধানী কলকাতা ঐতিহাসিকভাবে ভারতের সাংস্কৃতিক রাজধানী হিসেবে পরিচিত, যা তার ঐতিহ্যবাহী ট্রাম, ঐতিহাসিক স্থাপত্য এবং দুর্দান্ত শিল্প সংস্কৃতির জন্য বিখ্যাত, স্যার।"
+  },
+  satyajit_ray: {
+    en: "Satyajit Ray was a legendary filmmaker and author from West Bengal, whose masterpiece 'The Apu Trilogy' revolutionized Indian cinema on the global stage, Boss.",
+    hi: "सत्यजीत रे पश्चिम बंगाल के एक महान फिल्म निर्माता और लेखक थे, जिनकी कृति 'द अपू ट्रिलॉजी' ने वैश्विक मंच पर भारतीय सिनेमा को बदल दिया, श्रीमान।",
+    bn: "সত্যজিৎ রায় পশ্চিমবঙ্গের একজন কিংবদন্তি চলচ্চিত্র নির্মাতা এবং লেখক ছিলেন, যাঁর মাস্টারপিস 'অপু ট্রিলজি' বিশ্বমঞ্চে ভারতীয় সিনেমাকে এক অনন্য উচ্চতায় নিয়ে গিয়েছিল, স্যার।"
+  },
+  // ── ADVANCED AI & DEVELOPMENT ──
+  perplexity_ai: {
+    en: "Perplexity AI utilizes advanced retrieval-augmented generation to provide real-time web answers with conversational context, Boss.",
+    hi: "परप्लेक्सिटी एआई वास्तविक समय में वेब उत्तर प्रदान करने के लिए उन्नत आरएजी (RAG) का उपयोग करता है, श्रीमान।",
+    bn: "পারপ্লেক্সিটি এআই রিয়েল-টাইমে ওয়েব থেকে সঠিক উত্তর দেওয়ার জন্য উন্নত আরএজি প্রযুক্তি ব্যবহার করে, স্যার।"
+  },
+  chatbot_dev: {
+    en: "Building production chatbots involves setting up robust Node.js or Python backend servers connected via streaming APIs to LLM providers, Boss.",
+    hi: "चैटबॉट बनाने के लिए नोड.जेएस या पायथन बैकएंड सर्वर को स्ट्रीमिंग एपीआई के माध्यम से एलएलएम से जोड़ना होता है, श्रीमान।",
+    bn: "চ্যাটবট তৈরির জন্য নোড.জেএস বা পাইথন ব্যাকএন্ড সার্ভারকে স্ট্রিমিং এপিআই-এর মাধ্যমে এলএলএম-এর সাথে সংযুক্ত করতে হয়, স্যার।"
+  },
+  llm_finetuning: {
+    en: "Fine-tuning large language models adapts foundational weights to specific domains using techniques like LoRA or QLoRA to conserve VRAM, Boss.",
+    hi: "लोरा (LoRA) या क्युलोरा जैसी तकनीकों का उपयोग करके वीआरएएम (VRAM) को बचाने के लिए बड़े भाषा मॉडलों को फाइन-ट्यून किया जाता है, श्रीमान।",
+    bn: "লোরা বা কিউলোরা-র মতো প্রযুক্তি ব্যবহার করে ভিরাম বাঁচিয়ে লার্জ ল্যাঙ্গুয়েজ মডেলগুলিকে নির্দিষ্ট ডোমেনের জন্য ফাইন-টিউন করা হয়, স্যার।"
+  },
+
+  // ── CHESS STRATEGY & MASTERY ──
+  hikaru_nakamura: {
+    en: "Grandmaster Hikaru Nakamura is celebrated for his exceptional speed in blitz and bullet chess, combined with elite defensive resilience, Boss.",
+    hi: "ग्रैंडमास्टर हिकारू नाकामुरा को ब्लिट्ज़ और बुलेट शतरंज में उनकी असाधारण गति और बेहतरीन रक्षात्मक खेल के लिए जाना जाता है, श्रीमान।",
+    bn: "গ্র্যান্ডমাস্টার হিকারু নাকামুরা ব্লিটজ এবং বুলেট দাবায় তাঁর অসাধারণ গতি এবং চমৎকার রক্ষণাত্মক কৌশলের জন্য বিখ্যাত, স্যার।"
+  },
+  grind_grandmaster: {
+    en: "The grandmaster methodology emphasizes grinding out microscopic positional advantages in quiet endgames until the opponent's structure cracks, Boss.",
+    hi: "ग्रैंडमास्टर पद्धति शांत एंडगेम्स में सूक्ष्म रणनीतिक लाभों को भुनाने और प्रतिद्वंद्वी की संरचना को तोड़ने पर जोर देती है, श्रीमान।",
+    bn: "গ্র্যান্ডমাস্টার পদ্ধতিটি শান্ত এন্ডগেমে সূক্ষ্ম পজিশনাল সুবিধাগুলি কাজে লাগিয়ে প্রতিপক্ষের ডিফেন্স ভেঙে দেওয়ার ওপর জোর দেয়, স্যার।"
+  },
+  fide_kolkata: {
+    en: "FIDE rated chess tournaments in Kolkata continue to foster elite regional talent, carrying forward the rich intellectual legacy of West Bengal, Boss.",
+    hi: "कोलकाता में फिडे (FIDE) रेटेड शतरंज टूर्नामेंट क्षेत्रीय प्रतिभाओं को बढ़ावा देना जारी रख रहे हैं, श्रीमान।",
+    bn: "কলকাতায় ফিডে রেটেড দাবা টুর্নামেন্টগুলি আঞ্চলিক প্রতিভাদের বিকাশে এবং পশ্চিমবঙ্গের বুদ্ধিবৃত্তিক ঐতিহ্যকে এগিয়ে নিতে সাহায্য করছে, স্যার।"
+  },
+
+  // ── CORE GAMING & CONTENT CREATION ──
+  minecraft_mods: {
+    en: "Using advanced modifications like the Axiom editor or Replay Mod allows content creators to produce highly cinematic 4K rendering loops, Boss.",
+    hi: "एक्सिओम एडिटर या रीप्ले मॉड जैसे उन्नत संशोधनों का उपयोग करके कंटेंट क्रिएटर शानदार 4K सिनेमामैटिक वीडियो बना सकते हैं, श्रीमान।",
+    bn: "অ্যাক্সিওম এডিটর বা রিপ্লে মডের মতো উন্নত মডিফিকেশন ব্যবহার করে কনটেন্ট ক্রিয়েটররা চমৎকার সিনেমাটিক ফোর-কে রেন্ডারিং লুপ তৈরি করতে পারেন, স্যার।"
+  },
+  proximity_chat: {
+    en: "Proximity voice chat integrates real-time audio attenuation based on spatial distance within sandbox and multiplayer servers, Boss.",
+    hi: "प्रॉक्सिमिटी वॉयस चैट मल्टीप्लेयर सर्वर के भीतर स्थानिक दूरी के आधार पर वास्तविक समय में ऑडियो को नियंत्रित करता है, श्रीमान।",
+    bn: "প্রক্সিউমিটি ভয়েস চ্যাট মাল্টিপ্লেয়ার সার্ভারে দূরত্বের ওপর ভিত্তি করে রিয়েল-টাইম অডিওর তীব্রতা নিয়ন্ত্রণ করে, স্যার।"
+  },
+  indus_battle_royale: {
+    en: "Indus Battle Royale introduces distinct Indo-Futuristic design paradigms and unique gameplay mechanics to the mobile gaming landscape, Boss.",
+    hi: "इंडस बैटल रॉयल मोबाइल गेमिंग परिदृश्य में विशिष्ट इंडो-फ्यूचरिस्टिक डिज़ाइन और अद्वितीय गेमप्ले पेश करता है, श्रीमान।",
+    bn: "ইন্ডাস ব্যাটল রয়্যাল মোবাইল গেমিংয়ের দুনিয়ায় সম্পূর্ণ নতুন ইন্দো-ফিউচারিস্টিক ডিজাইন এবং অনন্য গেমপ্লে মেকানিক্স নিয়ে এসেছে, স্যার।"
+  },
+  youtube_growth: {
+    en: "Optimizing YouTube visibility requires high-retention editing, consistent thumb-nail styling, and precise multi-lingual metadata deployment, Boss.",
+    hi: "यूट्यूब पर विजिबिलिटी बढ़ाने के लिए हाई-रिटेंशन एडिटिंग, थंबनेल स्टाइलिंग और सटीक मेटाडेटा की आवश्यकता होती है, श्रीमान।",
+    bn: "ইউটিউবে চ্যানেলের গ্রোথ বাড়ানোর জন্য হাই-রিটেনশন এডিটিং, আকর্ষণীয় থাম্বনেইল এবং সঠিক মেটাডেটা ব্যবহার করা জরুরি, স্যার।"
+  },
+
+  // ── PREMIUM ANIME & SERIES ──
+  witch_hat: {
+    en: "Witch Hat Atelier stands out due to its highly intricate, classical art style and its deeply logical, rule-based magic system, Boss.",
+    hi: "विच हैट अतेलीए अपनी जटिल, शास्त्रीय कला शैली और अपने गहरे तार्किक, नियम-आधारित जादू प्रणाली के कारण प्रसिद्ध है, श्रीमान।",
+    bn: "উইচ হ্যাট অ্যাটেলিয়ার তার অত্যন্ত জটিল, ধ্রুপদী আর্ট স্টাইল এবং গভীর যৌক্তিক ম্যাজিক সিস্টেমের কারণে অনন্য, স্যার।"
+  },
+  classroom_elite: {
+    en: "Classroom of the Elite centers on Kiyotaka Ayanokoji's calculated, psychological maneuvers within a highly competitive, meritocratic school system, Boss.",
+    hi: "क्लासरूम ऑफ द एलीट अत्यधिक प्रतिस्पर्धी स्कूल प्रणाली के भीतर कियोटाका अयानोकोजी की मनोवैज्ञानिक चालों पर केंद्रित है, श्रीमान।",
+    bn: "ক্লাসরুম অফ দ্য এলিট অত্যন্ত প্রতিযোগিতামূলক স্কুল সিস্টেমে কিয়োটাকা আয়ানোকোজির নিখুঁত মনস্তাত্ত্বিক চালের ওপর ভিত্তি করে তৈরি, স্যার।"
+  },
+  fragrant_flower: {
+    en: "The Fragrant Flower Blooms with Dignity offers an elite narrative on emotional vulnerability, mutual respect, and overcoming social prejudices, Boss.",
+    hi: "द फ्रेग्रेंट फ्लावर ब्लूम्स विद डिग्निटी भावनात्मक संवेदनशीलता और आपसी सम्मान पर एक बेहतरीन कहानी प्रस्तुत करता है, श्रीमान।",
+    bn: "দ্য ফ্রেগ্রেন্ট ফ্লাওয়ার ব্লুমস উইথ ডিগনিটি পারস্পরিক শ্রদ্ধা এবং সামাজিক কুসংস্কার কাটিয়ে ওঠার এক দারুণ আবেগপূর্ণ গল্প উপহার দেয়, স্যার।"
+  },
+
+  // ── FITNESS & BODYBUILDING PHYSIOLOGY ──
+  mahakal_gym: {
+    en: "Consistent mechanical tension, progressive overload, and systematic heavy lifting form the pillars of elite strength conditioning, Boss.",
+    hi: "लगातार मैकेनिकल टेंशन, प्रोग्रेसिव ओवरलोड और व्यवस्थित भारी वजन उठाना ताकत बढ़ाने के मुख्य स्तंभ हैं, श्रीमान।",
+    bn: "টানা মেকানিক্যাল টেনশন, প্রোগ্রেসিভ ওভারলোড এবং সুশৃঙ্খল ভারী ওজন তোলা হলো শক্তি বৃদ্ধির মূল চাবিকাঠি, স্যার।"
+  },
+  hypertrophy_nutrition: {
+    en: "Muscle hypertrophy demands a precise macronutrient balance, high protein synthesis, clean caloric surpluses, and adequate deep sleep cycles, Boss.",
+    hi: "मांसपेशियों के विकास के लिए सटीक मैक्रोन्यूट्रिएंट संतुलन, उच्च प्रोटीन और पर्याप्त गहरी नींद के चक्र की आवश्यकता होती है, श्रीमान।",
+    bn: "পেশীর বৃদ্ধির জন্য সঠিক ম্যাক্রোনিউট্রিয়েন্ট ব্যালেন্স, উচ্চ প্রোটিন এবং পর্যাপ্ত গভীর ঘুমের প্রয়োজন, স্যার।"
+  },
+
+  // ── LITERATURE & STRATEGIC THINKING ──
+  psychology_money: {
+    en: "Morgan Housel's financial insights prove that managing wealth depends less on technical math and far more on behavioral discipline, Boss.",
+    hi: "मॉर्गन हौसेल के वित्तीय विचार साबित करते हैं कि धन का प्रबंधन गणित से कम और व्यवहारिक अनुशासन पर अधिक निर्भर करता है, श्रीमान।",
+    bn: "মর্গ্যান হাউজেলের আর্থিক অন্তর্দৃষ্টি প্রমাণ করে যে সম্পদ পরিচালনা করা গাণিতিক হিসাবের চেয়ে আচরণের শৃঙ্খলার ওপর বেশি নির্ভর করে, স্যার।"
+  },
+  laws_of_power: {
+    en: "Strategic interpersonal dynamics require understanding authority allocation, emotional detachment, and meticulous situational awareness, Boss.",
+    hi: "रणनीतिक पारस्परिक गतिशीलता के लिए अधिकार आवंटन, भावनात्मक अलगाव और सावधानीपूर्वक स्थितिजन्य जागरूकता की आवश्यकता होती है, श्रीमान।",
+    bn: "কৌশলগত আন্তঃব্যক্তিক সম্পর্কের জন্য ক্ষমতার বণ্টন, আবেগহীনতা এবং সূক্ষ্ম পরিস্থিতিগত সচেতনতা অত্যন্ত প্রয়োজন, স্যার।"
+  },
+
+  // ── ADVANCED MATHEMATICS & APPLIED PHYSICS ──
+  classical_mechanics: {
+    en: "Classical mechanics governs the macroscopic motion of bodies under forces, completely defined by Newton's laws and Lagrangian optimization, Boss.",
+    hi: "क्लासिक मैकेनिक्स बलों के तहत पिंडों की गति को नियंत्रित करता है, जो न्यूटन के नियमों द्वारा पूरी तरह से परिभाषित है, श्रीमान।",
+    bn: "ক্লাসিক্যাল মেকানিক্স বা বলবিজ্ঞান বলের প্রভাবে বস্তুর গতি নিয়ন্ত্রণ করে, যা নিউটনের সূত্র দ্বারা সম্পূর্ণরূপে সংজ্ঞায়িত, স্যার।"
+  },
+  geometry_theorems: {
+    en: "Advanced analytical geometry establishes precise coordinate mappings for conics, circles, and multi-dimensional planes via algebraic proofs, Boss.",
+    hi: "उन्नत विश्लेषणात्मक ज्यामिति बीजीय प्रमाणों के माध्यम से वृत्तों और बहु-आयामी विमानों के लिए सटीक समन्वय मानचित्रण स्थापित करती है, श्रीमान।",
+    bn: "উন্নত অ্যানালিটিক্যাল জ্যামিতি বীজগণিতীয় প্রমাণের সাহায্যে বৃত্ত এবং বহুমাত্রিক সমতলের নিখুঁত স্থানাঙ্ক ম্যাপিং তৈরি করে, স্যার।"
+  },
+
+  // ── HARDWARE ARCHITECTURE ──
+  processor_architecture: {
+    en: "Modern system-on-chip configurations balance multi-core processing speeds with power-efficient nanometer lithography to control thermal throttling, Boss.",
+    hi: "आधुनिक सिस्टम-ऑन-चिप कॉन्फ़िगरेशन थर्मल थ्रॉटलिंग को नियंत्रित करने के लिए बिजली-कुशल नैनोमीटर लिथोग्राफी के साथ काम करते हैं, श्रीमान।",
+    bn: "আধুনিক সিস্টেম-অন-চিপ কনফিগারেশনগুলি থার্মাল থ্রটলিং নিয়ন্ত্রণ করতে ন্যানোমিটার লিথোগ্রাফির সাথে প্রসেসিং স্পিডের ভারসাম্য বজায় রাখে, স্যার।"
+  },
+  music_distribution: {
+    en: "Digital distribution networks like RouteNote or Amuse allow independent artists to manage global metadata and pitch tracks to playlists, Boss.",
+    hi: "रूटनोट या अम्यूज़ जैसे डिजिटल वितरण नेटवर्क स्वतंत्र कलाकारों को वैश्विक स्तर पर अपने संगीत को प्रबंधित करने की अनुमति देते हैं, श्रीमान।",
+    bn: "রুটনোট বা অ্যামিউজের মতো ডিজিটাল ডিস্ট্রিবিউশন নেটওয়ার্কগুলি স্বাধীন শিল্পীদের বিশ্বব্যাপী মিউজিক পরিচালনা এবং প্লেলিস্ট পিচিংয়ের সুবিধা দেয়, স্যার।"
+  },
+  // ── ANIME & MANGA ──
+  attack_on_titan: {
+    en: "Attack on Titan is a phenomenal narrative exploring freedom, war, and the cycle of hatred, Boss. The strategic complexity of the Paradis Island conflict is a masterpiece of modern anime.",
+    hi: "अटैक ऑन टाइटन स्वतंत्रता, युद्ध और नफरत के चक्र की खोज करने वाली एक अभूतपूर्व कहानी है, श्रीमान।",
+    bn: "অ্যাটাক অন টাইটান স্বাধীনতা, যুদ্ধ এবং ঘৃণার চক্র নিয়ে তৈরি এক অসাধারণ অ্যানিমে, স্যার। প্যারাডিস আইল্যান্ডের সংঘাত আধুনিক অ্যানিমের এক মাস্টারপিস।"
+  },
+  rent_a_girlfriend: {
+    en: "Rent-a-Girlfriend follows Kazuya Kinoshita's complex and often comedic romantic entanglements, Boss. It is a highly popular romantic comedy series.",
+    hi: "रेंट-ए-गर्लफ्रेंड कज़ुया किनोशिता के जटिल और अक्सर हास्यपूर्ण रोमांटिक उलझनों पर आधारित एक बेहद लोकप्रिय सीरीज है, श्रीमान।",
+    bn: "রেন্ট-এ-গার্লফ্রেন্ড কাজুয়া কিনোশিতার জটিল এবং মজার রোমান্টিক জীবন নিয়ে তৈরি একটি অত্যন্ত জনপ্রিয় রোমান্টিক কমেডি সিরিজ, স্যার।"
+  },
+  demon_slayer: {
+    en: "Demon Slayer is globally recognized for its breathtaking Ufotable animation and the deeply emotional journey of Tanjiro Kamado, Boss.",
+    hi: "डेमन स्लेयर को इसके शानदार यूफोटेबल (Ufotable) एनीमेशन और तंजीरो कमाडो की भावनात्मक यात्रा के लिए विश्व स्तर पर पहचाना जाता है, श्रीमान।",
+    bn: "ডেমন স্লেয়ার তার অসাধারণ ইউফোটেবল অ্যানিমেশন এবং তানজিরো কামাদোর আবেগপূর্ণ যাত্রার জন্য বিশ্বজুড়ে পরিচিত, স্যার।"
+  },
+  jujutsu_kaisen: {
+    en: "Jujutsu Kaisen combines elite-tier martial arts choreography with a dark, cursed-energy magic system, Boss. Ryomen Sukuna remains one of the most formidable antagonists in anime.",
+    hi: "जुजुत्सु कैसेन बेहतरीन मार्शल आर्ट और एक डार्क श्रापित-ऊर्जा जादू प्रणाली का संयोजन है, श्रीमान।",
+    bn: "জুজুৎসু কাইসেন চমৎকার মার্শাল আর্ট এবং অভিশপ্ত-শক্তির জাদুকরী সিস্টেমের এক অসাধারণ সংমিশ্রণ, স্যার।"
+  },
+  one_piece: {
+    en: "One Piece is a monumental epic about Monkey D. Luffy's quest to become the Pirate King. Its world-building is widely considered unmatched in fiction, Boss.",
+    hi: "वन पीस मंकी डी. लफी की समुद्री डाकू राजा बनने की खोज के बारे में एक महाकाव्य है। इसकी विश्व-निर्माण कथा अद्वितीय है, श्रीमान।",
+    bn: "ওয়ান পিস হলো মাঙ্কি ডি. লফির পাইরেট কিং হওয়ার যাত্রার এক মহাকাব্য, স্যার। এর ওয়ার্ল্ড-বিল্ডিং ফিকশনের জগতে অতুলনীয়।"
+  },
+  naruto: {
+    en: "Naruto follows a young ninja seeking recognition and dreams of becoming the Hokage, Boss. It popularized the 'never give up' shonen trope globally.",
+    hi: "नारुतो एक युवा निंजा की कहानी है जो मान्यता और होकागे बनने का सपना देखता है, श्रीमान।",
+    bn: "নারুটো এমন এক তরুণ নিনজার গল্প যে স্বীকৃতি পেতে চায় এবং হোকাগে হওয়ার স্বপ্ন দেখে, স্যার।"
+  },
+  bleach_anime: {
+    en: "Bleach focuses on Ichigo Kurosaki, a Soul Reaper defending humanity from evil spirits called Hollows. Its Thousand-Year Blood War arc features stunning modern animation, Boss.",
+    hi: "ब्लीच इचिगो कुरोसाकी पर केंद्रित है, जो मानवता को 'होलोज़' नामक बुरी आत्माओं से बचाता है, श्रीमान।",
+    bn: "ব্লিচ ইচিগো কুরোসাকির গল্প, যে একজন সোল রিপার হিসেবে মানবতাকে 'হলোজ' নামক অশুভ আত্মার হাত থেকে রক্ষা করে, স্যার।"
+  },
+  death_note: {
+    en: "Death Note is a psychological thriller revolving around Light Yagami and a notebook that kills anyone whose name is written in it, Boss. A brilliant study in morality.",
+    hi: "डेथ नोट लाइट यागामी और एक ऐसी नोटबुक के इर्द-गिर्द घूमने वाला एक मनोवैज्ञानिक थ्रिलर है जो नाम लिखे जाने पर किसी को भी मार सकती है, श्रीमान।",
+    bn: "ডেথ নোট হলো লাইট ইয়াগামি এবং এমন একটি নোটবুক নিয়ে মনস্তাত্ত্বিক থ্রিলার, যাতে নাম লিখলে যে কেউ মারা যায়, স্যার।"
+  },
+  hunter_x_hunter: {
+    en: "Hunter x Hunter is celebrated for its highly strategic power system called 'Nen' and its complex, morally grey character arcs, Boss.",
+    hi: "हंटर एक्स हंटर को इसकी 'नेन' नामक अत्यधिक रणनीतिक शक्ति प्रणाली और जटिल चरित्र निर्माण के लिए सराहा जाता है, श्रीमान।",
+    bn: "হান্টার এক্স হান্টার এর 'নেন' নামক অত্যন্ত কৌশলগত পাওয়ার সিস্টেম এবং জটিল চরিত্রগুলোর জন্য প্রশংসিত, স্যার।"
+  },
+
+  // ── GAMING & ESPORTS ──
+  minecraft_bedrock: {
+    en: "Minecraft Bedrock Edition offers cross-platform multiplayer support and utilizes the RenderDragon engine for optimized performance across mobile, PC, and consoles, Boss.",
+    hi: "माइनक्राफ्ट बेडरॉक एडिशन क्रॉस-प्लेटफॉर्म मल्टीप्लेयर का समर्थन करता है और मोबाइल, पीसी और कंसोल पर बेहतरीन प्रदर्शन के लिए रेंडरड्रैगन (RenderDragon) इंजन का उपयोग करता है, श्रीमान।",
+    bn: "মাইনক্রাফট বেডরক এডিশন ক্রস-প্ল্যাটফর্ম মাল্টিপ্লেয়ার সাপোর্ট দেয় এবং মোবাইল, পিসি ও কনসোলে ভালো পারফরম্যান্সের জন্য রেন্ডারড্রাগন ইঞ্জিন ব্যবহার করে, স্যার।"
+  },
+  free_fire_max: {
+    en: "Free Fire MAX is an enhanced version of the original game, featuring Ultra HD resolutions, upgraded effects, and smoother animations for premium mobile hardware, Boss.",
+    hi: "फ्री फायर मैक्स मूल गेम का एक उन्नत संस्करण है, जिसमें प्रीमियम मोबाइल हार्डवेयर के लिए अल्ट्रा एचडी रिज़ॉल्यूशन और बेहतर एनिमेशन हैं, श्रीमान।",
+    bn: "ফ্রি ফায়ার ম্যাক্স আসল গেমটির একটি উন্নত সংস্করণ, যা প্রিমিয়াম মোবাইল হার্ডওয়্যারের জন্য আল্ট্রা এইচডি রেজোলিউশন এবং মসৃণ অ্যানিমেশন সরবরাহ করে, স্যার।"
+  },
+  clash_of_clans: {
+    en: "Clash of Clans is a premier mobile strategy game where base layout, clan war coordination, and precise troop deployment dictate success, Boss.",
+    hi: "क्लैश ऑफ क्लैंस एक प्रमुख मोबाइल रणनीति गेम है जहां बेस लेआउट, कबीले युद्ध समन्वय और सटीक सैन्य तैनाती सफलता तय करती है, श्रीमान।",
+    bn: "ক্ল্যাশ অফ ক্ল্যানস একটি শীর্ষস্থানীয় মোবাইল স্ট্র্যাটেজি গেম, যেখানে বেস লেআউট, ক্ল্যান ওয়ার কো-অর্ডিনেশন এবং নিখুঁত সেনা মোতায়েন সাফল্যের চাবিকাঠি, স্যার।"
+  },
+  valorant: {
+    en: "Valorant is a 5v5 tactical hero shooter by Riot Games, Boss. It demands precise gunplay mechanics, agent ability synergy, and sharp economic management.",
+    hi: "वैलोरेंट रायट गेम्स का एक 5v5 टैक्टिकल शूटर है, श्रीमान। इसके लिए सटीक गनप्ले, एजेंट क्षमता समन्वय और आर्थिक प्रबंधन की आवश्यकता होती है।",
+    bn: "ভ্যালোরেন্ট রায়ট গেমসের একটি 5v5 ট্যাকটিক্যাল শ্যুটার গেম, স্যার। এতে নিখুঁত গানপ্লে এবং এজেন্টদের ক্ষমতার দারুণ সমন্বয় প্রয়োজন।"
+  },
+  gta_five: {
+    en: "Grand Theft Auto V remains an industry titan, Boss. Its open-world design, complex physics engine, and massive GTA Online ecosystem set the standard for sandbox games.",
+    hi: "ग्रैंड थेफ्ट ऑटो V (GTA 5) गेमिंग उद्योग का एक टाइटन बना हुआ है, श्रीमान। इसका ओपन-वर्ल्ड डिजाइन सैंडबॉक्स गेम के लिए मानक तय करता है।",
+    bn: "গ্র্যান্ড থেফট অটো ফাইভ (GTA V) এখনও গেমিং দুনিয়ার এক বিশাল নাম, স্যার। এর ওপেন-ওয়ার্ল্ড ডিজাইন স্যান্ডবক্স গেমের মানদণ্ড তৈরি করেছে।"
+  },
+
+  // ── HARDWARE, TECH & TOOLS ──
+  mobile_processors: {
+    en: "Modern 5G mobile processors, like the Snapdragon and MediaTek Dimensity series, use 4-nanometer lithography to deliver flagship-level gaming performance without draining battery capacities, Boss.",
+    hi: "स्नैपड्रैगन और मीडियाटेक डाइमेंसिटी सीरीज जैसे आधुनिक 5G मोबाइल प्रोसेसर बैटरी खत्म किए बिना फ्लैगशिप गेमिंग प्रदर्शन देने के लिए 4-नैनोमीटर लिथोग्राफी का उपयोग करते हैं, श्रीमान।",
+    bn: "স্ন্যাপড্রাগন এবং মিডিয়াটেকের মতো আধুনিক ৫জি মোবাইল প্রসেসরগুলো ব্যাটারি খরচ না করেই ফ্ল্যাগশিপ লেভেলের গেমিং পারফরম্যান্স দিতে ৪-ন্যানোমিটার লিথোগ্রাফি ব্যবহার করে, স্যার।"
+  },
+  canva_design: {
+    en: "Canva has democratized digital art creation, Boss. Its intuitive cloud-based UI, vector manipulation, and AI-assisted generation tools make it a powerhouse for YouTube thumbnails and cinematic visuals.",
+    hi: "कैनवा ने डिजिटल कला निर्माण को आसान बना दिया है, श्रीमान। इसके क्लाउड-आधारित टूल यूट्यूब थंबनेल और विजुअल्स के लिए बेहतरीन हैं।",
+    bn: "ক্যানভা ডিজিটাল আর্ট তৈরিকে অনেক সহজ করে দিয়েছে, স্যার। এর ক্লাউড-ভিত্তিক টুল ইউটিউব থাম্বনেইল এবং সিনেমাটিক ভিজ্যুয়ালের জন্য দুর্দান্ত।"
+  },
+  music_platforms: {
+    en: "Platforms like Amuse and Madverse, alongside RouteNote, offer independent artists seamless digital rights management and direct playlist pitching to Spotify and Apple Music, Boss.",
+    hi: "अम्यूज़ और मैडवर्स जैसे प्लेटफॉर्म स्वतंत्र कलाकारों को सीधे स्पॉटिफाई और ऐप्पल म्यूज़िक पर अपनी प्लेलिस्ट भेजने की सुविधा देते हैं, श्रीमान।",
+    bn: "অ্যামিউজ এবং ম্যাডভার্স-এর মতো প্ল্যাটফর্ম স্বাধীন শিল্পীদের সরাসরি স্পটিফাই এবং অ্যাপল মিউজিকে গান রিলিজ করার সুবিধা দেয়, স্যার।"
+  },
+  ssd_vs_hdd: {
+    en: "Solid State Drives (SSDs) use NAND flash memory, offering data transfer speeds over ten times faster than traditional mechanical Hard Disk Drives (HDDs), Boss.",
+    hi: "सॉलिड स्टेट ड्राइव (SSD) नंद फ्लैश मेमोरी का उपयोग करते हैं, जो पारंपरिक हार्ड डिस्क ड्राइव की तुलना में दस गुना अधिक तेज डेटा ट्रांसफर स्पीड प्रदान करते हैं, श्रीमान।",
+    bn: "সলিড স্টেট ড্রাইভ (SSD) ন্যান্ড ফ্ল্যাশ মেমরি ব্যবহার করে, যা সাধারণ হার্ড ডিস্কের তুলনায় দশ গুণ বেশি দ্রুত ডেটা ট্রান্সফার স্পিড দেয়, স্যার।"
+  },
+
+  // ── CHESS LORE & MASTERS ──
+  bobby_fischer: {
+    en: "Bobby Fischer was a chess prodigy who single-handedly defeated the Soviet chess machine during the Cold War, Boss. His book 'My 60 Memorable Games' is required reading for grandmasters.",
+    hi: "बॉबी फिशर एक शतरंज कौतुक थे जिन्होंने शीत युद्ध के दौरान सोवियत शतरंज मशीन को अकेले ही हरा दिया था, श्रीमान।",
+    bn: "ববি ফিশার একজন দাবা প্রতিভা ছিলেন যিনি শীতল যুদ্ধের সময় সোভিয়েত দাবার আধিপত্যকে একাই পরাজিত করেছিলেন, স্যার।"
+  },
+  vishy_anand: {
+    en: "Viswanathan Anand is India's first Grandmaster and a five-time World Chess Champion, Boss. His lightning-fast calculation speed earned him the nickname 'The Lightning Kid'.",
+    hi: "विश्वनाथन आनंद भारत के पहले ग्रैंडमास्टर और पांच बार के विश्व शतरंज चैंपियन हैं, श्रीमान। उनकी तेज गणना गति के कारण उन्हें 'द लाइटनिंग किड' कहा जाता है।",
+    bn: "বিশ্বনাথন আনন্দ ভারতের প্রথম গ্র্যান্ডমাস্টার এবং পাঁচবারের বিশ্ব দাবা চ্যাম্পিয়ন, স্যার। তাঁর দ্রুত হিসাব করার ক্ষমতার জন্য তাঁকে 'দ্য লাইটনিং কিড' বলা হয়।"
+  },
+  sicilian_defense: {
+    en: "The Sicilian Defense (1. e4 c5) is the most popular and highest-scoring response to White's e4, Boss. It creates asymmetrical, highly tactical, and double-edged positions.",
+    hi: "सिसिलियन डिफेंस (1. e4 c5) सफेद के e4 के लिए सबसे लोकप्रिय और उच्च स्कोरिंग प्रतिक्रिया है, श्रीमान। यह बेहद सामरिक स्थिति पैदा करता है।",
+    bn: "সিসিলিয়ান ডিফেন্স (1. e4 c5) হলো সাদার e4-এর বিপরীতে সবচেয়ে জনপ্রিয় এবং আক্রমণাত্মক চাল, স্যার। এটি অত্যন্ত কৌশলগত অবস্থান তৈরি করে।"
+  },
+
+  // ── SCIENCE, MATH & PHYSICS ──
+  wave_optics: {
+    en: "Wave optics studies phenomena where light behaves as a wave, Boss. Interference, diffraction, and polarization cannot be explained by classical ray optics, requiring Huygens' principle.",
+    hi: "तरंग प्रकाशिकी उन घटनाओं का अध्ययन करती है जहां प्रकाश एक तरंग के रूप में व्यवहार करता है, श्रीमान। जैसे विवर्तन और ध्रुवीकरण।",
+    bn: "ওয়েভ অপটিক্স বা তরঙ্গ আলোকবিজ্ঞান এমন ঘটনাগুলো নিয়ে আলোচনা করে যেখানে আলো তরঙ্গের মতো আচরণ করে, স্যার। যেমন ব্যতিচার ও অপবর্তন।"
+  },
+  calculus_limits: {
+    en: "In calculus, a limit defines the value that a function approaches as the input approaches some value, Boss. It is the fundamental concept that makes derivatives and integrals mathematically rigorous.",
+    hi: "कैलकुलस में, एक सीमा (Limit) वह मान है जो एक फलन प्राप्त करता है जब इनपुट किसी मान के करीब पहुंचता है, श्रीमान।",
+    bn: "ক্যালকুলাসে, লিমিট হলো সেই মান যার দিকে কোনো ফাংশন এগোতে থাকে যখন তার ইনপুট একটি নির্দিষ্ট মানের কাছাকাছি পৌঁছায়, স্যার।"
+  },
+  aerodynamics: {
+    en: "Aerodynamics is the study of how gases interact with moving bodies, Boss. The Iron Man suit heavily utilizes Bernoulli's principle and thrust vectoring to achieve supersonic flight.",
+    hi: "एयरोडायनामिक्स इस बात का अध्ययन है कि गैसें चलती हुई वस्तुओं के साथ कैसे परस्पर क्रिया करती हैं, श्रीमान।",
+    bn: "অ্যারোডাইনামিক্স হলো চলমান বস্তুর সাথে বাতাসের মিথস্ক্রিয়া নিয়ে গবেষণা, স্যার। আয়রন ম্যান স্যুট সুপারসনিক উড়ান অর্জনের জন্য এটি ব্যবহার করে।"
+  },
+  black_hole_event: {
+    en: "The Event Horizon of a black hole is the boundary beyond which nothing can return, Boss. The escape velocity at this point exceeds the speed of light, making it entirely invisible.",
+    hi: "ब्लैक होल का इवेंट होराइजन वह सीमा है जिसके परे कुछ भी वापस नहीं आ सकता, श्रीमान। यहां पलायन वेग प्रकाश की गति से अधिक हो जाता है।",
+    bn: "ব্ল্যাক হোলের ইভেন্ট হরাইজন হলো সেই সীমানা যার ওপার থেকে কিছুই ফিরে আসতে পারে না, স্যার। এই বিন্দুতে এস্কেপ ভেলোসিটি আলোর গতিকে ছাড়িয়ে যায়।"
+  },
+
+  // ── FITNESS & PHYSIOLOGY ──
+  whey_protein: {
+    en: "Whey protein isolate undergoes cross-flow microfiltration to remove lactose and fats, Boss. It provides the fastest absorption rate of all proteins, making it optimal for post-workout recovery.",
+    hi: "व्हे प्रोटीन आइसोलेट लैक्टोज और वसा को हटाने के लिए माइक्रोफिल्ट्रेशन से गुजरता है, श्रीमान। वर्कआउट के बाद रिकवरी के लिए यह सबसे अच्छा है।",
+    bn: "হোয়ে প্রোটিন আইসোলেট ল্যাকটোজ এবং ফ্যাট অপসারণের জন্য মাইক্রোফিল্ট্রেশনের মধ্য দিয়ে যায়, স্যার। ওয়ার্কআউটের পরে পেশী পুনরুদ্ধারের জন্য এটি সেরা।"
+  },
+  creatine: {
+    en: "Creatine monohydrate is the most researched sports supplement in history, Boss. It increases ATP regeneration in muscle cells, directly enhancing explosive power output and high-intensity performance.",
+    hi: "क्रिएटिन मोनोहाइड्रेट इतिहास में सबसे अधिक शोध किया गया स्पोर्ट्स सप्लीमेंट है, श्रीमान। यह मांसपेशियों में विस्फोटक शक्ति और ऊर्जा बढ़ाता है।",
+    bn: "ক্রিয়েটিন মনোহাইড্রেট ইতিহাসের সবচেয়ে বেশি পরীক্ষিত স্পোর্টস সাপ্লিমেন্ট, স্যার। এটি পেশীতে শক্তি উৎপাদন বাড়ায় এবং পারফরম্যান্স উন্নত করে।"
+  },
+  muscle_mind_connection: {
+    en: "The mind-muscle connection requires conscious, deliberate contraction of the target muscle during a lift, Boss. Research shows it significantly increases hypertrophy compared to simply moving the weight.",
+    hi: "माइंड-मसल कनेक्शन के लिए वजन उठाते समय लक्षित मांसपेशी पर सचेत ध्यान केंद्रित करने की आवश्यकता होती है, श्रीमान। यह मांसपेशियों के विकास को बढ़ाता है।",
+    bn: "মাইন্ড-মাসল কানেকশনের জন্য ওজন তোলার সময় টার্গেট পেশীর ওপর সচেতনভাবে ফোকাস করতে হয়, স্যার। এটি পেশীর বৃদ্ধি উল্লেখযোগ্যভাবে ত্বরান্বিত করে।"
+  },
+  bulking_cutting: {
+    en: "Bulking requires a caloric surplus and heavy progressive overload to build mass, Boss. Cutting requires a caloric deficit while maintaining protein intake to shed fat while preserving that built muscle.",
+    hi: "बल्किंग (वजन बढ़ाने) के लिए कैलोरी सरप्लस की आवश्यकता होती है, और कटिंग (वसा कम करने) के लिए कैलोरी की कमी की आवश्यकता होती है, श्रीमान।",
+    bn: "বাল্কিং-এর জন্য বেশি ক্যালোরি খেয়ে পেশী বড় করতে হয়, এবং কাটিং-এর জন্য প্রোটিন ঠিক রেখে ক্যালোরি কমিয়ে চর্বি ঝরাতে হয়, স্যার।"
+  },
+
+  // ── GEOGRAPHY & HISTORY ──
+  mount_fuji: {
+    en: "Mount Fuji is an active stratovolcano and Japan's highest peak at 3,776 meters, Boss. It is considered a sacred site and is deeply woven into Japanese art and anime culture.",
+    hi: "माउंट फ़ूजी एक सक्रिय स्ट्रैटोवोलकैनो है और 3,776 मीटर पर जापान की सबसे ऊंची चोटी है, श्रीमान। इसे एक पवित्र स्थल माना जाता है।",
+    bn: "মাউন্ট ফুজি একটি সক্রিয় স্ট্র্যাটোভোলক্যানো এবং ৩,৭৭৬ মিটার উচ্চতায় জাপানের সর্বোচ্চ পর্বতশৃঙ্গ, স্যার। এটি একটি পবিত্র স্থান হিসেবে বিবেচিত।"
+  },
+  mariana_trench: {
+    en: "The Mariana Trench is the deepest oceanic trench on Earth, plunging nearly 11,000 meters at the Challenger Deep, Boss. The pressure there is over 1,000 times the standard atmospheric pressure at sea level.",
+    hi: "मारियाना ट्रेंच पृथ्वी पर सबसे गहरी महासागरीय खाई है, जो 11,000 मीटर से अधिक गहरी है, श्रीमान। यहाँ दबाव समुद्र तल से 1,000 गुना अधिक है।",
+    bn: "মারিয়ানা ট্রেঞ্চ পৃথিবীর গভীরতম সামুদ্রিক পরিখা, যা প্রায় ১১,০০০ মিটার গভীর, স্যার। সেখানকার চাপ সমুদ্রপৃষ্ঠের চাপের চেয়ে ১,০০০ গুণেরও বেশি।"
+  },
+  inca_empire: {
+    en: "The Inca Empire was the largest empire in pre-Columbian America, Boss. Known for Machu Picchu and monumental stone architecture built entirely without mortar or the wheel.",
+    hi: "इंका साम्राज्य पूर्व-कोलंबियन अमेरिका का सबसे बड़ा साम्राज्य था, श्रीमान। यह माचू पिचू और अपनी अद्भुत पत्थर की वास्तुकला के लिए जाना जाता है।",
+    bn: "ইনকা সাম্রাজ্য প্রাক-কলম্বিয়ান আমেরিকার বৃহত্তম সাম্রাজ্য ছিল, স্যার। এটি মাচু পিচু এবং চাকা বা সিমেন্ট ছাড়াই তৈরি অসাধারণ পাথরের স্থাপত্যের জন্য বিখ্যাত।"
+  },
+
+  // ── EVERYDAY & MISC ──
+  coffee_brewing: {
+    en: "The optimal temperature for brewing coffee is between 90°C and 96°C, Boss. Boiling water extracts bitter compounds, while cooler water results in sour, under-extracted coffee.",
+    hi: "कॉफी बनाने के लिए इष्टतम तापमान 90°C और 96°C के बीच होता है, श्रीमान। उबलता पानी कॉफी को कड़वा बना देता है।",
+    bn: "কফি বানানোর সঠিক তাপমাত্রা হলো 90°C থেকে 96°C এর মধ্যে, স্যার। ফুটন্ত জল কফিকে তেতো করে দেয়।"
+  },
+  maillard_reaction: {
+    en: "The Maillard reaction is a chemical reaction between amino acids and reducing sugars that gives browned food its distinctive flavor, Boss. It is the secret behind perfectly seared steaks and toasted bread.",
+    hi: "मेलार्ड (Maillard) प्रतिक्रिया अमीनो एसिड और शर्करा के बीच एक रासायनिक प्रतिक्रिया है जो भूरे रंग के भोजन को उसका विशिष्ट स्वाद देती है, श्रीमान।",
+    bn: "মেইলার্ড রিঅ্যাকশন হলো অ্যামিনো অ্যাসিড এবং শর্করার মধ্যে একটি রাসায়নিক বিক্রিয়া যা পোড়া খাবারকে তার স্বাদ দেয়, স্যার। এটি গ্রিল করা মাংসের স্বাদের রহস্য।"
+  },
+  electrolytes: {
+    en: "Electrolytes are essential minerals—like sodium, potassium, and magnesium—that carry an electric charge, Boss. They are critical for muscle contractions, hydration, and nervous system function, especially after heavy gym sessions.",
+    hi: "इलेक्ट्रोलाइट्स आवश्यक खनिज हैं - जैसे सोडियम और पोटेशियम - जो मांसपेशियों के संकुचन और जलयोजन के लिए महत्वपूर्ण हैं, श्रीमान।",
+    bn: "ইলেক্ট্রোলাইট হলো সোডিয়াম, পটাসিয়ামের মতো খনিজ উপাদান যা পেশী সংকোচন এবং শরীর হাইড্রেটেড রাখার জন্য অত্যন্ত গুরুত্বপূর্ণ, স্যার।"
+  },
+  vitamin_c: {
+    en: "Vitamin C is a powerful antioxidant essential for collagen synthesis, immune function, and iron absorption, Boss. Unlike most animals, humans cannot synthesize it internally and must acquire it through diet.",
+    hi: "विटामिन सी एक शक्तिशाली एंटीऑक्सीडेंट है जो प्रतिरक्षा कार्य और लोहे के अवशोषण के लिए आवश्यक है, श्रीमान।",
+    bn: "ভিটামিন সি একটি শক্তিশালী অ্যান্টিঅক্সিডেন্ট যা শরীরের রোগ প্রতিরোধ ক্ষমতা বাড়াতে এবং আয়রন শোষণের জন্য প্রয়োজনীয়, স্যার।"
+  },
+
+  // ── BOOKS & PHILOSOPHY ──
+  atomic_habits: {
+    en: "James Clear's 'Atomic Habits' emphasizes that getting 1% better every day leads to massive compounding results over time, Boss. Systems matter more than goals.",
+    hi: "जेम्स क्लियर की 'एटॉमिक हैबिट्स' इस बात पर जोर देती है कि हर दिन 1% बेहतर होने से समय के साथ बड़े परिणाम मिलते हैं, श्रीमान।",
+    bn: "জেমস ক্লিয়ারের 'অ্যাটমিক হ্যাবিটস' বইটিতে বলা হয়েছে যে প্রতিদিন ১% ভালো করলে তা একসময় বিশাল ফলাফল নিয়ে আসে, স্যার।"
+  },
+  stoic_meditations: {
+    en: "Marcus Aurelius' 'Meditations' is a cornerstone of Stoic philosophy, Boss. It teaches resilience, emotional control, and focusing solely on what is within our power.",
+    hi: "मार्कस ऑरेलियस का 'मेडिटेशन्स' स्टोइक दर्शन की आधारशिला है, श्रीमान। यह भावनात्मक नियंत्रण और अपने नियंत्रण में रहने वाली चीजों पर ध्यान केंद्रित करना सिखाता है।",
+    bn: "মার্কাস অরেলিয়াসের 'মেডিটেশনস' স্টোইক দর্শনের একটি মূল ভিত্তি, স্যার। এটি আবেগ নিয়ন্ত্রণ করা এবং কেবল নিজের ক্ষমতার মধ্যে থাকা বিষয়গুলিতে ফোকাস করা শেখায়।"
+  }
 
   
   default: {
@@ -5328,6 +5768,42 @@ async function getLocalResponse(query){
   if(/how are you|how do you|कैसे हो|कैसे हैं|আপনি কেমন|তুমি কেমন/i.test(q)) return KB.how_are_you[L];
   if(/what.*(time|समय|সময়)|time is it|টাইম|সময় কত/i.test(q)) return (typeof KB.time[L]==='function')?KB.time[L]():KB.time['en']();
   if(/what.*(date|day|তারিখ|দিন|तारीख|दिन)|today|আজকে/i.test(q)) return (typeof KB.date[L]==='function')?KB.date[L]():KB.date['en']();
+    // ── ADVANCED AI & DEVELOPMENT ──
+  if(/perplexity|ai\s*search/i.test(q)) return KB.perplexity_ai[L];
+  if(/chatbot|build\s*ai|node\s*ai/i.test(q)) return KB.chatbot_dev[L];
+  if(/fine\s*tune|lora|qlora/i.test(q)) return KB.llm_finetuning[L];
+
+  // ── CHESS STRATEGY & MASTERY ──
+  if(/hikaru|nakamura|blitz\s*chess/i.test(q)) return KB.hikaru_nakamura[L];
+  if(/grind|positional\s*advantage/i.test(q)) return KB.grind_grandmaster[L];
+  if(/fide|kolkata\s*chess/i.test(q)) return KB.fide_kolkata[L];
+
+  // ── CORE GAMING & CONTENT CREATION ──
+  if(/axiom|replay\s*mod|4k\s*loop/i.test(q)) return KB.minecraft_mods[L];
+  if(/proximity|voice\s*chat/i.test(q)) return KB.proximity_chat[L];
+  if(/indus|battle\s*royale/i.test(q)) return KB.indus_battle_royale[L];
+  if(/youtube\s*growth|hacker\s*gaming/i.test(q)) return KB.youtube_growth[L];
+
+  // ── PREMIUM ANIME & SERIES ──
+  if(/witch\s*hat|atelier/i.test(q)) return KB.witch_hat[L];
+  if(/classroom\s*of\s*the\s*elite|ayanokoji/i.test(q)) return KB.classroom_elite[L];
+  if(/fragrant\s*flower|waguri/i.test(q)) return KB.fragrant_flower[L];
+
+  // ── FITNESS & BODYBUILDING PHYSIOLOGY ──
+  if(/mahakal\s*gym|heavy\s*lifting/i.test(q)) return KB.mahakal_gym[L];
+  if(/hypertrophy|macronutrient/i.test(q)) return KB.hypertrophy_nutrition[L];
+
+  // ── LITERATURE & STRATEGIC THINKING ──
+  if(/psychology\s*of\s*money|morgan\s*housel/i.test(q)) return KB.psychology_money[L];
+  if(/48\s*laws|power\s*dynamics/i.test(q)) return KB.laws_of_power[L];
+
+  // ── ADVANCED MATHEMATICS & APPLIED PHYSICS ──
+  if(/classical\s*mechanics/i.test(q)) return KB.classical_mechanics[L];
+  if(/analytical\s*geometry|geometry\s*theorem/i.test(q)) return KB.geometry_theorems[L];
+
+  // ── HARDWARE ARCHITECTURE & SOFTWARE ──
+  if(/processor\s*architecture|lithography/i.test(q)) return KB.processor_architecture[L];
+  if(/routenote|amuse|music\s*distribution/i.test(q)) return KB.music_distribution[L];
   if(/who are you|what.*your name|তুমি কে|তোমার নাম|तुम कौन|आपका नाम|আপনি কে|আপনার নাম/i.test(q)) return KB.name[L];
   if(/weather|मौसम|আবহাওয়া|temperature|तापमान|তাপমাত্রা/i.test(q)) return KB.weather[L];
   if(/joke|funny|হাসি|मजाक|জোকস|চুটকিলা/i.test(q)) return rand(KB.joke[L]);
@@ -5596,6 +6072,33 @@ if(/four.*force|fundamental.*force|নিউক্লিয়.*বল|मूल
   if(/\btabla\b|zakir.?hussain|তবলা|तबला/i.test(q)) return KB.tabla[L];
   if(/\bsitar\b|ravi.?shankar|সেতার|सितार/i.test(q)) return KB.sitar[L];
   if(/bansuri|bamboo.*flute|hariprasad|বাঁশরি|बांसुरी/i.test(q)) return KB.flute_music[L];
+  // Paste these matching rules inside your async function getLocalResponse(query) { ... }
+
+if (/solo\s*leveling|shadow\s*monarch/i.test(q)) return KB.solo_leveling[L];
+if (/kaiju\s*no\s*8|kafka\s*hibino/i.test(q)) return KB.kaiju_no8[L];
+if (/anime\s*dub|hindi\s*dub|crunchyroll/i.test(q)) return KB.anime_dub[L];
+
+if (/chess\s*strategy|grandmaster|positional\s*advantage/i.test(q)) return KB.chess_strategy[L];
+if (/magnus|carlsen/i.test(q)) return KB.magnus_carlsen[L];
+if (/mikhail\s*tal|magician\s*from\s*riga/i.test(q)) return KB.mikhail_tal[L];
+
+if (/transformer\s*architecture|self\s*attention/i.test(q)) return KB.transformer_arch[L];
+if (/train.*model|model\s*training|loss\s*function/i.test(q)) return KB.model_training[L];
+if (/mmlu\s*benchmark|mmlu/i.test(q)) return KB.mmlu_benchmark[L];
+
+if (/ronnie\s*coleman|light\s*weight\s*baby/i.test(q)) return KB.ronnie_coleman[L];
+if (/ramon\s*dino|classic\s*physique/i.test(q)) return KB.ramon_dino[L];
+if (/hiit|high\s*intensity\s*interval/i.test(q)) return KB.hiit_training[L];
+if (/kettlebell/i.test(q)) return KB.kettlebell[L];
+
+if (/wave\s*mechanics|schrodinger/i.test(q)) return KB.wave_mechanics[L];
+if (/simple\s*harmonic|harmonic\s*motion|shm/i.test(q)) return KB.harmonic_motion[L];
+if (/circle\s*equation|equation\s*of\s*circle/i.test(q)) return KB.circle_equations[L];
+if (/probability\s*theory|uncertainty\s*math/i.test(q)) return KB.probability_theory[L];
+
+if (/west\s*bengal/i.test(q)) return KB.west_bengal[L];
+if (/kolkata\s*heritage|cultural\s*capital/i.test(q)) return KB.kolkata_heritage[L];
+if (/satyajit\s*ray|apu\s*trilogy/i.test(q)) return KB.satyajit_ray[L];
   if(/bollywood|hindi.*film|shah.?rukh|amitabh|বলিউড|बॉलीवुड/i.test(q)) return KB.bollywood[L];
   if(/tollywood|bengali.*film|telugu.*film|টলিউড|टॉलीवुड/i.test(q)) return KB.tollywood[L];
   if(/\bagi\b|artificial general|জেনারেল ইন্টেলিজেন্স|सामान्य.*बुद्धि/i.test(q)) return KB.artificial_general_intelligence[L];
@@ -6217,6 +6720,62 @@ if(/penicillin.*discovery|fleming.*mould.*bacteria|200.*million.*lives.*antibiot
 if(/x.*ray.*discovery|rontgen|wife.*hand.*bone.*image/i.test(q)) return KB.x_ray_discovery[L];
 if(/telephone.*invention|alexander.*graham.*bell|mr.*watson.*come.*here/i.test(q)) return KB.telephone_invention[L];
 if(/electricity.*history|edison.*power.*station|tesla.*westinghouse.*ac/i.test(q)) return KB.electricity_history[L];
+  // ── ANIME & MANGA ──
+  if(/attack\s*on\s*titan|eren\s*yeager|paradis/i.test(q)) return KB.attack_on_titan[L];
+  if(/rent\s*a\s*girlfriend|kazuya|chizuru/i.test(q)) return KB.rent_a_girlfriend[L];
+  if(/demon\s*slayer|tanjiro|ufotable/i.test(q)) return KB.demon_slayer[L];
+  if(/jujutsu|kaisen|sukuna|gojo/i.test(q)) return KB.jujutsu_kaisen[L];
+  if(/one\s*piece|luffy|pirate\s*king/i.test(q)) return KB.one_piece[L];
+  if(/naruto|hokage|shinobi/i.test(q)) return KB.naruto[L];
+  if(/bleach.*anime|ichigo|soul\s*reaper/i.test(q)) return KB.bleach_anime[L];
+  if(/death\s*note|light\s*yagami|shinigami/i.test(q)) return KB.death_note[L];
+  if(/hunter\s*x\s*hunter|gon\s*freecss|nen\s*power/i.test(q)) return KB.hunter_x_hunter[L];
+
+  // ── GAMING & ESPORTS ──
+  if(/minecraft\s*bedrock|renderdragon/i.test(q)) return KB.minecraft_bedrock[L];
+  if(/free\s*fire\s*max|ultra\s*hd\s*game/i.test(q)) return KB.free_fire_max[L];
+  if(/clash\s*of\s*clans|coc\s*base/i.test(q)) return KB.clash_of_clans[L];
+  if(/valorant|riot\s*games|tactical\s*shooter/i.test(q)) return KB.valorant[L];
+  if(/gta\s*five|grand\s*theft\s*auto/i.test(q)) return KB.gta_five[L];
+
+  // ── HARDWARE, TECH & TOOLS ──
+  if(/mobile\s*processor|snapdragon|mediatek|dimensity/i.test(q)) return KB.mobile_processors[L];
+  if(/canva\s*design|digital\s*art.*canva|thumbnail.*maker/i.test(q)) return KB.canva_design[L];
+  if(/amuse\s*music|madverse|spotify\s*pitching/i.test(q)) return KB.music_platforms[L];
+  if(/ssd\s*vs\s*hdd|solid\s*state\s*drive/i.test(q)) return KB.ssd_vs_hdd[L];
+
+  // ── CHESS LORE & MASTERS ──
+  if(/bobby\s*fischer|60\s*memorable\s*games/i.test(q)) return KB.bobby_fischer[L];
+  if(/vishy\s*anand|viswanathan\s*anand|lightning\s*kid/i.test(q)) return KB.vishy_anand[L];
+  if(/sicilian\s*defense|chess\s*opening.*e4/i.test(q)) return KB.sicilian_defense[L];
+
+  // ── SCIENCE, MATH & PHYSICS ──
+  if(/wave\s*optics|diffraction|huygens/i.test(q)) return KB.wave_optics[L];
+  if(/calculus\s*limit|math\s*limits/i.test(q)) return KB.calculus_limits[L];
+  if(/aerodynamics|bernoulli|thrust\s*vectoring/i.test(q)) return KB.aerodynamics[L];
+  if(/black\s*hole.*event\s*horizon|escape\s*velocity/i.test(q)) return KB.black_hole_event[L];
+
+  // ── FITNESS & PHYSIOLOGY ──
+  if(/whey\s*protein|isolate|post\s*workout\s*recovery/i.test(q)) return KB.whey_protein[L];
+  if(/creatine\s*monohydrate|atp\s*regeneration/i.test(q)) return KB.creatine[L];
+  if(/mind\s*muscle\s*connection|muscle\s*contraction/i.test(q)) return KB.muscle_mind_connection[L];
+  if(/bulking|cutting\s*diet|caloric\s*surplus/i.test(q)) return KB.bulking_cutting[L];
+
+  // ── GEOGRAPHY & HISTORY ──
+  if(/mount\s*fuji|japan.*highest.*peak/i.test(q)) return KB.mount_fuji[L];
+  if(/mariana\s*trench|challenger\s*deep/i.test(q)) return KB.mariana_trench[L];
+  if(/inca\s*empire|machu\s*picchu/i.test(q)) return KB.inca_empire[L];
+
+  // ── EVERYDAY & MISC ──
+  if(/coffee\s*brewing|brew\s*coffee|boiling\s*water.*coffee/i.test(q)) return KB.coffee_brewing[L];
+  if(/maillard\s*reaction|seared\s*steak/i.test(q)) return KB.maillard_reaction[L];
+  if(/electrolytes|sodium.*potassium.*magnesium/i.test(q)) return KB.electrolytes[L];
+  if(/vitamin\s*c|collagen\s*synthesis/i.test(q)) return KB.vitamin_c[L];
+
+  // ── BOOKS & PHILOSOPHY ──
+  if(/atomic\s*habits|james\s*clear|1%\s*better/i.test(q)) return KB.atomic_habits[L];
+  if(/stoic.*meditations|marcus\s*aurelius/i.test(q)) return KB.stoic_meditations[L];
+
 
   // ── MATH ──
   const mathResult = tryMath(q);
