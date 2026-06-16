@@ -8274,15 +8274,12 @@ function getBestVoice(lang){
 ════════════════════════════════════════════ */
 function speakText(text, onDoneCallback){
   if(!synthSupported) { if(onDoneCallback) onDoneCallback(); return; }
-  if(speechLock){ if(onDoneCallback) onDoneCallback(); return; } // FIX #3
+  if(speechLock){ if(onDoneCallback) onDoneCallback(); return; }
 
   const clean=text.replace(/[📡📱📂🔊⬤🎤⬡☁ℹ▶⬆⬇✕*_#`]/g,'').replace(/\s+/g,' ').trim();
   if(!clean){ if(onDoneCallback) onDoneCallback(); return; }
 
   speechLock=true;
-  // Cancel any existing speech first
-  if(synth.speaking || synth.pending) synth.cancel();
-
   const doSpeak=function(){
     currentUtter=new SpeechSynthesisUtterance(clean);
     const langCodes={en:'en-IN',hi:'hi-IN',bn:'bn-BD'};
@@ -8298,34 +8295,38 @@ function speakText(text, onDoneCallback){
       setVoiceStatus('speaking');
     };
 
-    function onDone(){
-      // FIX #3 — always release lock, even on error
-      speechLock=false;
+    currentUtter.onend=function(){
       isSpeaking=false;
-      currentUtter=null;
+      speechLock=false;
       const area=document.getElementById('responseArea');
       if(area) area.className='response-area';
       setVoiceStatus('idle');
       if(onDoneCallback) onDoneCallback();
-      // Resume auto-listen if active
       if(autoListen&&voiceSupported&&!isListening) setTimeout(startListening,500);
-    }
-
-    currentUtter.onend=onDone;
-    currentUtter.onerror=function(e){
-      // FIX #2/#3 — 'interrupted' is self-caused cancel, not a real error
-      if(e.error!=='interrupted') console.warn('Speech error:',e.error);
-      onDone();
     };
+
+    currentUtter.onerror=function(e){
+      if(e.error!=='interrupted') console.warn('Speech error:',e.error);
+      isSpeaking=false;
+      speechLock=false;
+      const area=document.getElementById('responseArea');
+      if(area) area.className='response-area';
+      setVoiceStatus('idle');
+      if(onDoneCallback) onDoneCallback();
+    };
+
     synth.speak(currentUtter);
   };
 
-  // FIX #3 — give browser event loop one tick after cancel before new utterance
-  setTimeout(doSpeak, 80);
+  if(synth.speaking || synth.pending){
+    synth.cancel();
+    setTimeout(doSpeak, 150);
+  } else {
+    doSpeak();
+  }
 }
 
 function typeAndSpeak(text){ typeResponse(text); speakText(text); }
-
 /* ════════════════════════════════════════════
    SPEECH RECOGNITION
    FIX — guard re-entry, no-speech is silent
