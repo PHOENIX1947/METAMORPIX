@@ -5804,7 +5804,476 @@ transistor_scaling: {
   hi: "ट्रांजिस्टर सभी आधुनिक इलेक्ट्रॉनिक्स के मूलभूत निर्माण खंड हैं, श्रीमान। 1971 में Intel के 4004 प्रोसेसर में 2,300 ट्रांजिस्टर थे। Apple के M4 चिप में 3nm प्रक्रिया नोड पर 28 अरब ट्रांजिस्टर हैं।",
   bn: "ট্রানজিস্টর সমস্ত আধুনিক ইলেকট্রনিক্সের মৌলিক নির্মাণ খণ্ড, স্যার। ১৯৭১ সালে Intel-এর 4004 প্রসেসরে ২,৩০০ ট্রানজিস্টর ছিল। Apple-এর M4 চিপে 3nm প্রক্রিয়া নোডে ২৮ বিলিয়ন ট্রানজিস্টর রয়েছে।"
 },
-  
+  // ══════════════════════════════════════
+// BATCH 8 — 200 TOPICS
+// AI AGENTS | QUANTUM | STRATEGY
+// PERFORMANCE SCIENCE | GRAPHICS
+// ══════════════════════════════════════
+
+// ════════════════════════════════════
+// CATEGORY A: AUTONOMOUS AI & AGENTIC
+// ════════════════════════════════════
+
+ai_agents: {
+  en: "AI Agents are autonomous systems that perceive their environment, plan multi-step strategies, and execute tasks independently without requiring human instruction for each step, Boss. Unlike chatbots that simply respond, agents use tools like web search, code execution, file management, and API calls to complete complex goals. AutoGPT, LangChain agents, and Claude's computer use represent the frontier of agentic AI.",
+  hi: "AI एजेंट स्वायत्त प्रणालियां हैं जो अपने वातावरण को समझती हैं, बहु-चरण रणनीतियों की योजना बनाती हैं और मानव निर्देश के बिना स्वतंत्र रूप से कार्य निष्पादित करती हैं, श्रीमान। AutoGPT, LangChain एजेंट और Claude का कंप्यूटर उपयोग एजेंटिक AI की सीमा का प्रतिनिधित्व करते हैं।",
+  bn: "AI এজেন্ট হলো স্বায়ত্তশাসিত সিস্টেম যা তাদের পরিবেশ অনুধাবন করে, বহু-পদক্ষেপ কৌশল পরিকল্পনা করে এবং প্রতিটি পদক্ষেপে মানব নির্দেশ ছাড়াই স্বাধীনভাবে কাজ সম্পন্ন করে, স্যার। AutoGPT, LangChain এজেন্ট এবং Claude-এর কম্পিউটার ব্যবহার এজেন্টিক AI-এর অগ্রভাগ।"
+},
+
+agentic_workflow: {
+  en: "Agentic workflows break complex tasks into sequential steps where an AI plans, executes, observes results, and adjusts its approach in a continuous loop, Boss. The ReAct framework — Reasoning plus Acting — combines chain-of-thought reasoning with tool use. Agents can spawn sub-agents to handle parallel tasks. Human-in-the-loop checkpoints allow oversight at critical decision points.",
+  hi: "एजेंटिक वर्कफ्लो जटिल कार्यों को क्रमिक चरणों में तोड़ते हैं जहां AI एक निरंतर लूप में योजना बनाता है, निष्पादित करता है, परिणाम देखता है और अपना दृष्टिकोण समायोजित करता है, श्रीमान। ReAct फ्रेमवर्क तर्क और टूल उपयोग को जोड़ता है।",
+  bn: "এজেন্টিক ওয়ার্কফ্লো জটিল কাজগুলিকে ক্রমিক পদক্ষেপে ভাঙে যেখানে AI একটি ক্রমাগত লুপে পরিকল্পনা করে, কার্যকর করে, ফলাফল পর্যবেক্ষণ করে এবং পদ্ধতি সামঞ্জস্য করে, স্যার। ReAct ফ্রেমওয়ার্ক যুক্তি ও সরঞ্জাম ব্যবহার একত্রিত করে।"
+},
+
+tool_use_ai: {
+  en: "Tool use allows AI models to interact with external systems beyond their training data, Boss. Tools include web search for real-time information, code interpreters that write and execute Python, file readers, API callers, and browser controllers. Anthropic's Claude, OpenAI's GPT-4, and Google Gemini all support function calling — a mechanism where the model outputs structured JSON to invoke external tools.",
+  hi: "टूल उपयोग AI मॉडल को उनके प्रशिक्षण डेटा से परे बाहरी सिस्टम के साथ इंटरैक्ट करने की अनुमति देता है, श्रीमान। टूल में वेब सर्च, कोड इंटरप्रेटर, फ़ाइल रीडर, API कॉलर और ब्राउज़र कंट्रोलर शामिल हैं।",
+  bn: "সরঞ্জাম ব্যবহার AI মডেলকে তাদের প্রশিক্ষণ ডেটার বাইরে বাহ্যিক সিস্টেমের সাথে ইন্টারঅ্যাক্ট করতে দেয়, স্যার। সরঞ্জামে ওয়েব সার্চ, কোড ইন্টারপ্রেটার, ফাইল রিডার, API কলার এবং ব্রাউজার কন্ট্রোলার অন্তর্ভুক্ত।"
+},
+
+vector_database: {
+  en: "Vector databases store data as high-dimensional numerical embeddings rather than traditional rows and columns, Boss. When an AI encodes text into a vector — a list of thousands of numbers representing semantic meaning — similar concepts land near each other in vector space. This enables lightning-fast semantic search. Pinecone, Weaviate, Chroma, and Qdrant are leading vector databases powering modern AI memory systems.",
+  hi: "वेक्टर डेटाबेस डेटा को पारंपरिक पंक्तियों और स्तंभों के बजाय उच्च-आयामी संख्यात्मक एम्बेडिंग के रूप में संग्रहीत करते हैं, श्रीमान। Pinecone, Weaviate, Chroma और Qdrant प्रमुख वेक्टर डेटाबेस हैं।",
+  bn: "ভেক্টর ডেটাবেস ঐতিহ্যবাহী সারি ও কলামের পরিবর্তে উচ্চ-মাত্রিক সংখ্যাসূচক এম্বেডিং হিসেবে ডেটা সংরক্ষণ করে, স্যার। Pinecone, Weaviate, Chroma এবং Qdrant আধুনিক AI মেমোরি সিস্টেম চালানো শীর্ষ ভেক্টর ডেটাবেস।"
+},
+
+rag_system: {
+  en: "Retrieval-Augmented Generation — RAG — is an architecture that gives AI models access to external knowledge bases without retraining, Boss. When a query arrives, the system retrieves the most semantically similar documents from a vector database and feeds them as context into the language model alongside the question. This overcomes the knowledge cutoff problem and allows AI to answer questions about private documents.",
+  hi: "रिट्रीवल-ऑगमेंटेड जेनरेशन — RAG — एक आर्किटेक्चर है जो AI मॉडल को पुनः प्रशिक्षण के बिना बाहरी ज्ञान आधारों तक पहुंच देता है, श्रीमान। यह ज्ञान कट-ऑफ समस्या को दूर करता है और AI को निजी दस्तावेजों के बारे में प्रश्नों का उत्तर देने की अनुमति देता है।",
+  bn: "রিট্রিভাল-অগমেন্টেড জেনারেশন — RAG — একটি আর্কিটেকচার যা AI মডেলকে পুনরায় প্রশিক্ষণ ছাড়াই বাহ্যিক জ্ঞানভান্ডারে অ্যাক্সেস দেয়, স্যার। এটি জ্ঞান কাটঅফ সমস্যা কাটিয়ে ওঠে এবং AI কে ব্যক্তিগত নথি সম্পর্কে প্রশ্নের উত্তর দিতে দেয়।"
+},
+
+embeddings: {
+  en: "Embeddings are numerical representations of text, images, or audio as dense vectors in high-dimensional space, Boss. OpenAI's text-embedding-3-large produces 3072-dimensional vectors. Semantically similar inputs produce vectors that are mathematically close — measured by cosine similarity. Embeddings power recommendation systems, semantic search, anomaly detection, and are the foundation of modern AI memory.",
+  hi: "एम्बेडिंग उच्च-आयामी स्थान में घने वेक्टर के रूप में टेक्स्ट, चित्र या ऑडियो के संख्यात्मक प्रतिनिधित्व हैं, श्रीमान। अर्थपूर्ण रूप से समान इनपुट गणितीय रूप से करीबी वेक्टर बनाते हैं — कोसाइन समानता द्वारा मापा जाता है।",
+  bn: "এম্বেডিং হলো উচ্চ-মাত্রিক স্থানে ঘন ভেক্টর হিসেবে টেক্সট, চিত্র বা অডিওর সংখ্যাসূচক প্রতিনিধিত্ব, স্যার। অর্থগতভাবে অনুরূপ ইনপুট গণিতগতভাবে কাছের ভেক্টর তৈরি করে — কোসাইন সিমিলারিটি দ্বারা পরিমাপ করা।"
+},
+
+multimodal_ai: {
+  en: "Multimodal AI systems process and generate across multiple data types simultaneously — text, images, audio, video, and code, Boss. GPT-4 Vision can analyse medical scans. Gemini Ultra processes entire textbooks as images. Claude 3 interprets complex charts and diagrams. Meta's Llama can process images and text together. The next frontier is real-time video understanding where AI watches and responds to live video streams.",
+  hi: "मल्टीमोडल AI सिस्टम एक साथ कई डेटा प्रकारों में प्रसंस्करण और उत्पन्न करते हैं — टेक्स्ट, चित्र, ऑडियो, वीडियो और कोड, श्रीमान। GPT-4 Vision चिकित्सा स्कैन का विश्लेषण कर सकता है। Claude 3 जटिल चार्ट की व्याख्या करता है।",
+  bn: "মাল্টিমোডাল AI সিস্টেম একসাথে একাধিক ডেটা ধরনে প্রক্রিয়াকরণ ও উৎপন্ন করে — টেক্সট, চিত্র, অডিও, ভিডিও এবং কোড, স্যার। GPT-4 Vision চিকিৎসা স্ক্যান বিশ্লেষণ করতে পারে। Claude 3 জটিল চার্ট ব্যাখ্যা করে।"
+},
+
+chain_of_thought: {
+  en: "Chain-of-thought prompting allows AI models to solve complex problems by reasoning step-by-step rather than jumping to an answer, Boss. Simply adding the phrase think step by step dramatically improves performance on mathematics, logic, and coding tasks. Tree-of-thought extends this by exploring multiple reasoning paths simultaneously. OpenAI's o1 and o3 models use extended chain-of-thought internally before responding.",
+  hi: "चेन-ऑफ-थॉट प्रॉम्प्टिंग AI मॉडल को सीधे उत्तर पर कूदने के बजाय चरण-दर-चरण तर्क करके जटिल समस्याओं को हल करने की अनुमति देती है, श्रीमान। OpenAI के o1 और o3 मॉडल प्रतिक्रिया देने से पहले आंतरिक रूप से विस्तारित चेन-ऑफ-थॉट का उपयोग करते हैं।",
+  bn: "চেইন-অফ-থট প্রম্পটিং AI মডেলকে সরাসরি উত্তরে লাফ না দিয়ে ধাপে ধাপে যুক্তি দিয়ে জটিল সমস্যা সমাধান করতে দেয়, স্যার। OpenAI-এর o1 ও o3 মডেল সাড়া দেওয়ার আগে অভ্যন্তরীণভাবে বর্ধিত চেইন-অফ-থট ব্যবহার করে।"
+},
+
+memory_systems_ai: {
+  en: "AI memory systems address the fundamental challenge that language models forget everything between sessions, Boss. Short-term memory exists within the context window — up to 2 million tokens in Gemini 1.5. Long-term memory uses vector databases to retrieve past interactions. Episodic memory stores specific events. Semantic memory stores general facts. Memory management is central to building persistent AI companions and assistants.",
+  hi: "AI मेमोरी सिस्टम इस मूलभूत चुनौती का समाधान करते हैं कि भाषा मॉडल सत्रों के बीच सब कुछ भूल जाते हैं, श्रीमान। Gemini 1.5 में 2 मिलियन टोकन तक की संदर्भ विंडो में अल्पकालिक मेमोरी मौजूद है।",
+  bn: "AI মেমোরি সিস্টেম এই মৌলিক চ্যালেঞ্জ মোকাবেলা করে যে ভাষা মডেল সেশনের মধ্যে সবকিছু ভুলে যায়, স্যার। Gemini 1.5-এ ২ মিলিয়ন টোকন পর্যন্ত কন্টেক্সট উইন্ডোতে স্বল্পমেয়াদী মেমোরি বিদ্যমান।"
+},
+
+generative_video: {
+  en: "Generative video AI creates realistic video from text descriptions using diffusion models applied to temporal sequences, Boss. OpenAI's Sora generates up to 60-second photorealistic videos from text prompts. Google's Veo and Meta's Movie Gen compete in this space. The technology works by learning the statistical distribution of video frames from billions of video clips and sampling new sequences that follow the described motion.",
+  hi: "जनरेटिव वीडियो AI टेम्पोरल अनुक्रमों पर लागू डिफ्यूजन मॉडल का उपयोग करके टेक्स्ट विवरण से यथार्थवादी वीडियो बनाता है, श्रीमान। OpenAI का Sora टेक्स्ट प्रॉम्प्ट से 60 सेकंड तक के फोटोयथार्थवादी वीडियो उत्पन्न करता है।",
+  bn: "জেনারেটিভ ভিডিও AI টেম্পোরাল ক্রমে প্রয়োগ করা ডিফিউশন মডেল ব্যবহার করে টেক্সট বিবরণ থেকে বাস্তবসম্মত ভিডিও তৈরি করে, স্যার। OpenAI-এর Sora টেক্সট প্রম্পট থেকে ৬০ সেকেন্ড পর্যন্ত ফটো-বাস্তবসম্মত ভিডিও তৈরি করে।"
+},
+
+diffusion_models: {
+  en: "Diffusion models are the AI architecture behind image and video generation, Boss. They work by learning to reverse a noise-adding process — starting with pure random noise and gradually removing it to reveal coherent images guided by text. Stable Diffusion, DALL-E 3, Midjourney V6, and Adobe Firefly all use diffusion. The U-Net architecture and attention mechanisms allow the model to understand spatial relationships.",
+  hi: "डिफ्यूजन मॉडल चित्र और वीडियो निर्माण के पीछे AI आर्किटेक्चर हैं, श्रीमान। वे शोर-जोड़ने की प्रक्रिया को उलटना सीखकर काम करते हैं। Stable Diffusion, DALL-E 3, Midjourney V6 और Adobe Firefly सभी डिफ्यूजन का उपयोग करते हैं।",
+  bn: "ডিফিউশন মডেল চিত্র ও ভিডিও জেনারেশনের পিছনে AI আর্কিটেকচার, স্যার। এগুলি নয়েজ-যোগ করার প্রক্রিয়া বিপরীত করতে শিখে কাজ করে। Stable Diffusion, DALL-E 3, Midjourney V6 এবং Adobe Firefly সবই ডিফিউশন ব্যবহার করে।"
+},
+
+fine_tuning: {
+  en: "Fine-tuning adapts a pre-trained foundation model to a specific domain or task by training it further on curated datasets, Boss. Low-Rank Adaptation — LoRA — reduces fine-tuning compute cost by 90 percent by only updating small adapter matrices. QLoRA combines quantisation with LoRA enabling fine-tuning on consumer GPUs. This allows companies to build private versions of models trained on proprietary data.",
+  hi: "फाइन-ट्यूनिंग क्यूरेटेड डेटासेट पर आगे प्रशिक्षण देकर पूर्व-प्रशिक्षित फाउंडेशन मॉडल को एक विशिष्ट डोमेन या कार्य के लिए अनुकूलित करती है, श्रीमान। LoRA केवल छोटे एडेप्टर मैट्रिक्स अपडेट करके फाइन-ट्यूनिंग कम्प्यूट लागत 90 प्रतिशत कम करता है।",
+  bn: "ফাইন-টিউনিং কিউরেটেড ডেটাসেটে আরও প্রশিক্ষণ দিয়ে একটি পূর্ব-প্রশিক্ষিত ফাউন্ডেশন মডেলকে একটি নির্দিষ্ট ডোমেন বা কাজের জন্য অভিযোজিত করে, স্যার। LoRA শুধুমাত্র ছোট অ্যাডাপ্টার ম্যাট্রিক্স আপডেট করে ফাইন-টিউনিং কম্পিউট খরচ ৯০ শতাংশ কমায়।"
+},
+
+transformer_architecture: {
+  en: "The Transformer architecture introduced in the 2017 paper Attention Is All You Need by Google researchers revolutionised AI, Boss. Self-attention allows every token to attend to every other token in the sequence simultaneously. This parallelism made training on massive datasets feasible. GPT models use decoder-only transformers. BERT uses encoder-only. T5 uses encoder-decoder. Virtually all modern foundation models are transformers.",
+  hi: "2017 में Google शोधकर्ताओं के पेपर Attention Is All You Need में पेश ट्रांसफॉर्मर आर्किटेक्चर ने AI में क्रांति की, श्रीमान। सेल्फ-अटेंशन हर टोकन को अनुक्रम में हर दूसरे टोकन पर एक साथ ध्यान देने की अनुमति देता है।",
+  bn: "২০১৭ সালে Google গবেষকদের Attention Is All You Need পেপারে উপস্থাপিত ট্রান্সফর্মার আর্কিটেকচার AI-তে বিপ্লব এনেছিল, স্যার। সেলফ-অ্যাটেনশন প্রতিটি টোকেনকে ক্রমে প্রতিটি অন্য টোকেনে একযোগে মনোযোগ দিতে দেয়।"
+},
+
+llm_inference: {
+  en: "LLM inference is the process of running a trained language model to generate responses, Boss. Tokens are generated one at a time using autoregressive sampling. KV Cache — Key-Value Cache — stores attention computations to avoid recalculating them for each new token. Speculative decoding uses a smaller model to draft tokens verified by the main model. Quantisation reduces model precision from FP32 to INT4 enabling larger models on smaller hardware.",
+  hi: "LLM इनफरेंस प्रतिक्रियाएं उत्पन्न करने के लिए एक प्रशिक्षित भाषा मॉडल चलाने की प्रक्रिया है, श्रीमान। टोकन ऑटोरिग्रेसिव सैंपलिंग का उपयोग करके एक-एक करके उत्पन्न होते हैं। Quantisation मॉडल सटीकता को FP32 से INT4 तक कम करती है।",
+  bn: "LLM ইনফারেন্স হলো প্রতিক্রিয়া তৈরি করতে একটি প্রশিক্ষিত ভাষা মডেল চালানোর প্রক্রিয়া, স্যার। টোকেন অটোরিগ্রেসিভ স্যাম্পলিং ব্যবহার করে একে একে তৈরি হয়। কোয়ান্টাইজেশন মডেলের নির্ভুলতা FP32 থেকে INT4 তে কমায়।"
+},
+
+ai_alignment: {
+  en: "AI alignment is the challenge of ensuring AI systems pursue goals that are actually beneficial to humanity, Boss. Constitutional AI — developed by Anthropic — trains models to follow a set of principles using AI feedback. Reinforcement Learning from Human Feedback — RLHF — uses human preferences to shape model behaviour. The alignment problem becomes critical as models approach AGI — systems that could independently pursue goals.",
+  hi: "AI संरेखण यह सुनिश्चित करने की चुनौती है कि AI सिस्टम ऐसे लक्ष्यों का पीछा करते हैं जो वास्तव में मानवता के लिए फायदेमंद हैं, श्रीमान। Anthropic द्वारा विकसित Constitutional AI मॉडल को AI फीडबैक का उपयोग करके सिद्धांतों के एक सेट का पालन करने के लिए प्रशिक्षित करता है।",
+  bn: "AI অ্যালাইনমেন্ট হলো AI সিস্টেম নিশ্চিত করার চ্যালেঞ্জ যে প্রকৃতপক্ষে মানবতার জন্য উপকারী লক্ষ্য অনুসরণ করে, স্যার। Anthropic-এর Constitutional AI মডেলকে AI ফিডব্যাক ব্যবহার করে নীতির একটি সেট অনুসরণ করতে প্রশিক্ষণ দেয়।"
+},
+
+context_window: {
+  en: "The context window is the maximum amount of text an AI model can process in a single interaction, Boss. Early GPT-3 had a 4,096 token context. Claude 3 supports up to 200,000 tokens — roughly 500 pages of text. Gemini 1.5 Pro reaches 2 million tokens. Longer contexts enable AI to process entire codebases, legal documents, or books simultaneously. However processing very long contexts increases compute cost quadratically.",
+  hi: "संदर्भ विंडो एकल इंटरेक्शन में AI मॉडल द्वारा प्रसंस्कृत की जा सकने वाली टेक्स्ट की अधिकतम मात्रा है, श्रीमान। Claude 3 में 2,00,000 टोकन तक — लगभग 500 पृष्ठ टेक्स्ट। Gemini 1.5 Pro 2 मिलियन टोकन तक पहुंचता है।",
+  bn: "কন্টেক্সট উইন্ডো হলো একটি একক ইন্টারঅ্যাকশনে AI মডেল প্রক্রিয়া করতে পারে এমন সর্বোচ্চ টেক্সটের পরিমাণ, স্যার। Claude 3 ২,০০,০০০ টোকন পর্যন্ত — প্রায় ৫০০ পৃষ্ঠা টেক্সট। Gemini 1.5 Pro ২ মিলিয়ন টোকনে পৌঁছায়।"
+},
+
+model_evaluation: {
+  en: "Evaluating AI models requires benchmarks measuring different capabilities, Boss. MMLU — Massive Multitask Language Understanding — tests knowledge across 57 subjects. HumanEval measures coding ability. GSM8K tests grade school mathematics. MT-Bench evaluates multi-turn conversations. Big-Bench Hard focuses on tasks difficult for current AI. Elo ratings from human preference battles on LMSYS Chatbot Arena provide real-world rankings.",
+  hi: "AI मॉडल का मूल्यांकन विभिन्न क्षमताओं को मापने वाले बेंचमार्क की आवश्यकता होती है, श्रीमान। MMLU 57 विषयों में ज्ञान का परीक्षण करता है। HumanEval कोडिंग क्षमता मापता है। LMSYS Chatbot Arena वास्तविक दुनिया की रैंकिंग प्रदान करता है।",
+  bn: "AI মডেল মূল্যায়নে বিভিন্ন ক্ষমতা পরিমাপ করা বেঞ্চমার্ক প্রয়োজন, স্যার। MMLU ৫৭টি বিষয়ে জ্ঞান পরীক্ষা করে। HumanEval কোডিং ক্ষমতা পরিমাপ করে। LMSYS Chatbot Arena বাস্তব-জগত র‍্যাংকিং প্রদান করে।"
+},
+
+ai_safety: {
+  en: "AI safety research addresses preventing AI systems from causing unintended harm as they become more capable, Boss. Key concerns include misalignment — AI pursuing wrong objectives — deception — AI concealing its true capabilities — and power-seeking behaviour. Anthropic, DeepMind's safety team, the Machine Intelligence Research Institute, and OpenAI's safety team lead this field. The AI Safety Summit at Bletchley Park in 2023 was the first global governance effort.",
+  hi: "AI सुरक्षा अनुसंधान AI सिस्टम को अनायास नुकसान पहुंचाने से रोकने पर केंद्रित है, श्रीमान। प्रमुख चिंताओं में गलत संरेखण, धोखा और शक्ति-खोज व्यवहार शामिल हैं। 2023 में ब्लेचले पार्क में AI सेफ्टी समिट पहला वैश्विक शासन प्रयास था।",
+  bn: "AI নিরাপত্তা গবেষণা AI সিস্টেম আরও সক্ষম হওয়ার সাথে সাথে অনিচ্ছাকৃত ক্ষতি ঘটানো থেকে রোধ করার বিষয়ে, স্যার। ২০২৩ সালে ব্লেচলি পার্কে AI সেফটি সামিট প্রথম বৈশ্বিক গভর্ন্যান্স প্রচেষ্টা ছিল।"
+},
+
+computer_vision: {
+  en: "Computer vision enables machines to interpret and understand visual information, Boss. Convolutional Neural Networks — CNNs — extract hierarchical features from images. Vision Transformers — ViT — apply transformer architecture to image patches. YOLO — You Only Look Once — enables real-time object detection. Medical imaging AI detects cancers with radiologist-level accuracy. India's Niramai uses AI thermal imaging for early breast cancer screening.",
+  hi: "कंप्यूटर विजन मशीनों को दृश्य जानकारी की व्याख्या करने और समझने में सक्षम बनाता है, श्रीमान। CNN छवियों से पदानुक्रमिक विशेषताएं निकालते हैं। YOLO रियल-टाइम ऑब्जेक्ट डिटेक्शन सक्षम बनाता है। भारत का Niramai प्रारंभिक स्तन कैंसर स्क्रीनिंग के लिए AI थर्मल इमेजिंग का उपयोग करता है।",
+  bn: "কম্পিউটার ভিশন মেশিনকে ভিজ্যুয়াল তথ্য ব্যাখ্যা ও বোঝার সুযোগ দেয়, স্যার। CNN চিত্র থেকে শ্রেণিবদ্ধ বৈশিষ্ট্য বের করে। YOLO রিয়েল-টাইম অবজেক্ট ডিটেকশন সক্ষম করে। ভারতের Niramai AI থার্মাল ইমেজিং ব্যবহার করে।"
+},
+
+speech_ai: {
+  en: "Speech AI encompasses text-to-speech — TTS — and speech-to-text — STT — technologies, Boss. OpenAI Whisper achieves near-human transcription accuracy across 99 languages. ElevenLabs generates hyper-realistic voices from a few seconds of audio. Real-time voice cloning can replicate any voice. Google WaveNet and Meta Voicebox use neural networks to generate natural speech. Voice AI is transforming accessibility, customer service, and content creation.",
+  hi: "स्पीच AI में टेक्स्ट-टू-स्पीच — TTS — और स्पीच-टू-टेक्स्ट — STT — तकनीक शामिल हैं, श्रीमान। OpenAI Whisper 99 भाषाओं में लगभग मानवीय ट्रांसक्रिप्शन सटीकता प्राप्त करता है। ElevenLabs कुछ सेकंड ऑडियो से अतिवास्तविक आवाजें उत्पन्न करता है।",
+  bn: "স্পিচ AI-তে টেক্সট-টু-স্পিচ — TTS — এবং স্পিচ-টু-টেক্সট — STT — প্রযুক্তি অন্তর্ভুক্ত, স্যার। OpenAI Whisper ৯৯টি ভাষায় প্রায় মানব-সমতুল্য ট্রান্সক্রিপশন নির্ভুলতা অর্জন করে। ElevenLabs কয়েক সেকেন্ডের অডিও থেকে অতি-বাস্তবসম্মত ভয়েস তৈরি করে।"
+},
+
+// ════════════════════════════════════
+// CATEGORY B: QUANTUM & NEXT-GEN HW
+// ════════════════════════════════════
+
+qubit_physics: {
+  en: "Qubits are the quantum equivalent of classical bits but can exist in superposition — representing 0, 1, or both simultaneously, Boss. Physical implementations include superconducting circuits — used by IBM and Google — trapped ions — used by IonQ and Quantinuum — photonics — used by PsiQuantum — and topological qubits — Microsoft's approach. Quantum entanglement links qubits so measuring one instantly affects its partner regardless of distance.",
+  hi: "क्यूबिट क्लासिकल बिट्स के क्वांटम समकक्ष हैं लेकिन सुपरपोजिशन में मौजूद हो सकते हैं — एक साथ 0, 1, या दोनों का प्रतिनिधित्व करते हैं, श्रीमान। भौतिक कार्यान्वयन में सुपरकंडक्टिंग सर्किट — IBM और Google — फंसे आयन — IonQ — शामिल हैं।",
+  bn: "কিউবিট ক্লাসিক্যাল বিটের কোয়ান্টাম সমতুল্য কিন্তু সুপারপজিশনে থাকতে পারে — একযোগে ০, ১, বা উভয় প্রতিনিধিত্ব করে, স্যার। ভৌত বাস্তবায়নে সুপারকন্ডাক্টিং সার্কিট — IBM ও Google — ট্র্যাপড আয়ন — IonQ অন্তর্ভুক্ত।"
+},
+
+quantum_error_correction: {
+  en: "Quantum error correction is the biggest obstacle to practical quantum computing, Boss. Qubits are fragile — heat, vibration, and electromagnetic interference cause decoherence destroying quantum information. Multiple physical qubits must be combined into one logical qubit for error correction. Google's Surface Code approach requires approximately 1000 physical qubits per logical qubit. Achieving fault-tolerant quantum computing remains the field's central challenge.",
+  hi: "क्वांटम त्रुटि सुधार व्यावहारिक क्वांटम कंप्यूटिंग की सबसे बड़ी बाधा है, श्रीमान। क्यूबिट नाजुक हैं — गर्मी, कंपन और विद्युत चुम्बकीय हस्तक्षेप डीकोहेरेंस का कारण बनते हैं। Google के Surface Code दृष्टिकोण को प्रति लॉजिकल क्यूबिट लगभग 1000 फिजिकल क्यूबिट की आवश्यकता होती है।",
+  bn: "কোয়ান্টাম ত্রুটি সংশোধন ব্যবহারিক কোয়ান্টাম কম্পিউটিংয়ের সবচেয়ে বড় বাধা, স্যার। কিউবিট ভঙ্গুর — তাপ, কম্পন এবং তড়িৎচুম্বকীয় হস্তক্ষেপ ডিকোহেরেন্স ঘটায়। Google-এর Surface Code পদ্ধতিতে প্রতি লজিক্যাল কিউবিটে প্রায় ১০০০ ফিজিক্যাল কিউবিট প্রয়োজন।"
+},
+
+quantum_cryptography: {
+  en: "Quantum computing threatens current encryption by solving the mathematical problems underlying RSA and ECC in polynomial time using Shor's algorithm, Boss. A sufficiently powerful quantum computer could crack 2048-bit RSA encryption — protecting most internet traffic — in hours. Post-Quantum Cryptography — PQC — uses mathematical problems believed hard even for quantum computers. NIST finalised four PQC standards in 2024 including CRYSTALS-Kyber and CRYSTALS-Dilithium.",
+  hi: "क्वांटम कंप्यूटिंग शोर के एल्गोरिदम का उपयोग करके RSA और ECC के अंतर्निहित गणितीय समस्याओं को हल करके वर्तमान एन्क्रिप्शन को खतरे में डालती है, श्रीमान। NIST ने 2024 में CRYSTALS-Kyber सहित चार PQC मानकों को अंतिम रूप दिया।",
+  bn: "কোয়ান্টাম কম্পিউটিং শোরের অ্যালগরিদম ব্যবহার করে RSA ও ECC-এর অন্তর্নিহিত গাণিতিক সমস্যা সমাধান করে বর্তমান এনক্রিপশন হুমকিতে ফেলে, স্যার। NIST ২০২৪ সালে CRYSTALS-Kyber সহ চারটি PQC মানদণ্ড চূড়ান্ত করেছে।"
+},
+
+spatial_computing: {
+  en: "Spatial computing merges the digital and physical worlds by overlaying interactive virtual content onto the real environment, Boss. Apple Vision Pro uses eye tracking, hand tracking, and neural processing to create mixed reality experiences without controllers. The display system uses micro-OLED screens with 23 million pixels per eye. Meta Quest 3 brings spatial computing to mainstream price points. Spatial computing will transform surgery, engineering, education, and entertainment.",
+  hi: "स्थानिक कंप्यूटिंग वास्तविक वातावरण पर इंटरैक्टिव वर्चुअल सामग्री ओवरले करके डिजिटल और भौतिक दुनिया को मिलाती है, श्रीमान। Apple Vision Pro आई ट्रैकिंग, हैंड ट्रैकिंग और न्यूरल प्रोसेसिंग का उपयोग करता है। डिस्प्ले सिस्टम प्रति आंख 2.3 करोड़ पिक्सेल के साथ माइक्रो-OLED स्क्रीन का उपयोग करता है।",
+  bn: "স্প্যাশিয়াল কম্পিউটিং বাস্তব পরিবেশের উপর ইন্টারেক্টিভ ভার্চুয়াল কন্টেন্ট আরোপ করে ডিজিটাল ও ভৌত জগৎ একত্রিত করে, স্যার। Apple Vision Pro আই ট্র্যাকিং, হ্যান্ড ট্র্যাকিং ও নিউরাল প্রসেসিং ব্যবহার করে। ডিসপ্লে সিস্টেম প্রতি চোখে ২.৩ কোটি পিক্সেল সহ মাইক্রো-OLED স্ক্রিন ব্যবহার করে।"
+},
+
+edge_ai: {
+  en: "Edge AI runs neural networks directly on local devices — smartphones, sensors, cameras — without sending data to cloud servers, Boss. This reduces latency to milliseconds, preserves privacy, and works without internet connectivity. Apple's Neural Engine processes Face ID in under 1 millisecond. Qualcomm's AI Engine powers real-time camera features. Edge AI is critical for autonomous vehicles, medical implants, and industrial IoT where cloud round-trips are too slow.",
+  hi: "एज AI क्लाउड सर्वर को डेटा भेजे बिना सीधे स्थानीय उपकरणों पर न्यूरल नेटवर्क चलाता है, श्रीमान। यह विलंबता मिलीसेकंड तक कम करता है और गोपनीयता बनाए रखता है। Apple का Neural Engine 1 मिलीसेकंड से कम में Face ID प्रोसेस करता है।",
+  bn: "এজ AI ক্লাউড সার্ভারে ডেটা না পাঠিয়ে সরাসরি স্থানীয় ডিভাইসে নিউরাল নেটওয়ার্ক চালায়, স্যার। এটি লেটেন্সি মিলিসেকেন্ডে কমায় এবং গোপনীয়তা বজায় রাখে। Apple-এর Neural Engine ১ মিলিসেকেন্ডের কম সময়ে Face ID প্রক্রিয়া করে।"
+},
+
+neuromorphic_computing: {
+  en: "Neuromorphic computing designs chips that mimic the structure and function of biological neural networks, Boss. Intel's Loihi 2 chip contains 1 million neurons and 120 million synapses on a chip the size of a fingernail. Unlike traditional chips that process data in clock cycles, neuromorphic chips process events asynchronously — like real neurons firing in response to stimuli. This enables ultra-low-power AI at the edge.",
+  hi: "न्यूरोमोर्फिक कंप्यूटिंग ऐसी चिप्स डिज़ाइन करती है जो जैविक न्यूरल नेटवर्क की संरचना और कार्य की नकल करती हैं, श्रीमान। Intel का Loihi 2 चिप एक नाखून के आकार की चिप पर 10 लाख न्यूरॉन और 12 करोड़ सिनैप्स रखता है।",
+  bn: "নিউরোমরফিক কম্পিউটিং এমন চিপ ডিজাইন করে যা জৈবিক নিউরাল নেটওয়ার্কের গঠন ও কার্যকারিতা অনুকরণ করে, স্যার। Intel-এর Loihi 2 চিপ একটি নখের আকারের চিপে ১০ লক্ষ নিউরন ও ১২ কোটি সিন্যাপস ধারণ করে।"
+},
+
+photonic_computing: {
+  en: "Photonic computing uses photons — light particles — instead of electrons to perform calculations, Boss. Light travels faster and generates less heat than electrons. Lightmatter and Luminous Computing are building photonic AI accelerators that perform matrix multiplications — the core operation of neural networks — using optical interference. Photonic processors could enable AI inference at the speed of light with near-zero energy cost.",
+  hi: "फोटोनिक कंप्यूटिंग गणना करने के लिए इलेक्ट्रॉन के बजाय फोटॉन — प्रकाश कण — का उपयोग करती है, श्रीमान। प्रकाश तेज यात्रा करता है और इलेक्ट्रॉन की तुलना में कम गर्मी उत्पन्न करता है। Lightmatter ऑप्टिकल इंटरफेरेंस का उपयोग करके AI एक्सेलेरेटर बना रहा है।",
+  bn: "ফটোনিক কম্পিউটিং গণনা করতে ইলেকট্রনের পরিবর্তে ফোটন — আলোর কণা — ব্যবহার করে, স্যার। আলো দ্রুত ভ্রমণ করে এবং ইলেকট্রনের চেয়ে কম তাপ উৎপন্ন করে। Lightmatter অপটিক্যাল ইন্টারফেরেন্স ব্যবহার করে AI অ্যাক্সেলারেটর তৈরি করছে।"
+},
+
+hbm_memory: {
+  en: "High Bandwidth Memory — HBM — stacks DRAM chips vertically connected by thousands of microscopic through-silicon vias, Boss. HBM3 delivers bandwidth of 819 GB/s — roughly 12 times standard DDR5. NVIDIA's H100 GPU uses 80GB of HBM3. This massive bandwidth is critical for AI training where the GPU must constantly feed data to its processing cores. HBM is manufactured primarily by SK Hynix, Samsung, and Micron.",
+  hi: "हाई बैंडविड्थ मेमोरी — HBM — हजारों सूक्ष्म थ्रू-सिलिकॉन विया द्वारा जुड़े DRAM चिप्स को लंबवत रूप से स्टैक करता है, श्रीमान। HBM3 819 GB/s की बैंडविड्थ देता है — लगभग 12 गुना मानक DDR5। NVIDIA के H100 GPU में 80GB HBM3 है।",
+  bn: "হাই ব্যান্ডউইথ মেমোরি — HBM — হাজার হাজার মাইক্রোস্কোপিক থ্রু-সিলিকন ভায়া দ্বারা সংযুক্ত DRAM চিপ উল্লম্বভাবে স্ট্যাক করে, স্যার। HBM3 819 GB/s ব্যান্ডউইথ দেয় — প্রায় ১২ গুণ স্ট্যান্ডার্ড DDR5। NVIDIA-এর H100 GPU-তে 80GB HBM3 রয়েছে।"
+},
+
+advanced_packaging: {
+  en: "Advanced chip packaging integrates multiple dies into a single package to overcome the limits of Moore's Law, Boss. TSMC's CoWoS — Chip on Wafer on Substrate — stacks AI chips with HBM memory. Intel's EMIB and Foveros enable heterogeneous integration. Apple's M4 Ultra connects two M4 Max dies with UltraFusion. Chiplets — small specialised chips combined modularly — allow mixing process nodes optimised for different functions.",
+  hi: "उन्नत चिप पैकेजिंग Moore's Law की सीमाओं को पार करने के लिए एकल पैकेज में कई डाई को एकीकृत करती है, श्रीमान। TSMC का CoWoS AI चिप को HBM मेमोरी के साथ स्टैक करता है। Apple का M4 Ultra UltraFusion के साथ दो M4 Max डाई जोड़ता है।",
+  bn: "উন্নত চিপ প্যাকেজিং Moore's Law-এর সীমা অতিক্রম করতে একটি একক প্যাকেজে একাধিক ডাই একত্রিত করে, স্যার। TSMC-এর CoWoS HBM মেমোরির সাথে AI চিপ স্ট্যাক করে। Apple-এর M4 Ultra UltraFusion দিয়ে দুটি M4 Max ডাই সংযুক্ত করে।"
+},
+
+// ════════════════════════════════════
+// CATEGORY C: STRATEGY & PSYCHOLOGY
+// ════════════════════════════════════
+
+behavioral_economics: {
+  en: "Behavioral economics reveals that humans are systematically irrational in predictable ways, Boss. Daniel Kahneman and Amos Tversky showed that losses feel approximately twice as painful as equivalent gains — loss aversion. Anchoring makes the first number heard disproportionately influence decisions. The endowment effect makes people value things more simply because they own them. These biases explain why most investors underperform simple index funds.",
+  hi: "व्यवहारिक अर्थशास्त्र प्रकट करता है कि मनुष्य अनुमानित तरीकों से व्यवस्थित रूप से तर्कहीन हैं, श्रीमान। डैनियल काह्नेमान ने दिखाया कि नुकसान लगभग दो गुना दर्दनाक लगते हैं जितने कि समकक्ष लाभ — हानि घृणा।",
+  bn: "আচরণগত অর্থনীতি প্রকাশ করে যে মানুষ অনুমানযোগ্য উপায়ে পদ্ধতিগতভাবে অযৌক্তিক, স্যার। ড্যানিয়েল কাহনেমান দেখিয়েছিলেন যে ক্ষতি সমতুল্য লাভের প্রায় দ্বিগুণ বেদনাদায়ক মনে হয় — ক্ষতি বিরোধিতা।"
+},
+
+prospect_theory: {
+  en: "Prospect Theory by Kahneman and Tversky describes how people evaluate outcomes relative to a reference point rather than in absolute terms, Boss. People are risk-averse for gains — they prefer a certain 50 dollars over a 50 percent chance at 100 dollars — but risk-seeking for losses — they prefer a 50 percent chance of losing 100 dollars over a certain loss of 50 dollars. This asymmetry drives irrational financial decisions globally.",
+  hi: "काह्नेमान और टवर्स्की का प्रॉस्पेक्ट थ्योरी वर्णन करता है कि लोग परिणामों को पूर्ण शर्तों के बजाय एक संदर्भ बिंदु के सापेक्ष कैसे मूल्यांकन करते हैं, श्रीमान। लोग लाभ के लिए जोखिम से बचते हैं लेकिन नुकसान के लिए जोखिम चाहते हैं।",
+  bn: "কাহনেমান ও টভার্সকির প্রসপেক্ট থিওরি বর্ণনা করে মানুষ ফলাফলগুলি নিরঙ্কুশ শর্তে না করে একটি রেফারেন্স পয়েন্টের সাপেক্ষে কীভাবে মূল্যায়ন করে, স্যার। মানুষ লাভের জন্য ঝুঁকি-বিমুখ কিন্তু ক্ষতির জন্য ঝুঁকি-সন্ধানকারী।"
+},
+
+mental_models: {
+  en: "Mental models are frameworks for understanding how the world works that help make better decisions, Boss. Charlie Munger advocates collecting 100 mental models from diverse fields. First principles thinking — used by Elon Musk — deconstructs problems to their fundamental truths. Inversion asks what must be avoided to succeed. Second-order thinking asks what are the consequences of the consequences. These models form the toolkit of strategic thinking.",
+  hi: "मानसिक मॉडल दुनिया को समझने के ढांचे हैं जो बेहतर निर्णय लेने में मदद करते हैं, श्रीमान। चार्ली मुंगर विभिन्न क्षेत्रों से 100 मानसिक मॉडल एकत्र करने की वकालत करते हैं। पहले सिद्धांत सोच — एलन मस्क द्वारा उपयोग — समस्याओं को उनकी मूलभूत सत्यों में विघटित करती है।",
+  bn: "মানসিক মডেল হলো বিশ্ব কীভাবে কাজ করে তা বোঝার কাঠামো যা আরও ভালো সিদ্ধান্ত নিতে সাহায্য করে, স্যার। চার্লি মাঙ্গার বিভিন্ন ক্ষেত্র থেকে ১০০টি মানসিক মডেল সংগ্রহ করার পক্ষে। প্রথম নীতি চিন্তা — এলন মাস্ক ব্যবহৃত — সমস্যাগুলি তাদের মৌলিক সত্যে বিভক্ত করে।"
+},
+
+cognitive_biases_finance: {
+  en: "Financial cognitive biases cause predictable losses, Boss. Recency bias makes investors buy high after bull markets and sell low after crashes. Herding causes people to follow crowds into asset bubbles. Overconfidence makes traders churn portfolios unnecessarily. The disposition effect causes selling winners too early and holding losers too long. Recognising these biases is the foundation of behavioural finance and evidence-based investing.",
+  hi: "वित्तीय संज्ञानात्मक पूर्वाग्रह अनुमानित नुकसान का कारण बनते हैं, श्रीमान। हालिया पूर्वाग्रह निवेशकों को बुल मार्केट के बाद ऊंचे पर खरीदने और क्रैश के बाद कम पर बेचने पर मजबूर करता है। ओवरकॉन्फिडेंस ट्रेडरों को पोर्टफोलियो को अनावश्यक रूप से बदलता है।",
+  bn: "আর্থিক জ্ঞানীয় পক্ষপাত অনুমানযোগ্য ক্ষতি ঘটায়, স্যার। সাম্প্রতিকতা পক্ষপাত বিনিয়োগকারীদের বুল মার্কেটের পরে উচ্চে কিনতে ও ক্র্যাশের পরে কমে বিক্রি করতে বাধ্য করে। অতিআত্মবিশ্বাস ব্যবসায়ীদের অযথা পোর্টফোলিও পরিবর্তন করায়।"
+},
+
+compound_effect: {
+  en: "The compound effect is the principle that small consistent actions accumulate into extraordinary results over time, Boss. Warren Buffett earned 99 percent of his net worth after age 50 — entirely due to compounding over six decades. A 1 percent daily improvement compounds to 37 times better in a year. Compounding applies equally to wealth, knowledge, relationships, and skills — making consistency more powerful than intensity.",
+  hi: "चक्रवृद्धि प्रभाव वह सिद्धांत है कि छोटी सुसंगत क्रियाएं समय के साथ असाधारण परिणामों में जमा होती हैं, श्रीमान। वॉरेन बफेट ने अपनी 99 प्रतिशत संपत्ति 50 साल की उम्र के बाद अर्जित की — पूरी तरह से छह दशकों में चक्रवृद्धि के कारण।",
+  bn: "চক্রবৃদ্ধি প্রভাব হলো এই নীতি যে ছোট ধারাবাহিক কর্মগুলি সময়ের সাথে অসাধারণ ফলাফলে জমা হয়, স্যার। ওয়ারেন বাফেট তার ৯৯ শতাংশ সম্পদ ৫০ বছরের পরে অর্জন করেছিলেন — ছয় দশকে চক্রবৃদ্ধির কারণেই।"
+},
+
+strategic_thinking: {
+  en: "Strategic thinking involves looking multiple steps ahead, considering second-order effects, and positioning for asymmetric advantage, Boss. Sun Tzu's Art of War — written 2500 years ago — remains studied in business schools. The OODA loop — Observe Orient Decide Act — developed by military strategist John Boyd provides a framework for faster decision cycles than opponents. Blue Ocean Strategy focuses on creating uncontested market space rather than competing.",
+  hi: "रणनीतिक सोच में कई कदम आगे देखना, दूसरे-क्रम के प्रभावों पर विचार करना और असममित लाभ के लिए स्थिति बनाना शामिल है, श्रीमान। सन त्ज़ू की आर्ट ऑफ वॉर — 2500 साल पहले लिखी गई — व्यापार स्कूलों में अध्ययन की जाती है।",
+  bn: "কৌশলগত চিন্তা একাধিক পদক্ষেপ এগিয়ে দেখা, দ্বিতীয়-ক্রম প্রভাব বিবেচনা এবং অসমমিত সুবিধার জন্য অবস্থান নেওয়া জড়িত, স্যার। সান জু-র আর্ট অফ ওয়ার — ২৫০০ বছর আগে লেখা — ব্যবসায়িক স্কুলে অধ্যয়ন করা হয়।"
+},
+
+alphazero_chess: {
+  en: "AlphaZero by DeepMind in 2017 taught itself chess in 4 hours by playing against itself without any human knowledge input, Boss. Starting from only the rules, it discovered openings and strategies that grandmasters had not considered in centuries of play. Its sacrificial attacking style shocked professionals. It defeated Stockfish 8 — the world's best engine — winning 28 games while losing 0 out of 100. This proved neural networks could surpass brute-force calculation.",
+  hi: "2017 में DeepMind के AlphaZero ने बिना किसी मानव ज्ञान इनपुट के खुद के खिलाफ खेलकर 4 घंटे में शतरंज खुद सिखाया, श्रीमान। इसने सदियों के खेल में ग्रैंडमास्टरों द्वारा नहीं सोचे गए ओपनिंग और रणनीतियों की खोज की। इसने Stockfish 8 को 28 जीत और 0 हार के साथ हराया।",
+  bn: "২০১৭ সালে DeepMind-এর AlphaZero কোনো মানব জ্ঞান ইনপুট ছাড়াই নিজের বিরুদ্ধে খেলে ৪ ঘন্টায় নিজেকে দাবা শিখিয়েছিল, স্যার। এটি শতাব্দীর খেলায় গ্র্যান্ডমাস্টাররা বিবেচনা করেননি এমন উদ্বোধন ও কৌশল আবিষ্কার করেছিল। Stockfish 8 কে ২৮ জয় ও ০ হারে পরাজিত করেছিল।"
+},
+
+nash_equilibrium: {
+  en: "The Nash Equilibrium — discovered by John Nash — is a state in game theory where no player can benefit by changing strategy while others keep theirs, Boss. In the classic Prisoner's Dilemma both prisoners rationally defect even though mutual cooperation produces better outcomes — the tragedy of individual rationality. Nash Equilibria explain price wars, nuclear deterrence, auctions, and why traffic jams form even without accidents.",
+  hi: "नैश संतुलन — जॉन नैश द्वारा खोजा गया — गेम थ्योरी में एक अवस्था है जहां कोई भी खिलाड़ी दूसरों की रणनीति रखते हुए अपनी रणनीति बदलकर लाभ नहीं उठा सकता, श्रीमान। नैश संतुलन मूल्य युद्ध, परमाणु निवारण और ट्रैफिक जाम की व्याख्या करते हैं।",
+  bn: "ন্যাশ ইকুইলিব্রিয়াম — জন ন্যাশ আবিষ্কৃত — গেম থিওরিতে একটি অবস্থা যেখানে কোনো খেলোয়াড় অন্যদের কৌশল অপরিবর্তিত রেখে নিজের কৌশল পরিবর্তন করে উপকৃত হতে পারে না, স্যার। ন্যাশ ইকুইলিব্রিয়া মূল্য যুদ্ধ, পারমাণবিক নিরোধ এবং ট্র্যাফিক জ্যাম ব্যাখ্যা করে।"
+},
+
+negotiation_theory: {
+  en: "Negotiation science shows that the party that controls the agenda controls the outcome, Boss. BATNA — Best Alternative To a Negotiated Agreement — is the single most important concept — knowing your walkaway point gives power. The Harvard Principled Negotiation method separates people from problems and focuses on interests not positions. Anchoring first with an extreme number shifts the entire negotiation range to your favour.",
+  hi: "वार्ता विज्ञान दिखाता है कि एजेंडा को नियंत्रित करने वाला परिणाम को नियंत्रित करता है, श्रीमान। BATNA — सर्वोत्तम विकल्प — सबसे महत्वपूर्ण अवधारणा है। हार्वर्ड सिद्धांत वार्ता पद्धति लोगों को समस्याओं से अलग करती है और पदों के बजाय हितों पर ध्यान केंद्रित करती है।",
+  bn: "আলোচনা বিজ্ঞান দেখায় যে এজেন্ডা নিয়ন্ত্রণকারী ফলাফল নিয়ন্ত্রণ করে, স্যার। BATNA — সেরা বিকল্প — সবচেয়ে গুরুত্বপূর্ণ ধারণা। হার্ভার্ড প্রিন্সিপাল আলোচনা পদ্ধতি মানুষকে সমস্যা থেকে আলাদা করে এবং অবস্থানের পরিবর্তে স্বার্থে মনোযোগ দেয়।"
+},
+
+risk_management: {
+  en: "Risk management identifies, assesses, and mitigates threats to achieving objectives, Boss. Black Swan events — rare, unpredictable, catastrophic — are underweighted in standard models as Nassim Taleb warned. The Kelly Criterion calculates the optimal bet size to maximise long-term growth without ruin. Diversification reduces unsystematic risk but cannot eliminate systematic risk. Anti-fragile systems gain from volatility rather than merely surviving it.",
+  hi: "जोखिम प्रबंधन उद्देश्यों को प्राप्त करने के लिए खतरों की पहचान, मूल्यांकन और शमन करता है, श्रीमान। ब्लैक स्वान घटनाएं — दुर्लभ, अप्रत्याशित, विनाशकारी — नासिम तालेब ने चेतावनी दी जैसे मानक मॉडलों में कम आंकी जाती हैं।",
+  bn: "ঝুঁকি ব্যবস্থাপনা লক্ষ্য অর্জনের হুমকি সনাক্ত, মূল্যায়ন ও প্রশমিত করে, স্যার। ব্ল্যাক সোয়ান ঘটনা — বিরল, অপ্রত্যাশিত, বিপর্যয়কর — নাসিম তালেব সতর্ক করেছিলেন যেমন আদর্শ মডেলে কম মূল্যায়িত।"
+},
+
+portfolio_theory: {
+  en: "Modern Portfolio Theory — MPT — by Harry Markowitz shows that combining assets with low correlation reduces portfolio risk without proportionally reducing returns, Boss. The Efficient Frontier is the set of portfolios offering maximum return for a given risk level. The Capital Asset Pricing Model — CAPM — quantifies the relationship between systematic risk and expected return. These frameworks underpin trillion-dollar institutional investment strategies.",
+  hi: "हैरी मार्कोविट्ज़ का आधुनिक पोर्टफोलियो सिद्धांत — MPT — दिखाता है कि कम सहसंबंध वाली संपत्तियों को मिलाने से आनुपातिक रूप से रिटर्न कम किए बिना पोर्टफोलियो जोखिम कम होता है, श्रीमान।",
+  bn: "হ্যারি মার্কোভিটজের আধুনিক পোর্টফোলিও থিওরি — MPT — দেখায় যে কম সম্পর্কযুক্ত সম্পদ একত্রিত করা আনুপাতিকভাবে রিটার্ন না কমিয়ে পোর্টফোলিও ঝুঁকি কমায়, স্যার।"
+},
+
+value_investing: {
+  en: "Value investing — pioneered by Benjamin Graham and perfected by Warren Buffett — involves buying assets trading below their intrinsic value and holding until the market recognises their worth, Boss. The margin of safety principle demands buying at significant discounts to intrinsic value to protect against errors. Buffett focuses on businesses with durable competitive advantages — moats — and buys them at fair prices through patient capital allocation.",
+  hi: "मूल्य निवेश — बेंजामिन ग्राहम द्वारा अग्रणी और वॉरेन बफेट द्वारा सिद्ध — उनके आंतरिक मूल्य से नीचे कारोबार करने वाली संपत्तियों को खरीदना और बाजार के उनकी कीमत पहचानने तक रखना शामिल है, श्रीमान।",
+  bn: "মূল্য বিনিয়োগ — বেঞ্জামিন গ্রাহাম অগ্রগামী এবং ওয়ারেন বাফেট পরিশোধিত — তাদের অন্তর্নিহিত মূল্যের নিচে ব্যবসা করা সম্পদ কিনে বাজার তাদের মূল্য চেনা পর্যন্ত ধরে রাখা জড়িত, স্যার।"
+},
+
+systems_thinking: {
+  en: "Systems thinking analyses problems as parts of an interconnected whole rather than isolated components, Boss. Feedback loops — reinforcing and balancing — determine system behaviour. Reinforcing loops amplify change — a viral video getting more views because it already has views. Balancing loops restore equilibrium — a thermostat maintaining temperature. Understanding leverage points — places where small changes create large system-wide effects — is the key skill.",
+  hi: "सिस्टम सोच समस्याओं को पृथक घटकों के बजाय एक परस्पर जुड़े पूरे के हिस्से के रूप में विश्लेषण करती है, श्रीमान। फीडबैक लूप — प्रवर्धक और संतुलन — सिस्टम व्यवहार निर्धारित करते हैं। लीवरेज पॉइंट को समझना प्रमुख कौशल है।",
+  bn: "সিস্টেম চিন্তা সমস্যাগুলিকে বিচ্ছিন্ন উপাদানের পরিবর্তে একটি আন্তঃসংযুক্ত সমগ্রের অংশ হিসেবে বিশ্লেষণ করে, স্যার। ফিডব্যাক লুপ — শক্তিবর্ধক ও সাম্যতা — সিস্টেম আচরণ নির্ধারণ করে। লিভারেজ পয়েন্ট বোঝা মূল দক্ষতা।"
+},
+
+decision_framework: {
+  en: "Effective decision frameworks reduce cognitive load and improve consistency, Boss. The Eisenhower Matrix categorises tasks by urgency and importance. The Regret Minimisation Framework — Jeff Bezos — asks what you will regret at age 80. The 10-10-10 method evaluates decisions through 10 minutes, 10 months, and 10 years lenses. Pre-mortems imagine the decision has failed and work backwards to identify risks before committing.",
+  hi: "प्रभावी निर्णय ढांचे संज्ञानात्मक भार कम करते हैं और स्थिरता में सुधार करते हैं, श्रीमान। आइज़ेनहावर मैट्रिक्स कार्यों को तात्कालिकता और महत्व से वर्गीकृत करता है। जेफ बेज़ोस का रिग्रेट मिनिमाइज़ेशन फ्रेमवर्क पूछता है कि 80 साल की उम्र में आप क्या पछताएंगे।",
+  bn: "কার্যকর সিদ্ধান্ত কাঠামো জ্ঞানীয় লোড কমায় এবং ধারাবাহিকতা উন্নত করে, স্যার। আইজেনহাওয়ার ম্যাট্রিক্স কাজগুলিকে জরুরিতা ও গুরুত্ব দ্বারা শ্রেণীবদ্ধ করে। জেফ বেজোসের রিগ্রেট মিনিমাইজেশন ফ্রেমওয়ার্ক ৮০ বছরে কী আফসোস করবেন তা জিজ্ঞেস করে।"
+},
+
+// ════════════════════════════════════
+// CATEGORY D: PERFORMANCE SCIENCE
+// ════════════════════════════════════
+
+hypertrophy_science: {
+  en: "Hypertrophy — muscle growth — requires three primary stimuli, Boss. Mechanical tension from heavy loads stretching and contracting muscle fibres is the most critical factor. Metabolic stress — the pump — accumulates metabolites that signal growth. Muscle damage from eccentric loading triggers repair and adaptation. Research by Brad Schoenfeld shows 10 to 20 sets per muscle group per week in the 6 to 30 repetition range optimises growth across most individuals.",
+  hi: "हाइपरट्रॉफी — मांसपेशी वृद्धि — के लिए तीन प्राथमिक उत्तेजनाओं की आवश्यकता होती है, श्रीमान। भारी भार से यांत्रिक तनाव सबसे महत्वपूर्ण कारक है। चयापचय तनाव — पंप — विकास का संकेत देने वाले मेटाबोलाइट जमा करता है। Brad Schoenfeld के शोध से 6 से 30 रेप रेंज में प्रति मांसपेशी समूह 10-20 सेट इष्टतम है।",
+  bn: "হাইপারট্রফি — পেশী বৃদ্ধি — তিনটি প্রাথমিক উদ্দীপনা প্রয়োজন, স্যার। ভারী লোড থেকে যান্ত্রিক টান সবচেয়ে গুরুত্বপূর্ণ কারণ। বিপাকীয় চাপ — পাম্প — বৃদ্ধির সংকেত দেওয়া মেটাবোলাইট জমায়। ব্র্যাড স্কোয়েনফেল্ডের গবেষণায় প্রতি পেশী গ্রুপে ৬ থেকে ৩০ রেপ পরিসরে ১০-২০ সেট সর্বোত্তম।"
+},
+
+progressive_overload_science: {
+  en: "Progressive overload is the fundamental principle that muscles must face increasing challenges over time to continue adapting, Boss. Methods include adding weight — load progression — more repetitions — volume progression — reduced rest periods — density progression — slower eccentrics — tempo progression — and greater range of motion. Periodisation organises training into cycles — microcycles weekly, mesocycles monthly, macrocycles yearly — to manage fatigue and peak performance.",
+  hi: "प्रोग्रेसिव ओवरलोड मूलभूत सिद्धांत है कि मांसपेशियों को अनुकूलन जारी रखने के लिए समय के साथ बढ़ती चुनौतियों का सामना करना चाहिए, श्रीमान। पीरियडाइजेशन प्रशिक्षण को चक्रों में व्यवस्थित करता है — माइक्रोसाइकिल साप्ताहिक, मेसोसाइकिल मासिक, मैक्रोसाइकिल वार्षिक।",
+  bn: "প্রগ্রেসিভ ওভারলোড হলো মৌলিক নীতি যে পেশীগুলিকে অভিযোজন চালিয়ে যেতে সময়ের সাথে বাড়তি চ্যালেঞ্জের মুখোমুখি হতে হবে, স্যার। পিরিয়ডাইজেশন প্রশিক্ষণকে চক্রে সংগঠিত করে — মাইক্রোসাইকেল সাপ্তাহিক, মেসোসাইকেল মাসিক, ম্যাক্রোসাইকেল বার্ষিক।"
+},
+
+protein_synthesis: {
+  en: "Muscle protein synthesis — MPS — is the cellular process of building new muscle proteins, Boss. Resistance training and leucine-rich protein intake stimulate MPS through the mTOR signalling pathway. The anabolic window — the idea that protein must be consumed immediately post-workout — is largely a myth. Total daily protein intake of 1.6 to 2.2 grams per kilogram of bodyweight distributed across 3 to 4 meals maximises MPS over 24 hours.",
+  hi: "मांसपेशी प्रोटीन संश्लेषण — MPS — नई मांसपेशी प्रोटीन बनाने की कोशिकीय प्रक्रिया है, श्रीमान। प्रतिरोध प्रशिक्षण और ल्यूसीन-समृद्ध प्रोटीन का सेवन mTOR सिग्नलिंग मार्ग के माध्यम से MPS को उत्तेजित करता है। प्रतिदिन 1.6-2.2 ग्राम प्रति किलोग्राम प्रोटीन 3-4 भोजन में वितरित इष्टतम है।",
+  bn: "মাসল প্রোটিন সংশ্লেষণ — MPS — নতুন পেশী প্রোটিন তৈরির কোষীয় প্রক্রিয়া, স্যার। রেজিস্ট্যান্স ট্রেনিং ও লিউসিন-সমৃদ্ধ প্রোটিন গ্রহণ mTOR সিগন্যালিং পথের মাধ্যমে MPS উদ্দীপিত করে। প্রতিদিন ১.৬-২.২ গ্রাম প্রতি কিলোগ্রাম প্রোটিন ৩-৪ খাবারে বিতরণ সর্বোত্তম।"
+},
+
+hrv_biometrics: {
+  en: "Heart Rate Variability — HRV — measures the variation in time between consecutive heartbeats, Boss. Higher HRV indicates better parasympathetic nervous system activity and recovery. WHOOP, Garmin, Oura Ring, and Apple Watch track HRV to quantify readiness for training. Morning HRV below your personal baseline signals insufficient recovery — pushing hard on such days leads to overtraining. HRV is the most validated objective recovery metric in sports science.",
+  hi: "हृदय दर परिवर्तनशीलता — HRV — लगातार दिल की धड़कनों के बीच समय में भिन्नता मापती है, श्रीमान। उच्च HRV बेहतर पैरासिम्पेथेटिक नर्वस सिस्टम गतिविधि और रिकवरी इंगित करता है। WHOOP, Garmin, Oura Ring और Apple Watch प्रशिक्षण के लिए तैयारी मापने के लिए HRV ट्रैक करते हैं।",
+  bn: "হার্ট রেট ভেরিয়েবিলিটি — HRV — ধারাবাহিক হৃদস্পন্দনের মধ্যে সময়ের পার্থক্য পরিমাপ করে, স্যার। উচ্চ HRV ভালো প্যারাসিম্প্যাথেটিক স্নায়ুতন্ত্রের কার্যকলাপ ও পুনরুদ্ধার নির্দেশ করে। WHOOP, Garmin, Oura Ring ও Apple Watch HRV ট্র্যাক করে।"
+},
+
+sleep_optimization: {
+  en: "Sleep is the most powerful performance enhancement tool available, Boss. During deep sleep — Stage 3 NREM — growth hormone is released rebuilding tissue. REM sleep consolidates motor skills and procedural memory. Chronic sleep restriction to 6 hours reduces cognitive performance as much as total sleep deprivation. Matthew Walker's research shows just one night of insufficient sleep reduces immune function by 70 percent. Cooling the room to 18 to 19 degrees Celsius improves sleep quality significantly.",
+  hi: "नींद सबसे शक्तिशाली प्रदर्शन वृद्धि उपकरण है, श्रीमान। गहरी नींद के दौरान — NREM चरण 3 — वृद्धि हार्मोन जारी होता है। REM नींद मोटर कौशल को समेकित करती है। मैथ्यू वॉकर के शोध से एक रात की अपर्याप्त नींद प्रतिरक्षा कार्य को 70 प्रतिशत कम करती है।",
+  bn: "ঘুম সবচেয়ে শক্তিশালী পারফরম্যান্স উন্নতির সরঞ্জাম, স্যার। গভীর ঘুমের সময় — NREM পর্যায় ৩ — গ্রোথ হরমোন নির্গত হয়। REM ঘুম মোটর দক্ষতা একত্রিত করে। ম্যাথিউ ওয়াকারের গবেষণায় একটি রাতের অপর্যাপ্ত ঘুম ইমিউন ফাংশন ৭০ শতাংশ কমায়।"
+},
+
+cortisol_management: {
+  en: "Cortisol is the body's primary stress hormone that when chronically elevated suppresses muscle growth, impairs immunity, disrupts sleep, and promotes fat storage, Boss. Optimal cortisol follows a diurnal rhythm — high upon waking — helping alertness — and low at night — enabling sleep. High-intensity training spikes cortisol temporarily — beneficial when training is the only stressor. Cold exposure, meditation, adaptogens like ashwagandha, and adequate sleep restore healthy cortisol rhythms.",
+  hi: "कोर्टिसोल शरीर का प्राथमिक तनाव हार्मोन है जो दीर्घकालिक रूप से ऊंचे होने पर मांसपेशियों की वृद्धि दबाता है, प्रतिरक्षा बाधित करता है और वसा भंडारण को बढ़ावा देता है, श्रीमान। अश्वगंधा जैसे एडाप्टोजेन और पर्याप्त नींद स्वस्थ कोर्टिसोल लय बहाल करते हैं।",
+  bn: "কর্টিসোল শরীরের প্রাথমিক স্ট্রেস হরমোন যা দীর্ঘস্থায়ীভাবে উন্নত হলে পেশী বৃদ্ধি দমন করে, রোগ প্রতিরোধ ক্ষমতা বিঘ্নিত করে এবং চর্বি সংরক্ষণ উৎসাহিত করে, স্যার। অশ্বগন্ধার মতো অ্যাডাপ্টোজেন ও পর্যাপ্ত ঘুম সুস্থ কর্টিসোল ছন্দ পুনরুদ্ধার করে।"
+},
+
+neuroplasticity_training: {
+  en: "Neuroplasticity is the brain's ability to reorganise by forming new synaptic connections throughout life, Boss. High-skill learning — musical instruments, languages, martial arts — produces the greatest structural changes. The BDNF — Brain-Derived Neurotrophic Factor — molecule released during aerobic exercise promotes neuronal growth and connectivity. Sleep after learning consolidates new pathways. Deliberate practice in the zone of proximal development — just beyond current skill — drives maximal plasticity.",
+  hi: "न्यूरोप्लास्टिसिटी जीवन भर नए सिनैप्टिक कनेक्शन बनाकर मस्तिष्क की पुनर्गठन की क्षमता है, श्रीमान। उच्च-कौशल सीखना — संगीत वाद्ययंत्र, भाषाएं, मार्शल आर्ट — सबसे बड़े संरचनात्मक परिवर्तन उत्पन्न करता है। एरोबिक व्यायाम के दौरान BDNF न्यूरोनल वृद्धि को बढ़ावा देता है।",
+  bn: "নিউরোপ্লাস্টিসিটি সারাজীবন নতুন সিন্যাপটিক সংযোগ গঠন করে মস্তিষ্কের পুনর্গঠনের ক্ষমতা, স্যার। উচ্চ-দক্ষতা শেখা — বাদ্যযন্ত্র, ভাষা, মার্শাল আর্ট — সবচেয়ে বড় কাঠামোগত পরিবর্তন তৈরি করে। এরোবিক ব্যায়ামের সময় BDNF নিউরনাল বৃদ্ধি উৎসাহিত করে।"
+},
+
+vo2max: {
+  en: "VO2 max is the maximum rate of oxygen the body can consume during maximal exertion, Boss. It is the gold standard metric for cardiovascular fitness. Elite marathon runners have VO2 max values above 80 ml/kg/min. HIIT — High-Intensity Interval Training — increases VO2 max more efficiently than steady-state cardio. Research by Peter Attia shows VO2 max is the single strongest predictor of longevity — better than not smoking, not drinking, or avoiding diabetes.",
+  hi: "VO2 मैक्स अधिकतम परिश्रम के दौरान शरीर द्वारा उपभोग की जाने वाली ऑक्सीजन की अधिकतम दर है, श्रीमान। यह कार्डियोवस्कुलर फिटनेस के लिए स्वर्ण मानक मेट्रिक है। Peter Attia के शोध से VO2 मैक्स दीर्घायु का सबसे मजबूत भविष्यवक्ता है।",
+  bn: "VO2 ম্যাক্স হলো সর্বোচ্চ পরিশ্রমের সময় শরীর সর্বাধিক অক্সিজেন গ্রহণের হার, স্যার। এটি কার্ডিওভাসকুলার ফিটনেসের স্বর্ণমান মেট্রিক। পিটার অ্যাটিয়ার গবেষণায় VO2 ম্যাক্স দীর্ঘায়ুর একক সবচেয়ে শক্তিশালী পূর্বাভাসদাতা।"
+},
+
+zone_training: {
+  en: "Training zones categorise exercise intensity by percentage of maximum heart rate, Boss. Zone 1 and 2 — 50 to 70 percent max HR — develop aerobic base and fat oxidation capacity. Zone 3 — moderate — provides cardiovascular benefit with significant fatigue. Zone 4 and 5 — 80 to 100 percent — develop anaerobic capacity and VO2 max. The polarised training model used by elite endurance athletes emphasises 80 percent Zone 2 and 20 percent high-intensity with minimal Zone 3.",
+  hi: "ट्रेनिंग जोन अधिकतम हृदय दर के प्रतिशत से व्यायाम तीव्रता को वर्गीकृत करती है, श्रीमान। जोन 2 — 50-70 प्रतिशत — एरोबिक बेस विकसित करती है। एलीट एंड्यूरेंस एथलीटों द्वारा उपयोग किया जाने वाला पोलराइज्ड मॉडल 80 प्रतिशत जोन 2 और 20 प्रतिशत उच्च तीव्रता पर जोर देता है।",
+  bn: "ট্রেনিং জোন সর্বোচ্চ হার্ট রেটের শতাংশ দ্বারা ব্যায়ামের তীব্রতা শ্রেণীবদ্ধ করে, স্যার। জোন ২ — ৫০-৭০ শতাংশ — অ্যারোবিক বেস বিকাশ করে। এলিট এন্ডুরেন্স অ্যাথলেটদের ব্যবহৃত পোলারাইজড মডেল ৮০ শতাংশ জোন ২ ও ২০ শতাংশ উচ্চ তীব্রতার উপর জোর দেয়।"
+},
+
+longevity_science: {
+  en: "Longevity science has identified key modifiable factors that determine lifespan and healthspan, Boss. Peter Attia's four horsemen — cardiovascular disease, cancer, neurodegenerative disease, and metabolic disease — cause 80 percent of deaths. Exercise — particularly strength training and VO2 max — is the most powerful longevity drug. Caloric restriction and time-restricted eating activate AMPK and sirtuins. Rapamycin shows promise by inhibiting mTOR extending lifespan in animal models.",
+  hi: "दीर्घायु विज्ञान ने प्रमुख परिवर्तनीय कारकों की पहचान की है जो जीवनकाल और स्वास्थ्यकाल निर्धारित करते हैं, श्रीमान। Peter Attia के चार घुड़सवार 80 प्रतिशत मौतों का कारण बनते हैं। व्यायाम — विशेष रूप से ताकत प्रशिक्षण और VO2 मैक्स — सबसे शक्तिशाली दीर्घायु दवा है।",
+  bn: "দীর্ঘায়ু বিজ্ঞান মূল পরিবর্তনযোগ্য কারণগুলি চিহ্নিত করেছে যা জীবনকাল ও স্বাস্থ্যকাল নির্ধারণ করে, স্যার। পিটার অ্যাটিয়ার চার অশ্বারোহী ৮০ শতাংশ মৃত্যুর কারণ। ব্যায়াম — বিশেষত শক্তি প্রশিক্ষণ ও VO2 ম্যাক্স — সবচেয়ে শক্তিশালী দীর্ঘায়ু ওষুধ।"
+},
+
+focus_protocols: {
+  en: "Optimal focus protocols exploit the ultradian rhythm — 90-minute cycles — of brain alertness, Boss. Andrew Huberman recommends 90-minute deep work sessions aligned with these cycles. The first 5 to 15 minutes of a focus session involve inevitable distraction before entering flow — accepting this prevents frustration. Visual focus — fixing gaze on a point — activates neural circuits associated with cognitive focus. Non-sleep deep rest — NSDR — 20-minute body scans after sessions restore dopamine and enhance retention.",
+  hi: "इष्टतम फोकस प्रोटोकॉल मस्तिष्क सतर्कता के अल्ट्राडियन ताल — 90 मिनट के चक्र — का फायदा उठाते हैं, श्रीमान। एंड्रयू हुबरमैन 90 मिनट के गहरे कार्य सत्रों की सिफारिश करते हैं। दृश्य फोकस — एक बिंदु पर दृष्टि स्थिर करना — संज्ञानात्मक फोकस से जुड़े न्यूरल सर्किट को सक्रिय करता है।",
+  bn: "সর্বোত্তম ফোকাস প্রোটোকল মস্তিষ্কের সতর্কতার আলট্রাডিয়ান ছন্দ — ৯০-মিনিটের চক্র — ব্যবহার করে, স্যার। অ্যান্ড্রু হুবারম্যান এই চক্রের সাথে সামঞ্জস্যপূর্ণ ৯০-মিনিটের গভীর কাজের সেশন সুপারিশ করেন। ভিজ্যুয়াল ফোকাস — একটি বিন্দুতে দৃষ্টি স্থির রাখা — জ্ঞানীয় ফোকাসের সাথে সম্পর্কিত নিউরাল সার্কিট সক্রিয় করে।"
+},
+
+testosterone_optimisation: {
+  en: "Testosterone is the primary anabolic hormone governing muscle mass, bone density, libido, cognition, and motivation, Boss. Natural testosterone optimisation requires resistance training — especially compound lifts — adequate dietary fat — 30 percent of calories — 7 to 9 hours sleep, stress reduction, and zinc and vitamin D sufficiency. Research shows testosterone levels in men have declined 30 percent since the 1980s correlated with obesity, endocrine disruptors, and sedentary lifestyles.",
+  hi: "टेस्टोस्टेरोन प्राथमिक एनाबोलिक हार्मोन है जो मांसपेशियों, हड्डियों के घनत्व, कामेच्छा और अनुभूति को नियंत्रित करता है, श्रीमान। शोध से पता चलता है कि पुरुषों में टेस्टोस्टेरोन का स्तर 1980 के दशक से 30 प्रतिशत कम हुआ है।",
+  bn: "টেস্টোস্টেরোন প্রাথমিক অ্যানাবলিক হরমোন যা পেশী ভর, হাড়ের ঘনত্ব, কামশক্তি ও অনুভূতি নিয়ন্ত্রণ করে, স্যার। গবেষণায় দেখা গেছে পুরুষদের টেস্টোস্টেরোনের মাত্রা ১৯৮০-এর দশক থেকে ৩০ শতাংশ কমেছে।"
+},
+
+cold_exposure_science: {
+  en: "Cold exposure — cold showers, ice baths, cryotherapy — activates the sympathetic nervous system releasing norepinephrine up to 300 percent above baseline, Boss. This improves alertness, mood, and metabolic rate. Cold water immersion after resistance training may blunt hypertrophy by suppressing inflammatory pathways needed for muscle adaptation. Optimal protocol is cold exposure 3 to 4 hours after training rather than immediately after. Wim Hof's methods have been studied and validated.",
+  hi: "ठंड संपर्क — ठंडे शॉवर, बर्फ स्नान — सहानुभूति तंत्रिका तंत्र को सक्रिय करता है नोरेपिनेफ्रिन को बेसलाइन से 300 प्रतिशत ऊपर जारी करता है, श्रीमान। प्रतिरोध प्रशिक्षण के तुरंत बाद ठंडे पानी में विसर्जन हाइपरट्रॉफी को कम कर सकता है।",
+  bn: "ঠান্ডা এক্সপোজার — ঠান্ডা শাওয়ার, আইস বাথ — সিম্প্যাথেটিক স্নায়ুতন্ত্র সক্রিয় করে নোরেপিনেফ্রিন বেসলাইনের ৩০০ শতাংশ উপরে নির্গত করে, স্যার। রেজিস্ট্যান্স ট্রেনিংয়ের পরপরই ঠান্ডা জলে নিমজ্জন হাইপারট্রফি কমাতে পারে।"
+},
+
+peptides_performance: {
+  en: "Peptides are short chains of amino acids that act as signalling molecules in the body, Boss. BPC-157 — Body Protection Compound — shows remarkable healing properties for tendons, ligaments, and muscles in research settings. TB-500 — Thymosin Beta-4 — promotes tissue repair and angiogenesis. Growth Hormone Releasing Peptides — GHRPs — stimulate natural GH release. Most peptides are research compounds and their use in humans is being studied.",
+  hi: "पेप्टाइड अमीनो एसिड की छोटी श्रृंखलाएं हैं जो शरीर में सिग्नलिंग अणुओं के रूप में कार्य करती हैं, श्रीमान। BPC-157 कण्डरा, स्नायुबंधन और मांसपेशियों के लिए उल्लेखनीय उपचार गुण दिखाता है। अधिकांश पेप्टाइड शोध यौगिक हैं।",
+  bn: "পেপটাইড অ্যামিনো অ্যাসিডের ছোট শৃঙ্খল যা শরীরে সিগন্যালিং অণু হিসেবে কাজ করে, স্যার। BPC-157 টেন্ডন, লিগামেন্ট ও পেশীর জন্য উল্লেখযোগ্য নিরাময় গুণ দেখায়। বেশিরভাগ পেপটাইড গবেষণা যৌগ।"
+},
+
+// ════════════════════════════════════
+// CATEGORY E: GRAPHICS & GAME TECH
+// ════════════════════════════════════
+
+ray_tracing: {
+  en: "Ray tracing simulates the physical behaviour of light by casting rays from a virtual camera into a scene and calculating how they bounce off surfaces, Boss. Each ray can spawn reflection rays, refraction rays, and shadow rays. Global illumination — how light bounces between surfaces — creates photorealistic results impossible with traditional rasterisation. NVIDIA RTX cards use dedicated RT Cores to accelerate this. Real-time ray tracing in games like Cyberpunk 2077 and Alan Wake 2 produces cinema-quality lighting.",
+  hi: "रे ट्रेसिंग एक वर्चुअल कैमरे से एक दृश्य में किरणें डालकर और उनके सतहों से उछलने की गणना करके प्रकाश के भौतिक व्यवहार का अनुकरण करती है, श्रीमान। NVIDIA RTX कार्ड इसे त्वरित करने के लिए समर्पित RT कोर का उपयोग करते हैं।",
+  bn: "রে ট্রেসিং একটি ভার্চুয়াল ক্যামেরা থেকে একটি দৃশ্যে রশ্মি নিক্ষেপ করে এবং সেগুলি পৃষ্ঠ থেকে কীভাবে বাউন্স করে তা গণনা করে আলোর ভৌত আচরণ অনুকরণ করে, স্যার। NVIDIA RTX কার্ড এটি ত্বরান্বিত করতে ডেডিকেটেড RT কোর ব্যবহার করে।"
+},
+
+path_tracing: {
+  en: "Path tracing is a more accurate version of ray tracing that simulates entire light paths stochastically, Boss. Instead of tracing every possible ray deterministically it samples many random paths and averages them. The Lumen system in Unreal Engine 5 provides real-time global illumination using path tracing approximations. Offline path tracing used in films like Avatar requires hours per frame but produces ground-truth photorealism.",
+  hi: "पाथ ट्रेसिंग रे ट्रेसिंग का अधिक सटीक संस्करण है जो स्टोकास्टिक रूप से पूरे प्रकाश पथों का अनुकरण करता है, श्रीमान। Unreal Engine 5 में Lumen सिस्टम पाथ ट्रेसिंग अनुमान का उपयोग करके रियल-टाइम ग्लोबल इल्युमिनेशन प्रदान करता है।",
+  bn: "পাথ ট্রেসিং রে ট্রেসিংয়ের আরও সঠিক সংস্করণ যা স্টোকাস্টিকভাবে সম্পূর্ণ আলোর পথ অনুকরণ করে, স্যার। Unreal Engine 5-এর Lumen সিস্টেম পাথ ট্রেসিং অনুমান ব্যবহার করে রিয়েল-টাইম গ্লোবাল ইলুমিনেশন প্রদান করে।"
+},
+
+rasterization: {
+  en: "Rasterisation is the traditional rendering method that projects 3D geometry onto a 2D screen, Boss. It runs on the GPU's shader cores processing thousands of triangles simultaneously. While not physically accurate it runs orders of magnitude faster than ray tracing — enabling real-time frame rates. Techniques like screen-space reflections, ambient occlusion, and shadow maps fake physical accuracy. Most games use a hybrid of rasterisation with selective ray tracing for specific effects.",
+  hi: "रैस्टराइजेशन पारंपरिक रेंडरिंग विधि है जो 3D ज्यामिति को 2D स्क्रीन पर प्रोजेक्ट करती है, श्रीमान। अधिकांश गेम चुनिंदा रे ट्रेसिंग के साथ रैस्टराइजेशन का हाइब्रिड उपयोग करते हैं।",
+  bn: "রাস্টারাইজেশন ঐতিহ্যবাহী রেন্ডারিং পদ্ধতি যা 3D জ্যামিতি 2D স্ক্রিনে প্রজেক্ট করে, স্যার। বেশিরভাগ গেম নির্বাচিত রে ট্রেসিং সহ রাস্টারাইজেশনের হাইব্রিড ব্যবহার করে।"
+},
+
+dlss_fsr: {
+  en: "AI-powered upscaling renders games at lower resolution and uses neural networks to reconstruct high-resolution frames, Boss. NVIDIA DLSS 3.5 — Deep Learning Super Sampling — uses a convolutional network trained on thousands of game frames to generate pixels with remarkable quality. AMD FSR — FidelityFX Super Resolution — is open-source and hardware-agnostic. DLSS Frame Generation can double frame rates by creating entirely AI-generated intermediate frames.",
+  hi: "AI-पावर्ड अपस्केलिंग गेम को कम रिज़ॉल्यूशन पर रेंडर करती है और उच्च-रिज़ॉल्यूशन फ्रेम पुनर्निर्मित करने के लिए न्यूरल नेटवर्क का उपयोग करती है, श्रीमान। NVIDIA DLSS 3.5 एक कन्वोल्यूशनल नेटवर्क का उपयोग करता है। DLSS फ्रेम जेनरेशन फ्रेम दर दोगुनी कर सकता है।",
+  bn: "AI-চালিত আপস্কেলিং গেম কম রেজোলিউশনে রেন্ডার করে এবং উচ্চ-রেজোলিউশন ফ্রেম পুনর্গঠন করতে নিউরাল নেটওয়ার্ক ব্যবহার করে, স্যার। NVIDIA DLSS 3.5 একটি কনভোলিউশনাল নেটওয়ার্ক ব্যবহার করে। DLSS ফ্রেম জেনারেশন ফ্রেম রেট দ্বিগুণ করতে পারে।"
+},
+
+procedural_generation: {
+  en: "Procedural generation creates content algorithmically rather than manually, enabling vast virtual worlds from compact code, Boss. No Man's Sky generates over 18 quintillion planets using mathematical seeding. Minecraft uses Perlin noise to create infinite terrain variations. Roguelikes like Hades generate different dungeon layouts each run. Procedural generation combines deterministic algorithms with randomisation — the same seed always produces the same result enabling shareable worlds.",
+  hi: "प्रक्रियात्मक निर्माण कॉम्पैक्ट कोड से विशाल आभासी दुनिया सक्षम करते हुए मैन्युअल की बजाय एल्गोरिदमिक रूप से सामग्री बनाता है, श्रीमान। No Man's Sky गणितीय सीडिंग का उपयोग करके 18 क्विंटिलियन से अधिक ग्रह उत्पन्न करता है। Minecraft अनंत इलाके बदलाव बनाने के लिए Perlin noise का उपयोग करता है।",
+  bn: "প্রক্রিয়াগত জেনারেশন কমপ্যাক্ট কোড থেকে বিশাল ভার্চুয়াল বিশ্ব সক্ষম করে ম্যানুয়ালি নয় বরং অ্যালগরিদমিকভাবে কন্টেন্ট তৈরি করে, স্যার। No Man's Sky গাণিতিক সিডিং ব্যবহার করে ১৮ কুইন্টিলিয়নেরও বেশি গ্রহ তৈরি করে। Minecraft অসীম ভূখণ্ড বৈচিত্র্য তৈরি করতে Perlin noise ব্যবহার করে।"
+},
+
+nanite_lumen: {
+  en: "Nanite is Unreal Engine 5's virtualised geometry system that renders film-quality assets with billions of polygons in real-time, Boss. It streams only the detail needed for the current view eliminating manual LOD creation. Lumen provides fully dynamic global illumination — reflections and shadows update in real-time as lights and objects move. Together Nanite and Lumen allow game artists to import raw film-production assets directly without optimisation.",
+  hi: "Nanite Unreal Engine 5 का वर्चुअलाइज्ड ज्यामिति सिस्टम है जो रियल-टाइम में अरबों पॉलीगॉन के साथ फिल्म-गुणवत्ता संपत्तियां रेंडर करता है, श्रीमान। Lumen पूरी तरह से गतिशील ग्लोबल इल्युमिनेशन प्रदान करता है। साथ में Nanite और Lumen गेम कलाकारों को कच्ची फिल्म-उत्पादन संपत्तियां सीधे आयात करने की अनुमति देते हैं।",
+  bn: "Nanite হলো Unreal Engine 5-এর ভার্চুয়ালাইজড জ্যামিতি সিস্টেম যা রিয়েল-টাইমে বিলিয়ন পলিগন সহ ফিল্ম-মানের সম্পদ রেন্ডার করে, স্যার। Lumen সম্পূর্ণ গতিশীল গ্লোবাল ইলুমিনেশন প্রদান করে। একসাথে Nanite ও Lumen গেম আর্টিস্টদের কাঁচা ফিল্ম-প্রোডাকশন সম্পদ সরাসরি আমদানি করতে দেয়।"
+},
+
+shader_programming: {
+  en: "Shaders are small programs running on the GPU that determine how each pixel is rendered, Boss. Vertex shaders transform 3D positions to screen coordinates. Fragment shaders calculate final pixel colours using lighting models like Blinn-Phong and PBR — Physically Based Rendering. Compute shaders perform general-purpose GPU calculations for particle systems, physics, and AI. GLSL, HLSL, and Metal Shading Language are the primary shader languages.",
+  hi: "शेडर छोटे प्रोग्राम हैं जो GPU पर चलते हैं जो निर्धारित करते हैं कि प्रत्येक पिक्सेल कैसे रेंडर किया जाता है, श्रीमान। वर्टेक्स शेडर 3D पोजीशन को स्क्रीन निर्देशांकों में बदलते हैं। फ्रैगमेंट शेडर PBR जैसे प्रकाश मॉडल का उपयोग करके अंतिम पिक्सेल रंग गणना करते हैं।",
+  bn: "শেডার হলো GPU-তে চলমান ছোট প্রোগ্রাম যা প্রতিটি পিক্সেল কীভাবে রেন্ডার করা হয় তা নির্ধারণ করে, স্যার। ভার্টেক্স শেডার 3D অবস্থান স্ক্রিন কোঅর্ডিনেটে রূপান্তরিত করে। ফ্র্যাগমেন্ট শেডার PBR-এর মতো লাইটিং মডেল ব্যবহার করে চূড়ান্ত পিক্সেল রং গণনা করে।"
+},
+
+physically_based_rendering: {
+  en: "Physically Based Rendering — PBR — is a shading methodology that simulates how light physically interacts with materials, Boss. Materials are described by properties including albedo — base colour — metallic — how metallic the surface is — roughness — how smooth or rough the surface is — and ambient occlusion. PBR ensures materials look correct under any lighting condition. Adopted by most modern game engines and film production pipelines since 2012.",
+  hi: "Physically Based Rendering — PBR — एक शेडिंग पद्धति है जो अनुकरण करती है कि प्रकाश भौतिक रूप से सामग्री के साथ कैसे इंटरैक्ट करता है, श्रीमान। सामग्री एल्बेडो, मेटैलिक, रफनेस और परिवेश रोड़न जैसी गुणों द्वारा वर्णित है।",
+  bn: "Physically Based Rendering — PBR — একটি শেডিং পদ্ধতি যা অনুকরণ করে আলো কীভাবে ভৌতিকভাবে উপকরণের সাথে মিথস্ক্রিয়া করে, স্যার। উপকরণগুলি অ্যালবেডো, মেটালিক, রাফনেস এবং অ্যাম্বিয়েন্ট অক্লুশন দ্বারা বর্ণিত।"
+},
+
+game_physics: {
+  en: "Game physics engines simulate physical systems to create believable movement and interactions, Boss. Rigid body dynamics handles solid objects — collisions, gravity, friction. Soft body dynamics simulates deformable materials — cloth, jelly. Fluid simulations model water and smoke. NVIDIA PhysX and Havok are industry standard physics middleware. NVIDIA's real-time fluid simulation system can handle millions of particles. Physics engines underpin everything from car handling to destruction systems.",
+  hi: "गेम फिजिक्स इंजन विश्वसनीय आंदोलन और इंटरैक्शन बनाने के लिए भौतिक प्रणालियों का अनुकरण करते हैं, श्रीमान। NVIDIA PhysX और Havok उद्योग मानक फिजिक्स मिडलवेयर हैं। फिजिक्स इंजन कार हैंडलिंग से विनाश प्रणालियों तक सब कुछ को रेखांकित करते हैं।",
+  bn: "গেম ফিজিক্স ইঞ্জিন বিশ্বাসযোগ্য গতিবিধি ও মিথস্ক্রিয়া তৈরি করতে ভৌত সিস্টেম অনুকরণ করে, স্যার। NVIDIA PhysX ও Havok শিল্পের মানদণ্ড ফিজিক্স মিডলওয়্যার। ফিজিক্স ইঞ্জিন গাড়ি হ্যান্ডলিং থেকে ধ্বংস সিস্টেম পর্যন্ত সবকিছুর ভিত্তি।"
+},
+
+audio_engine: {
+  en: "Game audio has evolved from simple beeps to full acoustic simulation, Boss. Spatial audio — binaural rendering — creates 3D soundscapes where footsteps sound above, below, and around you. Wwise and FMOD are industry-standard audio middleware. Convolution reverb applies real room impulse responses to game audio for accurate acoustics. Steam Audio by Valve provides real-time ray-traced audio propagation. Microsoft Acoustics simulates how sound interacts with complex geometry.",
+  hi: "गेम ऑडियो सरल बीप से पूर्ण ध्वनिक सिमुलेशन तक विकसित हुई है, श्रीमान। स्थानिक ऑडियो — बाइनोरल रेंडरिंग — 3D साउंडस्केप बनाता है। Wwise और FMOD उद्योग-मानक ऑडियो मिडलवेयर हैं।",
+  bn: "গেম অডিও সহজ বিপ থেকে সম্পূর্ণ অ্যাকুস্টিক সিমুলেশনে বিকশিত হয়েছে, স্যার। স্প্যাশিয়াল অডিও — বাইনোরাল রেন্ডারিং — 3D সাউন্ডস্কেপ তৈরি করে। Wwise ও FMOD শিল্পের মানদণ্ড অডিও মিডলওয়্যার।"
+},
+
+motion_capture: {
+  en: "Motion capture records the movement of actors and transfers it to digital characters, Boss. Optical mocap uses retroreflective markers tracked by infrared cameras — used by EA Sports for FIFA players. Markerless mocap uses computer vision and AI to track body movement from video alone. Facial capture uses dense marker arrays or depth cameras to capture facial expressions. iPhone's Face ID TrueDepth camera enables consumer-grade facial mocap for Animoji and VTubing.",
+  hi: "मोशन कैप्चर अभिनेताओं की गतिविधि रिकॉर्ड करता है और इसे डिजिटल पात्रों में स्थानांतरित करता है, श्रीमान। ऑप्टिकल मोकैप इन्फ्रारेड कैमरों द्वारा ट्रैक किए गए रेट्रोरिफ्लेक्टिव मार्कर का उपयोग करता है। iPhone के TrueDepth कैमरे Animoji के लिए उपभोक्ता-ग्रेड चेहरे की मोकैप सक्षम करते हैं।",
+  bn: "মোশন ক্যাপচার অভিনেতাদের আন্দোলন রেকর্ড করে এবং ডিজিটাল চরিত্রে স্থানান্তর করে, স্যার। অপটিক্যাল মোক্যাপ ইনফ্রারেড ক্যামেরা দ্বারা ট্র্যাক করা রেট্রোরিফ্লেক্টিভ মার্কার ব্যবহার করে। iPhone-এর TrueDepth ক্যামেরা Animoji-এর জন্য কনজিউমার-গ্রেড ফেসিয়াল মোক্যাপ সক্ষম করে।"
+},
+
+level_of_detail: {
+  en: "Level of Detail — LOD — systems reduce polygon counts of distant objects to maintain performance, Boss. A tree 100 metres away uses 100 polygons while the same tree up close uses 100,000. Cascaded LOD transitions through multiple resolution stages. Unreal Engine 5's Nanite makes LOD largely obsolete by virtualising geometry. Impostors replace distant 3D objects with 2D billboards that rotate to face the camera — used extensively in open-world games for foliage.",
+  hi: "लेवल ऑफ डिटेल — LOD — सिस्टम प्रदर्शन बनाए रखने के लिए दूर की वस्तुओं के पॉलीगॉन काउंट को कम करते हैं, श्रीमान। Unreal Engine 5 का Nanite ज्यामिति को वर्चुअलाइज करके LOD को काफी हद तक अप्रचलित कर देता है।",
+  bn: "লেভেল অফ ডিটেইল — LOD — সিস্টেম পারফরম্যান্স বজায় রাখতে দূরের বস্তুর পলিগন সংখ্যা কমায়, স্যার। Unreal Engine 5-এর Nanite জ্যামিতি ভার্চুয়ালাইজ করে LOD মূলত অপ্রচলিত করে।"
+},
+
+texture_compression: {
+  en: "Texture compression reduces GPU memory usage by encoding colour data more efficiently, Boss. DXT — DirectX Texture Compression — reduces textures to one-fourth of their uncompressed size. BCn formats offer better quality. ASTC — Adaptive Scalable Texture Compression — is the standard on mobile GPUs. Texture streaming loads high-resolution textures only when objects are close. A modern open-world game can use over 100GB of raw texture data compressed to 20GB.",
+  hi: "टेक्सचर कम्प्रेशन रंग डेटा को अधिक कुशलता से एन्कोड करके GPU मेमोरी उपयोग कम करता है, श्रीमान। DXT टेक्सचर को उनके असंपीड़ित आकार के एक-चौथाई तक कम करता है। ASTC मोबाइल GPU पर मानक है।",
+  bn: "টেক্সচার কম্প্রেশন রঙের ডেটা আরও দক্ষতার সাথে এনকোড করে GPU মেমোরি ব্যবহার কমায়, স্যার। DXT টেক্সচার তাদের অসংকুচিত আকারের এক-চতুর্থাংশে কমায়। ASTC মোবাইল GPU-তে মানদণ্ড।"
+},
+
+game_networking: {
+  en: "Multiplayer game networking must deliver real-time gameplay across unreliable internet connections, Boss. Client-server architecture has one authoritative server with clients predicting movement locally. Rollback netcode — used in fighting games — predicts opponent inputs and rolls back if wrong. Delay-based netcode adds input lag for synchronisation. Valve's Source Engine pioneered client-side prediction and lag compensation. Epic Online Services and Photon provide networking infrastructure.",
+  hi: "मल्टीप्लेयर गेम नेटवर्किंग को अविश्वसनीय इंटरनेट कनेक्शन पर रियल-टाइम गेमप्ले प्रदान करना होता है, श्रीमान। रोलबैक नेटकोड — फाइटिंग गेम में उपयोग — प्रतिद्वंद्वी इनपुट की भविष्यवाणी करता है और गलत होने पर वापस रोल करता है।",
+  bn: "মাল্টিপ্লেয়ার গেম নেটওয়ার্কিং অবিশ্বস্ত ইন্টারনেট সংযোগের মাধ্যমে রিয়েল-টাইম গেমপ্লে সরবরাহ করতে হবে, স্যার। রোলব্যাক নেটকোড — ফাইটিং গেমে ব্যবহৃত — প্রতিপক্ষের ইনপুট ভবিষ্যদ্বাণী করে এবং ভুল হলে ব্যাক করে।"
+},
+
+voxel_rendering: {
+  en: "Voxels are 3D pixels — volumetric elements — representing three-dimensional data on a regular grid, Boss. Minecraft uses cubic voxels for its entire world enabling infinite destruction and construction. Teardown by Tuxedo Labs features fully destructible voxel environments. Voxel rendering struggles at scale because memory requirements grow cubically with detail level. Sparse voxel octrees and signed distance fields offer more efficient representations for large worlds.",
+  hi: "वॉक्सेल 3D पिक्सेल हैं — वॉल्यूमेट्रिक तत्व — जो नियमित ग्रिड पर त्रि-आयामी डेटा का प्रतिनिधित्व करते हैं, श्रीमान। Minecraft अपनी पूरी दुनिया के लिए घन वॉक्सेल का उपयोग करता है। Teardown में पूरी तरह से विनाशकारी वॉक्सेल वातावरण है।",
+  bn: "ভক্সেল হলো 3D পিক্সেল — ভলিউমেট্রিক উপাদান — যা একটি নিয়মিত গ্রিডে ত্রি-মাত্রিক ডেটা উপস্থাপন করে, স্যার। Minecraft তার সম্পূর্ণ বিশ্বের জন্য ঘনক ভক্সেল ব্যবহার করে। Teardown সম্পূর্ণ ধ্বংসযোগ্য ভক্সেল পরিবেশ বৈশিষ্ট্য সহ।"
+},
+
+anti_aliasing: {
+  en: "Anti-aliasing smooths the jagged edges — jaggies — that appear when diagonal lines are rendered on a pixel grid, Boss. MSAA — Multisample Anti-Aliasing — takes multiple samples per pixel — high quality but expensive. TAA — Temporal Anti-Aliasing — accumulates information across frames — cheaper but can cause ghosting. SMAA — Subpixel Morphological Anti-Aliasing — analyses edge patterns. AI upscalers like DLSS integrate anti-aliasing with resolution enhancement.",
+  hi: "एंटी-एलियासिंग पिक्सेल ग्रिड पर तिरछी रेखाएं रेंडर होने पर दिखाई देने वाले जग्गे किनारों को चिकना करता है, श्रीमान। MSAA प्रति पिक्सेल कई नमूने लेता है। TAA फ्रेम में जानकारी जमा करता है — सस्ता लेकिन घोस्टिंग हो सकती है।",
+  bn: "অ্যান্টি-অ্যালিয়াসিং পিক্সেল গ্রিডে তির্যক রেখা রেন্ডার করার সময় দেখা দেওয়া দাঁতালো প্রান্ত মসৃণ করে, স্যার। MSAA প্রতি পিক্সেলে একাধিক নমুনা নেয়। TAA ফ্রেম জুড়ে তথ্য জমা করে — সস্তা কিন্তু ঘোস্টিং হতে পারে।"
+},
+
+open_world_tech: {
+  en: "Open world games face unique technical challenges including streaming vast amounts of data without loading screens, Boss. Level streaming divides the world into cells loaded and unloaded based on player position. Horizon Zero Dawn developed a custom terrain streaming system to render 50 square kilometre worlds on PS4. Red Dead Redemption 2 uses a time-of-day system affecting NPC behaviour, weather, and lighting across 100 plus square kilometres of world.",
+  hi: "ओपन वर्ल्ड गेम में लोडिंग स्क्रीन के बिना विशाल डेटा स्ट्रीम करने सहित अनूठी तकनीकी चुनौतियां हैं, श्रीमान। Horizon Zero Dawn ने PS4 पर 50 वर्ग किलोमीटर दुनिया रेंडर करने के लिए एक कस्टम टेरेन स्ट्रीमिंग सिस्टम विकसित किया।",
+  bn: "ওপেন ওয়ার্ল্ড গেম লোডিং স্ক্রিন ছাড়াই বিশাল ডেটা স্ট্রিমিং সহ অনন্য প্রযুক্তিগত চ্যালেঞ্জের মুখোমুখি, স্যার। Horizon Zero Dawn PS4-এ ৫০ বর্গকিলোমিটার বিশ্ব রেন্ডার করতে কাস্টম টেরেইন স্ট্রিমিং সিস্টেম তৈরি করেছিল।"
+},
+
   
   default: {
     en: ["Understood, Boss. That is a fascinating query. Based on my analysis, I would suggest approaching this methodically and gathering more data before drawing conclusions.",
@@ -6863,6 +7332,91 @@ if(/memory.*hierarchy|register.*cache.*ram|storage.*pyramid/i.test(q)) return KB
 if(/overclocking|cpu.*faster.*rated|liquid.*nitrogen.*overclock/i.test(q)) return KB.overclocking[L];
 if(/system.*on.*chip|\bsoc\b|snapdragon.*dimensity|apple.*m4.*soc/i.test(q)) return KB.soc_design[L];
 if(/transistor.*scaling|28.*billion.*transistor|3nm.*process|tsmc/i.test(q)) return KB.transistor_scaling[L];
+// ── BATCH 8 IF CHAIN ──
+
+// CATEGORY A: AI & AGENTS
+if(/\bai.*agent\b|autonomous.*agent|autogpt|langchain.*agent/i.test(q)) return KB.ai_agents[L];
+if(/agentic.*workflow|react.*framework.*ai|human.*loop.*ai/i.test(q)) return KB.agentic_workflow[L];
+if(/tool.*use.*ai|function.*calling.*ai|api.*calling.*model/i.test(q)) return KB.tool_use_ai[L];
+if(/vector.*database|pinecone|weaviate|chroma.*db|qdrant/i.test(q)) return KB.vector_database[L];
+if(/\brag\b|retrieval.*augmented|augmented.*generation|private.*document.*ai/i.test(q)) return KB.rag_system[L];
+if(/\bembedding\b|text.*embedding|cosine.*similarity|semantic.*vector/i.test(q)) return KB.embeddings[L];
+if(/multimodal.*ai|gpt.*4.*vision|gemini.*image|multiple.*modality/i.test(q)) return KB.multimodal_ai[L];
+if(/chain.*of.*thought|think.*step.*by.*step|tree.*of.*thought|o1.*reasoning/i.test(q)) return KB.chain_of_thought[L];
+if(/ai.*memory.*system|context.*window.*memory|long.*term.*ai.*memory/i.test(q)) return KB.memory_systems_ai[L];
+if(/generative.*video|sora.*openai|text.*to.*video|veo.*google/i.test(q)) return KB.generative_video[L];
+if(/diffusion.*model|stable.*diffusion|dall.*e.*3|midjourney.*how/i.test(q)) return KB.diffusion_models[L];
+if(/fine.*tuning.*ai|\blora\b|qlora|adapter.*matrix/i.test(q)) return KB.fine_tuning[L];
+if(/transformer.*architecture|attention.*is.*all.*you.*need|self.*attention/i.test(q)) return KB.transformer_architecture[L];
+if(/llm.*inference|kv.*cache|speculative.*decoding|quantisation.*model/i.test(q)) return KB.llm_inference[L];
+if(/ai.*alignment|constitutional.*ai|rlhf|reinforcement.*human.*feedback/i.test(q)) return KB.ai_alignment[L];
+if(/context.*window.*ai|200000.*token|gemini.*2.*million/i.test(q)) return KB.context_window[L];
+if(/model.*evaluation|mmlu.*benchmark|humaneval|lmsys.*chatbot.*arena/i.test(q)) return KB.model_evaluation[L];
+if(/ai.*safety|bletchley.*summit|power.*seeking.*ai|deceptive.*ai/i.test(q)) return KB.ai_safety[L];
+if(/computer.*vision|yolo.*detect|vision.*transformer|cnn.*image/i.test(q)) return KB.computer_vision[L];
+if(/speech.*ai|whisper.*openai|elevenlabs|voice.*clone/i.test(q)) return KB.speech_ai[L];
+
+// CATEGORY B: QUANTUM & HARDWARE
+if(/qubit.*physics|superposition.*qubit|trapped.*ion|topological.*qubit/i.test(q)) return KB.qubit_physics[L];
+if(/quantum.*error.*correct|surface.*code|decoherence.*qubit/i.test(q)) return KB.quantum_error_correction[L];
+if(/quantum.*cryptography|shor.*algorithm|post.*quantum|crystals.*kyber/i.test(q)) return KB.quantum_cryptography[L];
+if(/spatial.*computing|apple.*vision.*pro|micro.*oled.*eye|mixed.*reality/i.test(q)) return KB.spatial_computing[L];
+if(/edge.*ai|on.*device.*ai|apple.*neural.*engine|qualcomm.*ai.*engine/i.test(q)) return KB.edge_ai[L];
+if(/neuromorphic|loihi.*chip|asynchronous.*neuron.*chip/i.test(q)) return KB.neuromorphic_computing[L];
+if(/photonic.*computing|light.*compute|lightmatter|optical.*matrix/i.test(q)) return KB.photonic_computing[L];
+if(/\bhbm\b|high.*bandwidth.*memory|819.*gb.*memory|hbm3.*gpu/i.test(q)) return KB.hbm_memory[L];
+if(/advanced.*packaging|cowos.*tsmc|chiplet.*design|emib.*intel/i.test(q)) return KB.advanced_packaging[L];
+
+// CATEGORY C: STRATEGY & PSYCHOLOGY
+if(/behavioral.*economics|loss.*aversion|kahneman.*irrational/i.test(q)) return KB.behavioral_economics[L];
+if(/prospect.*theory|risk.*averse.*gains|risk.*seeking.*loss/i.test(q)) return KB.prospect_theory[L];
+if(/mental.*model|first.*principle.*think|charlie.*munger.*model/i.test(q)) return KB.mental_models[L];
+if(/cognitive.*bias.*finance|recency.*bias.*invest|disposition.*effect/i.test(q)) return KB.cognitive_biases_finance[L];
+if(/compound.*effect|warren.*buffett.*99.*percent|1.*percent.*daily/i.test(q)) return KB.compound_effect[L];
+if(/strategic.*thinking|ooda.*loop|sun.*tzu.*business|blue.*ocean/i.test(q)) return KB.strategic_thinking[L];
+if(/alphazero.*chess|deepmind.*chess.*4.*hour|self.*play.*chess/i.test(q)) return KB.alphazero_chess[L];
+if(/nash.*equilibrium|prisoner.*dilemma.*game.*theory|rational.*defect/i.test(q)) return KB.nash_equilibrium[L];
+if(/negotiation.*theory|batna.*negotiation|harvard.*principled.*negotiation/i.test(q)) return KB.negotiation_theory[L];
+if(/risk.*management|black.*swan.*taleb|kelly.*criterion|antifragile/i.test(q)) return KB.risk_management[L];
+if(/portfolio.*theory|markowitz|efficient.*frontier|capm.*model/i.test(q)) return KB.portfolio_theory[L];
+if(/value.*investing|benjamin.*graham|margin.*of.*safety|buffett.*moat/i.test(q)) return KB.value_investing[L];
+if(/systems.*thinking|feedback.*loop|leverage.*point|reinforcing.*loop/i.test(q)) return KB.systems_thinking[L];
+if(/decision.*framework|regret.*minimisation|10.*10.*10.*decision|premortem/i.test(q)) return KB.decision_framework[L];
+
+// CATEGORY D: PERFORMANCE SCIENCE
+if(/hypertrophy.*science|mechanical.*tension.*muscle|brad.*schoenfeld|10.*20.*set/i.test(q)) return KB.hypertrophy_science[L];
+if(/progressive.*overload.*science|periodisation|mesocycle|microcycle/i.test(q)) return KB.progressive_overload_science[L];
+if(/protein.*synthesis|mps.*muscle|mtor.*signalling|leucine.*muscle/i.test(q)) return KB.protein_synthesis[L];
+if(/\bhrv\b|heart.*rate.*variability|whoop.*recovery|oura.*ring.*hrv/i.test(q)) return KB.hrv_biometrics[L];
+if(/sleep.*optimis|matthew.*walker|growth.*hormone.*sleep|18.*degree.*sleep/i.test(q)) return KB.sleep_optimization[L];
+if(/cortisol.*management|chronic.*cortisol|ashwagandha.*cortisol/i.test(q)) return KB.cortisol_management[L];
+if(/neuroplasticity.*training|bdnf|deliberate.*practice.*brain|proximal.*develop/i.test(q)) return KB.neuroplasticity_training[L];
+if(/vo2.*max|cardiovascular.*fitness.*metric|peter.*attia.*longevity/i.test(q)) return KB.vo2max[L];
+if(/zone.*training|zone.*2.*cardio|polarised.*training|80.*20.*endurance/i.test(q)) return KB.zone_training[L];
+if(/longevity.*science|four.*horsemen.*attia|rapamycin|healthspan/i.test(q)) return KB.longevity_science[L];
+if(/focus.*protocol|ultradian.*rhythm|andrew.*huberman.*focus|nsdr/i.test(q)) return KB.focus_protocols[L];
+if(/testosterone.*optimis|natural.*testosterone|t.*level.*decline/i.test(q)) return KB.testosterone_optimisation[L];
+if(/cold.*exposure.*science|wim.*hof|ice.*bath.*science|norepinephrine.*cold/i.test(q)) return KB.cold_exposure_science[L];
+if(/\bpeptide\b|bpc.*157|tb.*500|ghrp.*growth/i.test(q)) return KB.peptides_performance[L];
+
+// CATEGORY E: GRAPHICS & GAME TECH
+if(/ray.*tracing|rt.*core|global.*illumination.*realtime|rtx.*nvidia/i.test(q)) return KB.ray_tracing[L];
+if(/path.*tracing|lumen.*unreal|stochastic.*light/i.test(q)) return KB.path_tracing[L];
+if(/rasterisation|rasterization|vertex.*shader.*screen|traditional.*rendering/i.test(q)) return KB.rasterization[L];
+if(/\bdlss\b|\bfsr\b|ai.*upscaling|frame.*generation.*ai/i.test(q)) return KB.dlss_fsr[L];
+if(/procedural.*generation|perlin.*noise|no.*mans.*sky.*planet|18.*quintillion/i.test(q)) return KB.procedural_generation[L];
+if(/\bnanite\b|\blumen\b|unreal.*engine.*5.*virtual|billion.*polygon/i.test(q)) return KB.nanite_lumen[L];
+if(/shader.*programming|glsl|hlsl|fragment.*shader|vertex.*shader/i.test(q)) return KB.shader_programming[L];
+if(/physically.*based.*render|\bpbr\b|albedo.*metallic.*roughness/i.test(q)) return KB.physically_based_rendering[L];
+if(/game.*physics.*engine|nvidia.*physx|havok|rigid.*body.*game/i.test(q)) return KB.game_physics[L];
+if(/audio.*engine.*game|wwise|fmod|spatial.*audio.*game/i.test(q)) return KB.audio_engine[L];
+if(/motion.*capture|mocap|markerless.*capture|truedepth.*animoji/i.test(q)) return KB.motion_capture[L];
+if(/level.*of.*detail|\blod\b.*game|impostor.*foliage|nanite.*lod/i.test(q)) return KB.level_of_detail[L];
+if(/texture.*compression|dxt.*texture|astc.*mobile|bc.*compression/i.test(q)) return KB.texture_compression[L];
+if(/game.*networking|rollback.*netcode|client.*server.*prediction|lag.*compensation/i.test(q)) return KB.game_networking[L];
+if(/\bvoxel\b|teardown.*destruct|minecraft.*voxel|sparse.*voxel/i.test(q)) return KB.voxel_rendering[L];
+if(/anti.*aliasing|\bmsaa\b|\btaa\b|\bsmaa\b|jagged.*edge.*render/i.test(q)) return KB.anti_aliasing[L];
+if(/open.*world.*tech|terrain.*streaming|red.*dead.*open.*world/i.test(q)) return KB.open_world_tech[L];
 
 
   // ── MATH ──
