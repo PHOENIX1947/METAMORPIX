@@ -8164,7 +8164,7 @@ function tryMath(q){
     .replace(/\bdivided\s+by\b/gi,   '/')
     .replace(/\bto\s+the\s+power\s+of\b/gi, '^')
     .replace(/\bpow(er)?\b/gi, '^')
-    .replace(/[×x]/g, '*')
+    .replace(/(\d)\s*[×x]\s*(\d)/g, '$1*$2')
     .replace(/[÷]/g,  '/');
 
   // Must contain at least two numbers and one operator to qualify as math
