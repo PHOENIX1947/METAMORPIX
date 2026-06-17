@@ -9116,13 +9116,15 @@ function speakText(text, onDoneCallback){
 
   speechLock=true;
   const doSpeak=function(){
-    currentUtter=new SpeechSynthesisUtterance(clean);
+    const myUtter=new SpeechSynthesisUtterance(clean);
+    currentUtter=myUtter;
     const langCodes={en:'en-IN',hi:'hi-IN',bn:'bn-BD'};
-    currentUtter.lang=langCodes[currentLang]||'en-IN';
-    currentUtter.rate=0.92; currentUtter.pitch=0.85; currentUtter.volume=1;
-    const v=getBestVoice(currentLang); if(v) currentUtter.voice=v;
+    myUtter.lang=langCodes[currentLang]||'en-IN';
+    myUtter.rate=0.92; myUtter.pitch=0.85; myUtter.volume=1;
+    const v=getBestVoice(currentLang); if(v) myUtter.voice=v;
 
-    currentUtter.onstart=function(){
+    myUtter.onstart=function(){
+      if(currentUtter!==myUtter) return; // FIX — stale event from a superseded/canceled utterance
       isSpeaking=true;
       if(isListening) stopListeningInt();
       const area=document.getElementById('responseArea');
@@ -9130,7 +9132,8 @@ function speakText(text, onDoneCallback){
       setVoiceStatus('speaking');
     };
 
-    currentUtter.onend=function(){
+    myUtter.onend=function(){
+      if(currentUtter!==myUtter) return; // FIX — stale event from a superseded/canceled utterance
       isSpeaking=false;
       speechLock=false;
       const area=document.getElementById('responseArea');
@@ -9140,7 +9143,8 @@ function speakText(text, onDoneCallback){
       if(autoListen&&voiceSupported&&!isListening) setTimeout(startListening,500);
     };
 
-    currentUtter.onerror=function(e){
+    myUtter.onerror=function(e){
+      if(currentUtter!==myUtter) return; // FIX — ignore onerror fired by cancel() of a superseded utterance
       if(e.error!=='interrupted') console.warn('Speech error:',e.error);
       isSpeaking=false;
       speechLock=false;
@@ -9150,7 +9154,7 @@ function speakText(text, onDoneCallback){
       if(onDoneCallback) onDoneCallback();
     };
 
-    synth.speak(currentUtter);
+    synth.speak(myUtter);
   };
 
   if(synth.speaking || synth.pending){
