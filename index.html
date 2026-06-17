@@ -7405,41 +7405,103 @@ derivatives_greeks: {
 function rand(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
 function l3(en,hi,bn){ return currentLang==='hi'?hi:currentLang==='bn'?bn:en; }
 
-/* ── MATH HELPERS (FIX #1 — let in block scope, no var shadowing) ── */
+/* ── MATH HELPERS — multi-number expression evaluator ── */
 function fmtNum(n){
   if(!isFinite(n)) return 'undefined (division by zero)';
   return Number.isInteger(n) ? String(n) : parseFloat(n.toFixed(6)).toString();
 }
 
-function tryMath(q){
-  // Handles: word operators (plus/minus/times/divided by), symbols, and spacing
-  const patterns = [
-    { re: /(\d+\.?\d*)\s*(?:plus|\+)\s*(\d+\.?\d*)/i,   op: (a,b)=>a+b },
-    { re: /(\d+\.?\d*)\s*(?:minus|-)\s*(\d+\.?\d*)/i,   op: (a,b)=>a-b },
-    { re: /(\d+\.?\d*)\s*(?:times|multiplied by|x|\*|×)\s*(\d+\.?\d*)/i, op: (a,b)=>a*b },
-    { re: /(\d+\.?\d*)\s*(?:divided by|÷|\/)\s*(\d+\.?\d*)/i, op: (a,b)=>b!==0?a/b:Infinity },
-    // FIX #1 — generic operator last, avoids shadowing
-    { re: /(\d+\.?\d*)\s*([\+\-\*\/])\s*(\d+\.?\d*)/, op: null },
-  ];
-  for(const p of patterns){
-    const m = q.match(p.re);
-    if(m){
-      let res;
-      if(p.op){
-        res = p.op(parseFloat(m[1]), parseFloat(m[2]));
-      } else {
-        const a=parseFloat(m[1]),op=m[2],b=parseFloat(m[3]);
-        if(op==='+') res=a+b;
-        else if(op==='-') res=a-b;
-        else if(op==='*') res=a*b;
-        else res=b!==0?a/b:Infinity;
+/* Tokenise → shunting-yard → evaluate (handles +, -, *, /, ^, parentheses, correct precedence) */
+function evalExpr(expr){
+  // Tokenise: numbers and operators/parens
+  const tokens = [];
+  let i = 0;
+  while(i < expr.length){
+    if(/\s/.test(expr[i])){ i++; continue; }
+    if(/[\d\.]/.test(expr[i])){
+      let num = '';
+      while(i < expr.length && /[\d\.]/.test(expr[i])) num += expr[i++];
+      tokens.push({type:'num', val: parseFloat(num)});
+    } else if(/[\+\-\*\/\^]/.test(expr[i])){
+      tokens.push({type:'op', val: expr[i++]});
+    } else if(expr[i]==='('){
+      tokens.push({type:'lparen'}); i++;
+    } else if(expr[i]===')'){
+      tokens.push({type:'rparen'}); i++;
+    } else { i++; } // ignore unknown chars
+  }
+  // Handle unary minus (e.g. -5, or after operator/lparen)
+  for(let j=0;j<tokens.length;j++){
+    if(tokens[j].type==='op' && tokens[j].val==='-'){
+      const prev = tokens[j-1];
+      if(!prev || prev.type==='op' || prev.type==='lparen'){
+        tokens.splice(j,1); // remove '-'
+        if(tokens[j] && tokens[j].type==='num') tokens[j].val = -tokens[j].val;
+        j--;
       }
-      return l3('The answer is '+fmtNum(res)+', Boss.',
-                'उत्तर है '+fmtNum(res)+', श्रीमान।',
-                'উত্তর হলো '+fmtNum(res)+', স্যার।');
     }
   }
-  return null;
+  const prec = {'+':1,'-':1,'*':2,'/':2,'^':3};
+  const rightAssoc = {'^':true};
+  const applyOp = (op,b,a)=>{
+    if(op==='+') return a+b;
+    if(op==='-') return a-b;
+    if(op==='*') return a*b;
+    if(op==='/') return b!==0?a/b:Infinity;
+    if(op==='^') return Math.pow(a,b);
+  };
+  // Shunting-yard
+  const out=[], ops=[];
+  for(const t of tokens){
+    if(t.type==='num'){ out.push(t.val); }
+    else if(t.type==='op'){
+      while(ops.length && ops[ops.length-1]!=='(' &&
+            (prec[ops[ops.length-1]]>prec[t.val] ||
+             (prec[ops[ops.length-1]]===prec[t.val] && !rightAssoc[t.val]))){
+        out.push(applyOp(ops.pop(), out.pop(), out.pop()));
+      }
+      ops.push(t.val);
+    } else if(t.type==='lparen'){ ops.push('('); }
+    else if(t.type==='rparen'){
+      while(ops.length && ops[ops.length-1]!=='(')
+        out.push(applyOp(ops.pop(), out.pop(), out.pop()));
+      ops.pop();
+    }
+  }
+  while(ops.length) out.push(applyOp(ops.pop(), out.pop(), out.pop()));
+  return out[0];
+}
+
+function tryMath(q){
+  // Normalise word operators → symbols
+  let expr = q
+    .replace(/\bplus\b/gi,     '+')
+    .replace(/\bminus\b/gi,    '-')
+    .replace(/\btimes\b/gi,    '*')
+    .replace(/\bmultiplied\s+by\b/gi, '*')
+    .replace(/\bdivided\s+by\b/gi,   '/')
+    .replace(/\bto\s+the\s+power\s+of\b/gi, '^')
+    .replace(/\bpow(er)?\b/gi, '^')
+    .replace(/[×x]/g, '*')
+    .replace(/[÷]/g,  '/');
+
+  // Must contain at least two numbers and one operator to qualify as math
+  // Also accept expressions with parentheses
+  const hasMath = /\d[\s]*[\+\-\*\/\^][\s]*\d/.test(expr) ||
+                  /\([\d\s\+\-\*\/\^\.\(\)]+\)/.test(expr);
+  if(!hasMath) return null;
+
+  // Extract the pure math expression (numbers, operators, parens, dots, spaces)
+  const clean = expr.replace(/[^\d\.\+\-\*\/\^\(\)\s]/g, ' ').trim();
+  if(!clean) return null;
+
+  try{
+    const res = evalExpr(clean);
+    if(res === undefined || isNaN(res)) return null;
+    return l3('The answer is '+fmtNum(res)+', Boss.',
+              'उत्तर है '+fmtNum(res)+', श्रीमान।',
+              'উত্তর হলো '+fmtNum(res)+', স্যার।');
+  } catch(e){ return null; }
 }
 
 async function getLocalResponse(query){
