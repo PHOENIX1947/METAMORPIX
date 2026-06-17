@@ -372,9 +372,9 @@ body{background:var(--bg);font-family:'Share Tech Mono',monospace;color:var(--cy
       <div class="panel-label"><span class="dot"></span>ARC REACTOR STATUS</div>
       <div class="panel-inner" style="align-items:center;">
         <div class="reactor-health">
-          <div class="rh-ring"><div class="rh-pct">100%</div></div>
+          <div class="rh-ring" id="batteryRing"><div class="rh-pct" id="batteryPct">--%</div></div>
           <div style="font-size:6px;letter-spacing:2px;color:var(--text-dim);">POWER OUTPUT</div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:8px;color:var(--green);">OPTIMAL</div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:8px;color:var(--green);" id="batteryStatus">ACQUIRING...</div>
         </div>
         <div style="width:100%">
           <div class="diag-item"><div class="diag-header"><span class="diag-label">ENERGY CORE</span><span class="diag-val" id="coreV">3.2 GW</span></div><div class="diag-bar"><div class="diag-fill cyan" style="width:82%"></div></div></div>
@@ -486,6 +486,7 @@ body{background:var(--bg);font-family:'Share Tech Mono',monospace;color:var(--cy
         <div class="info-row"><span class="info-label">WIND</span><span class="info-val" id="wWind">-- km/h</span></div>
         <div class="info-row"><span class="info-label">VISIBILITY</span><span class="info-val" id="wVis">-- km</span></div>
         <div class="info-row"><span class="info-label">PRESSURE</span><span class="info-val" id="wPress">-- hPa</span></div>
+        <div class="info-row" style="margin-top:2px;border-top:1px solid rgba(0,229,255,.08);padding-top:3px;"><span style="font-size:6px;letter-spacing:1.5px;color:var(--text-dim);" id="wLastUpdate">ACQUIRING...</span></div>
       </div>
     </div>
     <div class="panel" style="flex:0 0 auto;">
@@ -9308,7 +9309,9 @@ function animMetrics(){
   items.forEach(function(it){
     const v=Math.floor(Math.random()*(it.max-it.min)+it.min);
     const barEl=document.getElementById(it.bar), valEl=document.getElementById(it.val);
-    if(barEl) barEl.style.width=v+'%'; if(valEl) valEl.textContent=v+it.suffix;
+    // Map value to 0–100% within its own min/max range for accurate bar fill
+    const pct=Math.round((v-it.min)/(it.max-it.min)*100);
+    if(barEl) barEl.style.width=pct+'%'; if(valEl) valEl.textContent=v+it.suffix;
     if(it.bbId){ const bb=document.getElementById(it.bbId); if(bb) bb.textContent=v+it.suffix; }
   });
   const dl=document.getElementById('dlSpeed'), ul=document.getElementById('ulSpeed');
@@ -9317,26 +9320,159 @@ function animMetrics(){
 }
 setInterval(animMetrics,3000); animMetrics();
 
-/* ══════════════════════
-   WEATHER (simulated)
-══════════════════════ */
-setTimeout(function(){
-  const weathers=[
-    {icon:'⛅',temp:28,desc:'PARTLY CLOUDY',hum:72,wind:14,vis:8,press:1013},
-    {icon:'☀️',temp:34,desc:'CLEAR SKIES',hum:45,wind:8,vis:12,press:1018},
-    {icon:'🌧️',temp:22,desc:'LIGHT RAIN',hum:88,wind:22,vis:4,press:1005},
-    {icon:'🌩️',temp:19,desc:'THUNDERSTORM',hum:95,wind:35,vis:2,press:998},
-    {icon:'🌤️',temp:31,desc:'MOSTLY SUNNY',hum:58,wind:11,vis:10,press:1015},
-  ];
-  const w=weathers[Math.floor(Math.random()*weathers.length)];
-  document.getElementById('weatherIcon').textContent=w.icon;
-  document.getElementById('weatherTemp').textContent=w.temp+'°C';
-  document.getElementById('weatherDesc').textContent=w.desc;
-  document.getElementById('wHumidity').textContent=w.hum+'%';
-  document.getElementById('wWind').textContent=w.wind+' km/h';
-  document.getElementById('wVis').textContent=w.vis+' km';
-  document.getElementById('wPress').textContent=w.press+' hPa';
-},1500);
+/* ══════════════════════════════════════════════
+   WEATHER (LIVE) — pulls real atmospheric data
+   from Open-Meteo (no key required). Location is
+   resolved via the browser's geolocation first,
+   falling back to IP-based geolocation if denied.
+   WMO weather codes are mapped to icon + label.
+══════════════════════════════════════════════ */
+let weatherLat=null, weatherLon=null;
+
+function wmoToDisplay(code,isDay){
+  // Open-Meteo "weathercode" → icon + human label
+  if(code===0) return {icon:isDay?'☀️':'🌙',desc:'CLEAR SKIES'};
+  if(code===1||code===2) return {icon:isDay?'🌤️':'🌙',desc:'MOSTLY SUNNY'};
+  if(code===3) return {icon:'⛅',desc:'PARTLY CLOUDY'};
+  if(code===45||code===48) return {icon:'🌫️',desc:'FOG'};
+  if(code>=51&&code<=57) return {icon:'🌦️',desc:'DRIZZLE'};
+  if(code>=61&&code<=67) return {icon:'🌧️',desc:'RAIN'};
+  if(code>=71&&code<=77) return {icon:'🌨️',desc:'SNOW'};
+  if(code>=80&&code<=82) return {icon:'🌧️',desc:'RAIN SHOWERS'};
+  if(code>=85&&code<=86) return {icon:'🌨️',desc:'SNOW SHOWERS'};
+  if(code>=95) return {icon:'🌩️',desc:'THUNDERSTORM'};
+  return {icon:'⛅',desc:'PARTLY CLOUDY'};
+}
+
+function renderWeatherError(){
+  const desc=document.getElementById('weatherDesc');
+  if(desc) desc.textContent='DATA UNAVAILABLE';
+  const el=document.getElementById('wLastUpdate');
+  if(el) el.textContent='RETRY IN 5 MIN';
+}
+
+async function fetchAndRenderWeather(lat,lon){
+  try{
+    const url='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon
+      +'&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,pressure_msl,visibility,is_day'
+      +'&wind_speed_unit=kmh';
+    const res=await fetch(url);
+    if(!res.ok) throw new Error('weather fetch failed: '+res.status);
+    const data=await res.json();
+    const c=data.current;
+    if(!c) throw new Error('no current weather block');
+
+    const disp=wmoToDisplay(c.weather_code,c.is_day===1);
+    document.getElementById('weatherIcon').textContent=disp.icon;
+    document.getElementById('weatherTemp').textContent=Math.round(c.temperature_2m)+'°C';
+    document.getElementById('weatherDesc').textContent=disp.desc;
+    document.getElementById('wHumidity').textContent=Math.round(c.relative_humidity_2m)+'%';
+    document.getElementById('wWind').textContent=Math.round(c.wind_speed_10m)+' km/h';
+    // visibility comes back in metres from Open-Meteo
+    const visKm=(typeof c.visibility==='number')?(c.visibility/1000):null;
+    document.getElementById('wVis').textContent=(visKm!==null?visKm.toFixed(1):'--')+' km';
+    document.getElementById('wPress').textContent=Math.round(c.pressure_msl)+' hPa';
+
+    const el=document.getElementById('wLastUpdate');
+    if(el){
+      const now=new Date();
+      el.textContent='UPDATED '+now.getHours().toString().padStart(2,'0')+':'+now.getMinutes().toString().padStart(2,'0')+':'+now.getSeconds().toString().padStart(2,'0')+' • LIVE';
+    }
+  } catch(err){
+    console.error('Weather fetch error:',err);
+    renderWeatherError();
+  }
+}
+
+async function resolveLocationByIP(){
+  // Fallback when browser geolocation is denied/unavailable.
+  // ipapi.co requires no key and returns approximate lat/lon from IP.
+  try{
+    const res=await fetch('https://ipapi.co/json/');
+    if(!res.ok) throw new Error('ip geolocation failed: '+res.status);
+    const data=await res.json();
+    if(typeof data.latitude==='number'&&typeof data.longitude==='number'){
+      return {lat:data.latitude,lon:data.longitude};
+    }
+    throw new Error('ip geolocation missing coordinates');
+  } catch(err){
+    console.error('IP geolocation error:',err);
+    return null;
+  }
+}
+
+function updateWeather(){
+  // If we already have a resolved location, just refresh the reading.
+  if(weatherLat!==null&&weatherLon!==null){
+    fetchAndRenderWeather(weatherLat,weatherLon);
+    return;
+  }
+  const onCoords=function(lat,lon){
+    weatherLat=lat; weatherLon=lon;
+    fetchAndRenderWeather(lat,lon);
+  };
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(
+      function(pos){ onCoords(pos.coords.latitude,pos.coords.longitude); },
+      async function(){ // denied or failed — fall back to IP-based location
+        const loc=await resolveLocationByIP();
+        if(loc) onCoords(loc.lat,loc.lon); else renderWeatherError();
+      },
+      {timeout:8000,maximumAge:600000}
+    );
+  } else {
+    resolveLocationByIP().then(function(loc){
+      if(loc) onCoords(loc.lat,loc.lon); else renderWeatherError();
+    });
+  }
+}
+setTimeout(function(){ updateWeather(); setInterval(updateWeather,300000); },1500); // initial load then every 5 min
+
+/* ══════════════════════════════════════════════
+   BATTERY (LIVE) — reads the actual device battery
+   via the Battery Status API and drives the
+   "ARC REACTOR STATUS" ring with real percentage
+   and charging state. Falls back gracefully on
+   browsers that don't support it (e.g. iOS Safari).
+══════════════════════════════════════════════ */
+function renderBattery(level,charging){
+  const pct=Math.round(level*100);
+  const pctEl=document.getElementById('batteryPct');
+  const statusEl=document.getElementById('batteryStatus');
+  const ringEl=document.getElementById('batteryRing');
+  if(pctEl) pctEl.textContent=pct+'%';
+
+  let label,color;
+  if(charging){ label='CHARGING'; color='var(--gold)'; }
+  else if(pct<=15){ label='CRITICAL'; color='var(--red)'; }
+  else if(pct<=40){ label='LOW POWER'; color='var(--gold)'; }
+  else { label='OPTIMAL'; color='var(--green)'; }
+
+  if(statusEl){ statusEl.textContent=label; statusEl.style.color=color; }
+  if(ringEl) ringEl.style.borderColor=(pct<=15&&!charging)?'var(--red)':'var(--cyan)';
+}
+
+function renderBatteryUnsupported(){
+  const pctEl=document.getElementById('batteryPct');
+  const statusEl=document.getElementById('batteryStatus');
+  if(pctEl) pctEl.textContent='N/A';
+  if(statusEl){ statusEl.textContent='UNSUPPORTED'; statusEl.style.color='var(--text-dim)'; }
+}
+
+function initBattery(){
+  if(!navigator.getBattery){ renderBatteryUnsupported(); return; }
+  navigator.getBattery().then(function(battery){
+    renderBattery(battery.level,battery.charging);
+    // Keep the display in sync with real-time battery events —
+    // no polling needed, the browser pushes updates on change.
+    battery.addEventListener('levelchange',function(){ renderBattery(battery.level,battery.charging); });
+    battery.addEventListener('chargingchange',function(){ renderBattery(battery.level,battery.charging); });
+  }).catch(function(err){
+    console.error('Battery API error:',err);
+    renderBatteryUnsupported();
+  });
+}
+initBattery();
 
 /* ══════════════════════════════════════════════
    REACTOR CANVAS — FIX #5: debounced resize, single RAF loop
