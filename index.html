@@ -9675,6 +9675,7 @@ async function getLocalResponse(query){
   if(/what.*(time|समय|সময়)|time is it|টাইম|সময় কত/i.test(q)) return (typeof KB.time[L]==='function')?KB.time[L]():KB.time['en']();
   if(/what.*(date|day|তারিখ|দিন|तारीख|दिन)|today|আজকে/i.test(q)) return (typeof KB.date[L]==='function')?KB.date[L]():KB.date['en']();
   if(/who are you|what.*your name|তুমি কে|তোমার নাম|तुम कौन|आपका नाम|আপনি কে|আপনার নাম/i.test(q)) return KB.name[L];
+  if(/\bcloud computing\b|cloud storage|\baws\b|\bazure\b|google cloud|ক্লাউড|क्लाउड/i.test(q)) return KB.cloud[L];
   if(/weather|मौसम|আবহাওয়া|temperature|तापमान|তাপমাত্রা/i.test(q)) return KB.weather[L];
   if(/joke|funny|হাসি|मजाक|জোকস|চুটকিলা/i.test(q)) return rand(KB.joke[L]);
   if(/thank|thanks|धन्यवाद|ধন্যবাদ|शुक्रिया/i.test(q)) return rand(KB.thanks[L]);
@@ -9682,14 +9683,14 @@ async function getLocalResponse(query){
   if(/PHOENIX/i.test(q)) return KB.PHOENIX[L];
   if(/iron\s*man|suit|আয়রন ম্যান|आयरन मैन/i.test(q)) return KB.ironman[L];
   if(/help|what can you|capabilities|क्या कर सकते|কী করতে পারেন/i.test(q)) return KB.help[L];
-  if(/universe|space|galaxy|cosmos|ब्रह्मांड|মহাবিশ্ব/i.test(q)) return KB.universe[L];
-  if(/avenger|shield|fury/i.test(q)) return KB.avengers[L];
-  if(/artificial intelligence|machine learning|\bai\b|robot|কৃত্রিম|আর্টিফিশিয়াল|कृत्रिम/i.test(q)) return KB.ai[L];
-  if(/arc\s*reactor|reactor|আর্ক রিঅ্যাক্টর|आर्क रिएक्टर/i.test(q)) return KB.arc[L];
   if(/\bspace\b|outer space|মহাকাশ|अंतरिक्ष/i.test(q)) return KB.space[L];
+  if(/universe|galaxy|cosmos|ब्रह्मांड|মহাবিশ্ব/i.test(q)) return KB.universe[L];
+  if(/avenger|shield|fury/i.test(q)) return KB.avengers[L];
+  if(/artificial intelligence|\bai\b|robot|কৃত্রিম|আর্টিফিশিয়াল|कृत्रिम/i.test(q)) return KB.ai[L];
+  if(/arc\s*reactor|reactor|আর্ক রিঅ্যাক্টর|आर्क रिएक्टर/i.test(q)) return KB.arc[L];
+  if(/\bsun\b|solar energy|solar power|সূর্য|सूर्य/i.test(q)) return KB.sun[L];
   if(/planet|solar system|গ্রহ|সৌরজগত|ग्रह|सौरमंडल/i.test(q)) return KB.planets[L];
   if(/\bmoon\b|lunar|চাঁদ|चंद्रमा/i.test(q)) return KB.moon[L];
-  if(/\bsun\b|solar|সূর্য|सूर्य/i.test(q)) return KB.sun[L];
   if(/black.?hole|ব্লাক হোল|ब्लैक होल/i.test(q)) return KB.blackhole[L];
   if(/einstein|আইনস্টাইন|आइंस्टीन/i.test(q)) return KB.einstein[L];
   if(/newton|নিউটন|न्यूटन/i.test(q)) return KB.newton[L];
@@ -9721,7 +9722,7 @@ async function getLocalResponse(query){
   if(/\bage\b|how old|বয়স|उम्र/i.test(q)) return KB.age[L];
   if(/\bgravity\b|gravitational|মাধ্যাকর্ষণ|गुरुत्व/i.test(q)) return KB.gravity[L];
   if(/\blight\b|photon|speed of light|আলো|प्रकाश/i.test(q)) return KB.light[L];
-  if(/\batom\b|atomic|proton|electron|পরমাণু|परमाणु/i.test(q)) return KB.atom[L];
+  if(/\batom\b|atomic|proton|electron|পরমাণু/i.test(q)) return KB.atom[L];
   if(/quantum|superposition|entangle|কোয়ান্টাম|क्वांटम/i.test(q)) return KB.quantum[L];
   if(/electric|current|voltage|বিদ্যুৎ|बिजली/i.test(q)) return KB.electricity[L];
   if(/magnet|magnetic|চুম্বক|चुम्बक/i.test(q)) return KB.magnetism[L];
@@ -9737,9 +9738,9 @@ async function getLocalResponse(query){
   if(/satellite|orbit|উপগ্রহ|उपग्रह/i.test(q)) return KB.satellite[L];
   if(/\bdrone\b|uav|ড্রোন|ड्रोन/i.test(q)) return KB.drone[L];
   if(/cybersecurity|hacking|firewall|সাইবার|साइबर/i.test(q)) return KB.cyber[L];
-  if(/\bcloud\b|aws|azure|ক্লাউড|क्लाउड/i.test(q)) return KB.cloud[L];
-  if(/javascript|nodejs|frontend|জাভাস্ক্রিপ্ট|जावास्क्रिप्ट/i.test(q)) return KB.javascript[L];
+  if(/\bcloud\b|ক্লাউড|क्लाउड/i.test(q)) return KB.cloud[L];
   if(/machine.?learn|neural.?network|deep.?learn|মেশিন লার্নিং|मशीन लर्निंग/i.test(q)) return KB.machine_learning[L];
+  if(/javascript|nodejs|frontend|জাভাস্ক্রিপ্ট|जावास्क्रिप्ट/i.test(q)) return KB.javascript[L];
   if(/amazon.?(rain|forest|river)|আমাজন বন|अमेज़न वन/i.test(q)) return KB.amazon[L];
   if(/himalaya|everest|হিমালয়|हिमालय/i.test(q)) return KB.himalaya[L];
   if(/\bocean\b|sea|pacific|atlantic|সমুদ্র|महासागर/i.test(q)) return KB.ocean[L];
