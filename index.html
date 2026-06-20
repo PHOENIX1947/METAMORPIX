@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>METAMORPIX — PHOENIX REAL ESTATE</title>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap');
 
@@ -19,7 +20,7 @@
   --purple: #b44aff;
   --blue: #0077ff;
   --bg: #000608;
-  --panel: rgba(0,15,22,0.92);
+  --panel: rgb(0,15,22);
   --border: rgba(0,229,255,0.25);
   --text: #7fffff;
   --text-dim: rgba(0,229,255,0.45);
@@ -113,9 +114,10 @@ body{background:var(--bg);font-family:'Share Tech Mono',monospace;color:var(--cy
 @keyframes waveSpk{from{height:2px;}to{height:24px;}}
 
 /* ── CENTER TOP ── */
-#centerTop{grid-column:2;grid-row:2;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.reactor-canvas-wrap{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
-#reactorCanvas{display:block;}
+#centerTop{grid-column:2;grid-row:2;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;backdrop-filter:none;}
+.reactor-canvas-wrap{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:280px;height:280px;}
+#reactorSpline{display:block;width:100%;height:100%;}
+.spline-watermark-cover{position:absolute;bottom:0;right:0;width:96px;height:26px;background:var(--panel);border-radius:2px 0 2px 0;pointer-events:none;z-index:2;}
 .radar-wrap{position:absolute;bottom:8px;right:8px;width:88px;height:88px;}
 #radarCanvas{border-radius:50%;border:1px solid rgba(0,229,255,.25);}
 .reticle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:180px;height:180px;pointer-events:none;animation:reticleSpin 20s linear infinite;}
@@ -156,6 +158,8 @@ body{background:var(--bg);font-family:'Share Tech Mono',monospace;color:var(--cy
 .q-btn.red:hover,.q-btn.red:active{background:rgba(255,23,68,.08);}
 .q-btn.purple{border-color:rgba(180,74,255,.35);color:var(--purple);}
 .q-btn.purple:hover,.q-btn.purple:active{background:rgba(180,74,255,.08);}
+.q-btn.gold{border-color:rgba(255,193,7,.4);color:var(--gold);}
+.q-btn.gold:hover,.q-btn.gold:active{background:rgba(255,193,7,.1);border-color:var(--gold);}
 .lang-row{display:flex;gap:4px;align-items:center;}
 .lang-btn{background:transparent;border:1px solid rgba(0,229,255,.2);color:rgba(0,229,255,.5);font-family:'Share Tech Mono',monospace;font-size:clamp(7px,1.2vw,9px);letter-spacing:1.5px;padding:3px 8px;border-radius:2px;cursor:pointer;transition:all .15s;touch-action:manipulation;}
 .lang-btn.active,.lang-btn:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim);}
@@ -227,7 +231,8 @@ body{background:var(--bg);font-family:'Share Tech Mono',monospace;color:var(--cy
   #bottomBar{grid-column:1;grid-row:4;}
   #leftCol,#rightCol{display:none;}
   .crosshair-h,.crosshair-v,.reticle,.radar-wrap{display:none;}
-  #reactorCanvas{width:200px;height:200px;}
+  .reactor-canvas-wrap{width:200px;height:200px;}
+  .spline-watermark-cover{width:72px;height:20px;}
   .jarvis-name{font-size:22px;}
   .top-center{display:none;}
   /* FIX #10: taller response on mobile */
@@ -239,7 +244,8 @@ body{background:var(--bg);font-family:'Share Tech Mono',monospace;color:var(--cy
   .top-logo{font-size:11px;letter-spacing:3px;}
   #clock{font-size:12px;}
   #centerTop{height:220px;}
-  #reactorCanvas{width:160px;height:160px;}
+  .reactor-canvas-wrap{width:160px;height:160px;}
+  .spline-watermark-cover{width:58px;height:16px;}
   .jarvis-name{font-size:17px;letter-spacing:5px;}
   .jarvis-sub{display:none;}
   .status-badge{padding:3px 9px;}
@@ -262,7 +268,8 @@ body{background:var(--bg);font-family:'Share Tech Mono',monospace;color:var(--cy
 @media(max-width:380px){
   .jarvis-name{font-size:14px;letter-spacing:4px;}
   #centerTop{height:190px;}
-  #reactorCanvas{width:130px;height:130px;}
+  .reactor-canvas-wrap{width:130px;height:130px;}
+  .spline-watermark-cover{width:48px;height:14px;}
   .q-btn{font-size:7px;padding:3px 5px;}
 }
 </style>
@@ -417,7 +424,10 @@ body{background:var(--bg);font-family:'Share Tech Mono',monospace;color:var(--cy
     <div class="crosshair-h"></div>
     <div class="crosshair-v"></div>
     <div class="reticle"></div>
-    <div class="reactor-canvas-wrap"><canvas id="reactorCanvas" width="280" height="280"></canvas></div>
+    <div class="reactor-canvas-wrap" id="reactorWrap">
+      <spline-viewer id="reactorSpline" url="https://prod.spline.design/Ho-wrYrmE938yjO7/scene.splinecode"></spline-viewer>
+      <div class="spline-watermark-cover"></div>
+    </div>
     <div class="jarvis-title-wrap">
       <div class="jarvis-name">METAMORPIX</div>
       <div class="jarvis-sub">JUST A RATHER VERY INTELLIGENT SYSTEM</div>
@@ -11818,23 +11828,7 @@ function initBattery(){
 }
 initBattery();
 
-/* ══════════════════════════════════════════════
-   REACTOR CANVAS — FIX #5: debounced resize, single RAF loop
-══════════════════════════════════════════════ */
-(function(){
-  const canvas=document.getElementById('reactorCanvas');
-  const ctx=canvas.getContext('2d');
-  let t=0;
-  const ringAngles=[0,0,0,0,0,0,0];
-  const ringsDef=[
-    {rFrac:.53,speed:.3,dir:1,dash:[6,3],color:'rgba(0,229,255,0.35)'},
-    {rFrac:.46,speed:.5,dir:-1,dash:[3,6],color:'rgba(0,180,255,0.28)'},
-    {rFrac:.39,speed:.2,dir:1,dash:[2,5],color:'rgba(0,229,255,0.38)'},
-    {rFrac:.32,speed:.7,dir:-1,dash:[1,3],color:'rgba(0,150,255,0.22)'},
-    {rFrac:.25,speed:.4,dir:1,dash:[],color:'rgba(0,229,255,0.48)'},
-    {rFrac:.18,speed:.9,dir:-1,dash:[2,2],color:'rgba(0,229,255,0.55)'},
-    {rFrac:.11,speed:1.2,dir:1,dash:[],color:'rgba(0,229,255,0.65)'},
-  ];
+/* ── REACTOR PANEL is now a Spline 3D viewer (#reactorSpline) — no canvas animation needed ── */
 // ══════════════════════════════════════
 // BATCH 19 — INDIA RX LOOKUP TABLE
 // Replaces the sequential if-chain with
@@ -11918,78 +11912,6 @@ function matchIndiaRx(q) {
   }
   return null;
 }
-  // FIX #5 — debounced resize, no flicker
-  let resizeTimeout = null;
-  function resizeReactor(){
-    const parent=document.getElementById('centerTop');
-    if(!parent) return;
-    let side=Math.min(parent.offsetWidth-40, parent.offsetHeight-80, 280);
-    side=Math.max(side,100);
-    canvas.width=side; canvas.height=side;
-    canvas.style.width=side+'px'; canvas.style.height=side+'px';
-  }
-  resizeReactor();
-  window.addEventListener('resize',function(){
-    clearTimeout(resizeTimeout);
-    resizeTimeout=setTimeout(resizeReactor,150); // FIX #5 — debounce 150ms
-  });
-
-  function drawReactor(){
-    const W=canvas.width,H=canvas.height,cx=W/2,cy=H/2;
-    ctx.clearRect(0,0,W,H);
-    t+=.01;
-    const grd=ctx.createRadialGradient(cx,cy,W*.07,cx,cy,W*.55);
-    grd.addColorStop(0,'rgba(0,229,255,0.15)');
-    grd.addColorStop(.5,'rgba(0,100,255,0.05)');
-    grd.addColorStop(1,'transparent');
-    ctx.fillStyle=grd; ctx.beginPath(); ctx.arc(cx,cy,W*.55,0,Math.PI*2); ctx.fill();
-    ringsDef.forEach(function(ring,i){
-      const r=W*ring.rFrac;
-      ringAngles[i]+=ring.speed*.01*ring.dir;
-      ctx.save(); ctx.translate(cx,cy); ctx.rotate(ringAngles[i]);
-      ctx.strokeStyle=ring.color; ctx.lineWidth=1;
-      ctx.setLineDash(ring.dash.length?ring.dash:[]);
-      ctx.beginPath(); ctx.arc(0,0,r,0,Math.PI*2); ctx.stroke();
-      ctx.setLineDash([]);
-      ctx.beginPath(); ctx.arc(r,0,2.5,0,Math.PI*2);
-      ctx.fillStyle=ring.color.replace(/[\d.]+\)$/,'0.9)');
-      ctx.shadowColor=ring.color; ctx.shadowBlur=8; ctx.fill();
-      ctx.shadowBlur=0; ctx.restore();
-    });
-    ctx.save(); ctx.translate(cx,cy); ctx.rotate(t*.5);
-    for(let i=0;i<3;i++){
-      ctx.save(); ctx.rotate(i*Math.PI*2/3);
-      ctx.strokeStyle='rgba(0,229,255,'+(0.45+.28*Math.sin(t*2+i))+')';
-      ctx.lineWidth=.8;
-      ctx.beginPath(); ctx.moveTo(0,0);
-      ctx.lineTo(W*.085*Math.cos(t*.3),W*.085*Math.sin(t*.3));
-      ctx.stroke(); ctx.restore();
-    }
-    ctx.restore();
-    const p=Math.sin(t*2)*.5+.5, cr=W*.08;
-    const coreGrd=ctx.createRadialGradient(cx,cy,0,cx,cy,cr);
-    coreGrd.addColorStop(0,'rgba(255,255,255,'+(0.8+p*.18)+')');
-    coreGrd.addColorStop(.3,'rgba(0,229,255,0.88)');
-    coreGrd.addColorStop(.7,'rgba(0,100,255,0.45)');
-    coreGrd.addColorStop(1,'transparent');
-    ctx.beginPath(); ctx.arc(cx,cy,cr,0,Math.PI*2);
-    ctx.fillStyle=coreGrd; ctx.shadowColor='rgba(0,229,255,0.75)';
-    ctx.shadowBlur=25; ctx.fill(); ctx.shadowBlur=0;
-    ctx.save(); ctx.translate(cx,cy); ctx.rotate(t);
-    for(let j=0;j<6;j++){
-      ctx.save(); ctx.rotate(j*Math.PI/3);
-      ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(0,-W*.1);
-      const beamGrd=ctx.createLinearGradient(0,0,0,-W*.1);
-      beamGrd.addColorStop(0,'rgba(0,229,255,0.65)');
-      beamGrd.addColorStop(1,'transparent');
-      ctx.strokeStyle=beamGrd; ctx.lineWidth=1.2; ctx.stroke();
-      ctx.restore();
-    }
-    ctx.restore();
-    requestAnimationFrame(drawReactor);
-  }
-  drawReactor();
-})();
 
 /* ══════════════════════
    RADAR
